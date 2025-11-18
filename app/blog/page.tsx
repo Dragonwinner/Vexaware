@@ -9,27 +9,16 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   const posts = [
-    {
-      title: "The Vulnerability Management Crisis: Why 85% of Alerts Are False Positives",
-      excerpt: "Explore the challenges facing modern security teams and how VEX is solving the false positive problem.",
-      date: "2025-01-15",
-      readTime: "8 min",
-      slug: "vulnerability-management-crisis",
-    },
-    {
-      title: "VEX Standards Explained: CycloneDX vs OpenVEX vs CSAF",
-      excerpt: "A comprehensive comparison of the three major VEX standards and when to use each one.",
-      date: "2025-01-14",
-      readTime: "12 min",
-      slug: "vex-standards-comparison",
-    },
-    {
-      title: "Supply Chain Security in 2025: Complete Guide",
-      excerpt: "Learn how to secure your software supply chain with SBOM and VEX integration.",
-      date: "2025-01-13",
-      readTime: "15 min",
-      slug: "supply-chain-security-2025",
-    },
+    { title: "Understanding the VEX Standard", excerpt: "Learn about the VEX standard and its role in modern vulnerability management.", date: "2025-01-15", readTime: "10 min", slug: "understanding-vex-standard" },
+    { title: "The False Positive Problem in Vulnerability Scanning", excerpt: "Explore why 85% of vulnerability alerts are false positives and how to solve this.", date: "2025-01-12", readTime: "8 min", slug: "false-positive-problem" },
+    { title: "SBOM Integration: Complete Guide", excerpt: "A comprehensive guide to integrating Software Bill of Materials with VEX.", date: "2025-01-10", readTime: "12 min", slug: "sbom-integration-guide" },
+    { title: "Supply Chain Attacks in 2024: Lessons Learned", excerpt: "Analysis of major supply chain attacks and how to prevent them.", date: "2025-01-08", readTime: "15 min", slug: "supply-chain-attacks-2024" },
+    { title: "Kubernetes Security Best Practices", excerpt: "Essential security practices for Kubernetes deployments.", date: "2025-01-05", readTime: "10 min", slug: "kubernetes-security-best-practices" },
+    { title: "Managing Zero-Day Vulnerabilities", excerpt: "Strategies for handling zero-day vulnerabilities effectively.", date: "2025-01-03", readTime: "12 min", slug: "zero-day-vulnerabilities" },
+    { title: "Automating Security Compliance", excerpt: "How to automate compliance processes with VEX Aware.", date: "2025-01-01", readTime: "10 min", slug: "compliance-automation" },
+    { title: "Integrating Threat Intelligence Feeds", excerpt: "Enhance your security with external threat intelligence.", date: "2024-12-28", readTime: "8 min", slug: "threat-intelligence-feeds" },
+    { title: "Comparing Container Scanning Tools", excerpt: "An in-depth comparison of popular container security scanners.", date: "2024-12-25", readTime: "15 min", slug: "container-scanning-tools" },
+    { title: "Building a DevSecOps Culture", excerpt: "Creating a security-first culture in your development team.", date: "2024-12-22", readTime: "10 min", slug: "devsecops-culture" },
   ];
 
   return (

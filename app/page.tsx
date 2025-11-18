@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import Navigation from "@/components/Navigation";
 
 export const metadata: Metadata = {
-  title: "VEX Aware Tutorial - Master Vulnerability Management",
-  description: "Learn VEX Aware from basics to advanced. Free tutorials on vulnerability exploitability, SBOM integration, container security, and compliance.",
+  title: "VEX Aware Tutorial - Master Vulnerability Management | 100+ Free Tutorials",
+  description: "Complete VEX Aware guide with 100+ tutorials covering security, compliance, Kubernetes, cloud native, and more. Learn vulnerability management from basics to advanced.",
+  keywords: ["VEX", "vulnerability management", "SBOM", "security tutorials", "DevSecOps", "compliance"],
 };
 
 export default function Home() {
@@ -40,6 +42,13 @@ export default function Home() {
     },
   ];
 
+  const stats = [
+    { number: "127+", label: "Tutorial Pages" },
+    { number: "5", label: "Learning Paths" },
+    { number: "78", label: "Comprehensive Tutorials" },
+    { number: "Free", label: "All Content" },
+  ];
+
   const tutorialPaths = [
     {
       level: "Beginner",
@@ -69,41 +78,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Navigation */}
-      <nav className="border-b border-gray-200 dark:border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                VEX Aware
-              </Link>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <Link href="/tutorials/getting-started" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                Tutorials
-              </Link>
-              <Link href="/use-cases" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                Use Cases
-              </Link>
-              <Link href="/api-docs" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                API Docs
-              </Link>
-              <Link href="/resources" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                Resources
-              </Link>
-              <Link href="/blog" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                Blog
-              </Link>
-            </div>
-            <Link
-              href="/tutorials/getting-started"
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Get Started
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-950 py-20">
@@ -132,6 +107,22 @@ export default function Home() {
           </div>
           <div className="mt-8 text-sm text-gray-500 dark:text-gray-500">
             ✨ 10,000+ developers learning VEX Aware • 500+ enterprises trust us
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-12 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-600 dark:text-gray-400">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

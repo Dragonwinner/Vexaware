@@ -3,6 +3,9 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CodeBlock from "@/components/CodeBlock";
 import SocialShare from "@/components/SocialShare";
 import TableOfContents from "@/components/TableOfContents";
+import CodePlayground from "@/components/CodePlayground";
+import Comments from "@/components/Comments";
+import InteractiveDiagram from "@/components/InteractiveDiagram";
 
 export const metadata: Metadata = {
   title: "What is VEX and Why It Matters - VEX Aware Tutorial",
@@ -19,8 +22,24 @@ export default function WhatIsVEXPage() {
     { id: "vex-standards", text: "VEX Standards", level: 2 },
     { id: "real-world-example", text: "Real-World Example", level: 2 },
     { id: "benefits", text: "Key Benefits", level: 2 },
+    { id: "interactive-demo", text: "Try It Yourself", level: 2 },
     { id: "next-steps", text: "Next Steps", level: 2 },
   ];
+
+  const diagramCode = `graph TD
+    A[Vulnerability Scanner] -->|Detects CVE-2024-1234| B[VEX Document]
+    B -->|Analyzes Context| C{Is Code Path Used?}
+    C -->|No| D[Status: not_affected]
+    C -->|Yes| E[Status: affected]
+    D -->|85% of cases| F[No Action Needed]
+    E -->|15% of cases| G[Remediation Required]
+    F --> H[Security Team Efficiency ⬆️]
+    G --> I[Prioritize Fix]
+    
+    style D fill:#90EE90
+    style E fill:#FFB6C1
+    style F fill:#90EE90
+    style H fill:#87CEEB`;
 
   const vexExample = `{
   "@context": "https://openvex.dev/ns/v0.2.0",
@@ -154,6 +173,25 @@ export default function WhatIsVEXPage() {
                 <li>🤝 Improved communication</li>
               </ul>
 
+              <InteractiveDiagram 
+                code={diagramCode}
+                title="VEX Workflow Visualization"
+                description="See how VEX reduces false positives in the vulnerability management process"
+              />
+
+              <h2 id="interactive-demo">Try It Yourself</h2>
+              <p>
+                Experience VEX firsthand! Modify the VEX document below and run it to see how different 
+                vulnerability statuses affect the output.
+              </p>
+
+              <CodePlayground
+                initialCode={vexExample}
+                language="json"
+                title="VEX Document Playground"
+                description="Edit the VEX document and see the results"
+              />
+
               <h2 id="next-steps">Next Steps</h2>
               <p>
                 Now that you understand VEX, continue to the next tutorial to learn about the vulnerability management crisis.
@@ -164,6 +202,8 @@ export default function WhatIsVEXPage() {
               title="What is VEX and Why It Matters"
               url="https://vexaware.com/tutorials/getting-started/what-is-vex-and-why-it-matters"
             />
+
+            <Comments pageId="what-is-vex-and-why-it-matters" />
           </article>
 
           <aside className="lg:col-span-1">
