@@ -4,9 +4,23 @@
  * Script to check for uncommitted git changes
  * Exits with code 1 if there are uncommitted changes
  * Exits with code 0 if working tree is clean
+ * 
+ * Can be skipped by setting SKIP_UNCOMMITTED_CHECK=true environment variable
+ * Automatically skipped in CI/CD environments (GitHub Actions, Vercel, etc.)
  */
 
 const { execSync } = require('child_process');
+
+// Allow skipping the check via environment variable or in CI/CD
+if (process.env.SKIP_UNCOMMITTED_CHECK === 'true') {
+  console.log('⚠️  Uncommitted changes check skipped (SKIP_UNCOMMITTED_CHECK=true).');
+  process.exit(0);
+}
+
+if (process.env.CI === 'true' || process.env.GITHUB_ACTIONS === 'true' || process.env.VERCEL === '1') {
+  console.log('✅ CI/CD environment detected. Uncommitted changes check skipped.');
+  process.exit(0);
+}
 
 try {
   // Check if we're in a git repository

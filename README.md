@@ -62,7 +62,9 @@ npm run check-uncommitted
 The project includes automatic checks that run before building:
 
 - **Uncommitted Changes Detection**: The build process will automatically check for uncommitted git changes and fail if any are detected. This ensures all code is properly versioned before deployment.
-  - To bypass this check temporarily, you can run: `next build` directly
+  - Automatically skipped in CI/CD environments (Vercel, GitHub Actions, etc.)
+  - To bypass this check locally, set environment variable: `SKIP_UNCOMMITTED_CHECK=true npm run build`
+  - Or run Next.js directly: `next build`
   - Or commit your changes: `git add . && git commit -m "your message"`
 
 ## 📖 Development
@@ -159,6 +161,13 @@ Tutorial content is extracted from `vex-aware-complete-guide.pdf`. To update con
 1. Place the updated PDF in the root directory
 2. Run the extraction script (if available)
 3. Update tutorial pages in `app/tutorials/`
+
+## 🔒 Pre-build Checks
+
+This project includes automated checks to ensure code quality:
+
+- **Uncommitted Changes Detection**: Automatically checks for uncommitted git changes before building
+- See [docs/UNCOMMITTED_CHANGES_CHECK.md](docs/UNCOMMITTED_CHANGES_CHECK.md) for detailed documentation
 
 ## 🤝 Contributing
 
