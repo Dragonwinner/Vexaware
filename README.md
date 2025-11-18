@@ -52,7 +52,18 @@ npm run build
 
 # Start production server
 npm start
+
+# Check for uncommitted changes (runs automatically before build)
+npm run check-uncommitted
 ```
+
+### Pre-build Checks
+
+The project includes automatic checks that run before building:
+
+- **Uncommitted Changes Detection**: The build process will automatically check for uncommitted git changes and fail if any are detected. This ensures all code is properly versioned before deployment.
+  - To bypass this check temporarily, you can run: `next build` directly
+  - Or commit your changes: `git add . && git commit -m "your message"`
 
 ## 📖 Development
 
