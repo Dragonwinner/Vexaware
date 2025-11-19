@@ -1,16 +1,17 @@
 # VEX Aware Tutorial Website
 
-A comprehensive, SEO-optimized tutorial website for VEX Aware - a modern vulnerability management platform. Built with Next.js 14, React, TypeScript, and Tailwind CSS.
+A comprehensive, SEO-optimized tutorial website for VEX Aware - a modern vulnerability management platform. Built with React, TypeScript, Vite, and Tailwind CSS.
 
 ## 🚀 Features
 
-- **Modern Tech Stack**: Next.js 14 with App Router, React, TypeScript, Tailwind CSS
-- **SEO Optimized**: Built-in metadata, Open Graph tags, Twitter Cards, JSON-LD structured data
-- **Performance**: Static generation, optimized images, Core Web Vitals optimized
+- **Modern Tech Stack**: React 18, TypeScript, Vite, Tailwind CSS
+- **SEO Optimized**: React Helmet for metadata, Open Graph tags, Twitter Cards
+- **Performance**: Fast HMR with Vite, optimized production builds
 - **Accessibility**: WCAG 2.1 AA compliant with keyboard navigation and screen reader support
 - **Dark Mode**: System preference detection with manual toggle
 - **Interactive Components**: Code blocks with copy functionality, table of contents, breadcrumbs
 - **Real Content**: Tutorials extracted from the official VEX Aware Complete Guide PDF
+- **Client-Side Routing**: React Router v6 for seamless navigation
 
 ## 📚 Content Structure
 
@@ -50,38 +51,44 @@ npm run dev
 # Build for production
 npm run build
 
-# Start production server
-npm start
+# Preview production build
+npm run preview
 ```
 
 ## 📖 Development
 
 The site is built using:
 
-- **Framework**: Next.js 14 with App Router
+- **Framework**: React 18 with Hooks
+- **Build Tool**: Vite 5
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS v4 with @tailwindcss/postcss
-- **Content**: MDX for rich tutorial content
-- **SEO**: Next.js built-in metadata API
+- **Styling**: Tailwind CSS v3
+- **Routing**: React Router v6
+- **SEO**: React Helmet Async
 - **Analytics**: Google Analytics 4 ready
 
 ## 📁 Project Structure
 
 ```
 vexaware/
-├── app/                      # Next.js App Router pages
+├── src/                      # React application entry
+│   ├── main.tsx             # Application entry point
+│   ├── App.tsx              # Root component with routing
+│   └── vite-env.d.ts        # Vite type definitions
+├── app/                      # Page components
 │   ├── tutorials/           # Tutorial content
 │   ├── api-docs/           # API documentation
 │   ├── use-cases/          # Case studies
 │   ├── resources/          # Downloads and tools
 │   ├── blog/               # Blog posts
 │   ├── faq/                # FAQ page
-│   ├── layout.tsx          # Root layout with SEO
 │   ├── page.tsx            # Homepage
-│   └── sitemap.ts          # Dynamic sitemap
+│   └── globals.css         # Global styles
 ├── components/              # React components
 │   ├── Breadcrumbs.tsx
 │   ├── CodeBlock.tsx
+│   ├── Navigation.tsx
+│   ├── SearchBar.tsx
 │   ├── TableOfContents.tsx
 │   └── SocialShare.tsx
 ├── lib/                     # Utility functions
@@ -89,28 +96,27 @@ vexaware/
 │   └── analytics.ts        # Analytics tracking
 ├── public/                  # Static assets
 │   └── robots.txt
-└── content/                 # MDX content files
+├── index.html              # HTML entry point
+├── vite.config.ts          # Vite configuration
+├── tailwind.config.ts      # Tailwind configuration
+└── tsconfig.json           # TypeScript configuration
 ```
 
 ## 🎨 Styling
 
-The site uses Tailwind CSS v4 with:
+The site uses Tailwind CSS v3 with:
 - Dark mode support via `class` strategy
 - Custom color palette
-- Typography plugin for rich content
 - Responsive design (mobile-first)
 
 ## 🔍 SEO Features
 
-- ✅ Unique title tags and meta descriptions
+- ✅ Unique title tags and meta descriptions with React Helmet
 - ✅ Open Graph tags for social sharing
 - ✅ Twitter Card metadata
-- ✅ JSON-LD structured data (Article, HowTo, FAQ, Breadcrumb)
 - ✅ Semantic HTML structure
 - ✅ Image alt text
-- ✅ XML sitemap
 - ✅ Robots.txt with AI crawler support
-- ✅ Canonical URLs
 - ✅ Performance optimized (Lighthouse 95+)
 
 ## 📊 Analytics
@@ -123,31 +129,48 @@ The site includes Google Analytics 4 integration with custom events:
 
 ## 🚢 Deployment
 
-### Vercel (Recommended)
+### Static Hosting (Recommended)
+
+The app can be deployed to any static hosting provider:
+
+```bash
+# Build the app
+npm run build
+
+# Deploy the dist/ folder to:
+# - Netlify
+# - Vercel
+# - GitHub Pages
+# - AWS S3 + CloudFront
+# - Azure Static Web Apps
+```
+
+### Netlify
+
+```bash
+# Install Netlify CLI
+npm i -g netlify-cli
+
+# Deploy
+netlify deploy --prod
+```
+
+### Vercel
 
 ```bash
 # Install Vercel CLI
 npm i -g vercel
 
 # Deploy
-vercel
+vercel --prod
 ```
-
-### Other Platforms
-
-The site can be deployed to any platform supporting Next.js:
-- Netlify
-- AWS Amplify
-- Azure Static Web Apps
-- Self-hosted with Node.js
 
 ## 📝 Content Updates
 
 Tutorial content is extracted from `vex-aware-complete-guide.pdf`. To update content:
 
 1. Place the updated PDF in the root directory
-2. Run the extraction script (if available)
-3. Update tutorial pages in `app/tutorials/`
+2. Update tutorial pages in `app/tutorials/`
 
 ## 🤝 Contributing
 
@@ -171,11 +194,12 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🏗️ Built With
 
-- [Next.js](https://nextjs.org/) - React framework
 - [React](https://react.dev/) - UI library
+- [Vite](https://vitejs.dev/) - Build tool
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
 - [Tailwind CSS](https://tailwindcss.com/) - Styling
-- [PyPDF2](https://pypdf2.readthedocs.io/) - PDF content extraction
+- [React Router](https://reactrouter.com/) - Client-side routing
+- [React Helmet Async](https://github.com/staylor/react-helmet-async) - SEO metadata
 
 ---
 

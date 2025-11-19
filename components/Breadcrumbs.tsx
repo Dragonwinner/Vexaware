@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 interface BreadcrumbItem {
   name: string;
@@ -14,7 +14,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
     <nav aria-label="Breadcrumb" className="mb-4">
       <ol className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
         <li>
-          <Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400">
+          <Link to="/" className="hover:text-blue-600 dark:hover:text-blue-400">
             Home
           </Link>
         </li>
@@ -27,7 +27,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
               </span>
             ) : (
               <Link
-                href={item.url}
+                to={item.url}
                 className="hover:text-blue-600 dark:hover:text-blue-400"
               >
                 {item.name}

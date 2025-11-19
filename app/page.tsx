@@ -1,12 +1,6 @@
-import Link from "next/link";
-import { Metadata } from "next";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
-
-export const metadata: Metadata = {
-  title: "VEX Aware Tutorial - Master Vulnerability Management | 100+ Free Tutorials",
-  description: "Complete VEX Aware guide with 100+ tutorials covering security, compliance, Kubernetes, cloud native, and more. Learn vulnerability management from basics to advanced.",
-  keywords: ["VEX", "vulnerability management", "SBOM", "security tutorials", "DevSecOps", "compliance"],
-};
 
 export default function Home() {
   const features = [
@@ -78,6 +72,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>VEX Aware Tutorial - Master Vulnerability Management | 100+ Free Tutorials</title>
+        <meta name="description" content="Complete VEX Aware guide with 100+ tutorials covering security, compliance, Kubernetes, cloud native, and more. Learn vulnerability management from basics to advanced." />
+        <meta name="keywords" content="VEX, vulnerability management, SBOM, security tutorials, DevSecOps, compliance" />
+      </Helmet>
+      
       <Navigation />
 
       {/* Hero Section */}
@@ -93,13 +93,13 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/tutorials/getting-started"
+              to="/tutorials/getting-started"
               className="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
             >
               Start Free Tutorial
             </Link>
             <Link
-              href="#features"
+              to="#features"
               className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-2 border-gray-300 dark:border-gray-700 px-8 py-3 rounded-lg text-lg font-semibold hover:border-blue-600 dark:hover:border-blue-400 transition-colors"
             >
               Learn More
@@ -200,7 +200,7 @@ export default function Home() {
             Join thousands of developers mastering vulnerability management
           </p>
           <Link
-            href="/tutorials/getting-started"
+            to="/tutorials/getting-started"
             className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Start Learning Now
@@ -221,25 +221,25 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Learn</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><Link href="/tutorials/getting-started" className="hover:text-white">Getting Started</Link></li>
-                <li><Link href="/tutorials/technical-implementation" className="hover:text-white">Technical Guides</Link></li>
-                <li><Link href="/tutorials/advanced" className="hover:text-white">Advanced Topics</Link></li>
+                <li><Link to="/tutorials/getting-started" className="hover:text-white">Getting Started</Link></li>
+                <li><Link to="/tutorials/technical-implementation" className="hover:text-white">Technical Guides</Link></li>
+                <li><Link to="/tutorials/advanced" className="hover:text-white">Advanced Topics</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Resources</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><Link href="/api-docs" className="hover:text-white">API Documentation</Link></li>
-                <li><Link href="/use-cases" className="hover:text-white">Use Cases</Link></li>
-                <li><Link href="/faq" className="hover:text-white">FAQ</Link></li>
+                <li><Link to="/api-docs" className="hover:text-white">API Documentation</Link></li>
+                <li><Link to="/use-cases" className="hover:text-white">Use Cases</Link></li>
+                <li><Link to="/faq" className="hover:text-white">FAQ</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Community</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
-                <li><a href="https://github.com" className="hover:text-white">GitHub</a></li>
-                <li><a href="https://twitter.com" className="hover:text-white">Twitter</a></li>
+                <li><Link to="/blog" className="hover:text-white">Blog</Link></li>
+                <li><a to="https://github.com" className="hover:text-white">GitHub</a></li>
+                <li><a to="https://twitter.com" className="hover:text-white">Twitter</a></li>
               </ul>
             </div>
           </div>
