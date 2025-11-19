@@ -1,0 +1,31 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "version": 1,
+  "components": [
+    {
+      "name": "example-package",
+      "version": "1.2.3",
+      "purl": "pkg:npm/example-package@1.2.3",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2024-1234",
+          "description": "SQL injection vulnerability",
+          "severity": "high"
+        }
+      ]
+    },
+    {
+      "name": "upload-lib",
+      "version": "2.0.1",
+      "purl": "pkg:npm/upload-lib@2.0.1",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2024-5678",
+          "description": "Remote code execution",
+          "severity": "critical"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://example.com/vex/2025/001",
+  "author": "Example Security Team",
+  "author_role": "Security Analyst",
+  "timestamp": "2025-01-15T10:00:00Z",
+  "version": 1,
+  "tooling": "@vexaware/vex-tool",
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2024-1234",
+        "description": "Example SQL injection vulnerability in authentication module"
+      },
+      "products": [
+        {
+          "@id": "pkg:npm/example-package@1.2.3"
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The vulnerable authentication module is not used in our application. We use a different authentication provider."
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-5678",
+        "description": "Remote code execution in file upload handler"
+      },
+      "products": [
+        {
+          "@id": "pkg:npm/upload-lib@2.0.1"
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Upgrade to version 2.1.0 which includes the security patch. The fix will be deployed in the next maintenance window on 2025-01-20.",
+      "action_statement_timestamp": "2025-01-15T10:00:00Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-9012",
+        "description": "Cross-site scripting vulnerability in comment rendering"
+      },
+      "products": [
+        {
+          "@id": "pkg:npm/comment-system@3.4.0"
+        }
+      ],
+      "status": "fixed",
+      "status_notes": "Patched in version 3.4.1 released on 2025-01-10. All systems updated as of 2025-01-12."
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-3456",
+        "description": "Potential denial of service in XML parser"
+      },
+      "products": [
+        {
+          "@id": "pkg:npm/xml-processor@1.0.0"
+        }
+      ],
+      "status": "under_investigation",
+      "status_notes": "Currently analyzing impact on our specific use case. Initial assessment suggests low risk but verification ongoing."
+    }
+  ]
+}
