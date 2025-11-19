@@ -1,7 +1,5 @@
-"use client";
-
 import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 interface SearchResult {
   title: string;
@@ -97,7 +95,7 @@ export default function SearchBar() {
           {results.map((result, index) => (
             <Link
               key={index}
-              href={result.url}
+              to={result.url}
               className="block px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 border-b border-gray-200 dark:border-gray-700 last:border-b-0"
               onClick={() => {
                 setIsOpen(false);

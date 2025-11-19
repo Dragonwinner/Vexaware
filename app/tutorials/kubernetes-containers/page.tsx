@@ -1,11 +1,7 @@
-import Link from "next/link";
-import { Metadata } from "next";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "Kubernetes & Containers - VEX Aware Tutorial Series",
-  description: "Comprehensive security for Docker and Kubernetes environments. Learn container scanning, runtime protection, and SBOM management.",
-};
 
 export default function CategoryPage() {
   return (
@@ -40,7 +36,7 @@ export default function CategoryPage() {
           
             <Link
               key="container-security-basics"
-              href="/tutorials/kubernetes-containers/container-security-basics"
+              to="/tutorials/kubernetes-containers/container-security-basics"
               className="block p-6 bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-lg transition-all"
             >
               <div className="flex items-start justify-between">
@@ -78,7 +74,7 @@ export default function CategoryPage() {
 
             <Link
               key="image-scanning"
-              href="/tutorials/kubernetes-containers/image-scanning"
+              to="/tutorials/kubernetes-containers/image-scanning"
               className="block p-6 bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-lg transition-all"
             >
               <div className="flex items-start justify-between">
@@ -116,7 +112,7 @@ export default function CategoryPage() {
 
             <Link
               key="kubernetes-sbom"
-              href="/tutorials/kubernetes-containers/kubernetes-sbom"
+              to="/tutorials/kubernetes-containers/kubernetes-sbom"
               className="block p-6 bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-lg transition-all"
             >
               <div className="flex items-start justify-between">
@@ -154,7 +150,7 @@ export default function CategoryPage() {
 
             <Link
               key="runtime-security"
-              href="/tutorials/kubernetes-containers/runtime-security"
+              to="/tutorials/kubernetes-containers/runtime-security"
               className="block p-6 bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-lg transition-all"
             >
               <div className="flex items-start justify-between">
@@ -200,13 +196,13 @@ export default function CategoryPage() {
           </p>
           <div className="flex gap-4">
             <Link
-              href="/faq"
+              to="/faq"
               className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
             >
               View FAQ →
             </Link>
             <a
-              href="https://discord.gg/vexaware"
+              to="https://discord.gg/vexaware"
               className="px-6 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors font-semibold"
             >
               Join Discord →
