@@ -1,11 +1,7 @@
-import Link from "next/link";
-import { Metadata } from "next";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "Compliance & Audit - VEX Aware Tutorial Series",
-  description: "Meet regulatory requirements with VEX Aware. Comprehensive guides for SOC 2, PCI DSS, HIPAA, and ISO 27001.",
-};
 
 export default function CategoryPage() {
   return (
@@ -40,7 +36,7 @@ export default function CategoryPage() {
           
             <Link
               key="soc2-compliance"
-              href="/tutorials/compliance/soc2-compliance"
+              to="/tutorials/compliance/soc2-compliance"
               className="block p-6 bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-lg transition-all"
             >
               <div className="flex items-start justify-between">
@@ -78,7 +74,7 @@ export default function CategoryPage() {
 
             <Link
               key="pci-dss"
-              href="/tutorials/compliance/pci-dss"
+              to="/tutorials/compliance/pci-dss"
               className="block p-6 bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-lg transition-all"
             >
               <div className="flex items-start justify-between">
@@ -116,7 +112,7 @@ export default function CategoryPage() {
 
             <Link
               key="hipaa-compliance"
-              href="/tutorials/compliance/hipaa-compliance"
+              to="/tutorials/compliance/hipaa-compliance"
               className="block p-6 bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-lg transition-all"
             >
               <div className="flex items-start justify-between">
@@ -154,7 +150,7 @@ export default function CategoryPage() {
 
             <Link
               key="iso-27001"
-              href="/tutorials/compliance/iso-27001"
+              to="/tutorials/compliance/iso-27001"
               className="block p-6 bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-lg transition-all"
             >
               <div className="flex items-start justify-between">
@@ -200,13 +196,13 @@ export default function CategoryPage() {
           </p>
           <div className="flex gap-4">
             <Link
-              href="/faq"
+              to="/faq"
               className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
             >
               View FAQ →
             </Link>
             <a
-              href="https://discord.gg/vexaware"
+              to="https://discord.gg/vexaware"
               className="px-6 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors font-semibold"
             >
               Join Discord →

@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import { Helmet } from "react-helmet-async";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CodeBlock from "@/components/CodeBlock";
 import SocialShare from "@/components/SocialShare";
@@ -7,11 +7,6 @@ import CodePlayground from "@/components/CodePlayground";
 import Comments from "@/components/Comments";
 import InteractiveDiagram from "@/components/InteractiveDiagram";
 
-export const metadata: Metadata = {
-  title: "What is VEX and Why It Matters - VEX Aware Tutorial",
-  description: "Learn about VEX (Vulnerability Exploitability eXchange) and understand why it's revolutionizing vulnerability management in modern DevSecOps.",
-  keywords: ["VEX", "Vulnerability Exploitability eXchange", "SBOM", "vulnerability management", "security"],
-};
 
 export default function WhatIsVEXPage() {
   const headings = [

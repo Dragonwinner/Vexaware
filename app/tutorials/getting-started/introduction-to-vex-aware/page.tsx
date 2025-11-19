@@ -1,13 +1,8 @@
-import { Metadata } from "next";
+import { Helmet } from "react-helmet-async";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SocialShare from "@/components/SocialShare";
 import TableOfContents from "@/components/TableOfContents";
 
-export const metadata: Metadata = {
-  title: "Introduction to VEX Aware Platform - Complete Guide",
-  description: "Learn about VEX Aware's architecture, core capabilities, and how it transforms vulnerability management with automated VEX generation and intelligent analysis.",
-  keywords: ["VEX Aware", "platform architecture", "vulnerability intelligence", "automated VEX", "SBOM integration"],
-};
 
 export default function IntroVexAwarePage() {
   const headings = [
@@ -254,7 +249,7 @@ export default function IntroVexAwarePage() {
                   configure the platform for your environment.
                 </p>
                 <a 
-                  href="/tutorials/getting-started/installing-vex-aware"
+                  to="/tutorials/getting-started/installing-vex-aware"
                   className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
                 >
                   Next: Installing VEX Aware →

@@ -1,7 +1,5 @@
-"use client";
-
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 
 export default function Navigation() {
@@ -21,7 +19,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+            <Link to="/" className="text-2xl font-bold text-blue-600 dark:text-blue-400">
               VEX Aware
             </Link>
           </div>
@@ -32,7 +30,7 @@ export default function Navigation() {
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   {link.name}
@@ -41,7 +39,7 @@ export default function Navigation() {
             </div>
             <SearchBar />
             <Link
-              href="/tutorials/getting-started"
+              to="/tutorials/getting-started"
               className="ml-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap"
             >
               Get Started
@@ -96,7 +94,7 @@ export default function Navigation() {
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -104,7 +102,7 @@ export default function Navigation() {
                 </Link>
               ))}
               <Link
-                href="/tutorials/getting-started"
+                to="/tutorials/getting-started"
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

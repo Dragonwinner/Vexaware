@@ -1,11 +1,7 @@
-import Link from "next/link";
-import { Metadata } from "next";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "Cloud Native Security - VEX Aware Tutorial Series",
-  description: "Deploy and secure VEX Aware across AWS, Azure, and GCP. Master cloud-native security patterns and serverless protection.",
-};
 
 export default function CategoryPage() {
   return (
@@ -40,7 +36,7 @@ export default function CategoryPage() {
           
             <Link
               key="aws-integration"
-              href="/tutorials/cloud-native/aws-integration"
+              to="/tutorials/cloud-native/aws-integration"
               className="block p-6 bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-lg transition-all"
             >
               <div className="flex items-start justify-between">
@@ -78,7 +74,7 @@ export default function CategoryPage() {
 
             <Link
               key="azure-integration"
-              href="/tutorials/cloud-native/azure-integration"
+              to="/tutorials/cloud-native/azure-integration"
               className="block p-6 bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-lg transition-all"
             >
               <div className="flex items-start justify-between">
@@ -116,7 +112,7 @@ export default function CategoryPage() {
 
             <Link
               key="gcp-integration"
-              href="/tutorials/cloud-native/gcp-integration"
+              to="/tutorials/cloud-native/gcp-integration"
               className="block p-6 bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-lg transition-all"
             >
               <div className="flex items-start justify-between">
@@ -154,7 +150,7 @@ export default function CategoryPage() {
 
             <Link
               key="serverless-security"
-              href="/tutorials/cloud-native/serverless-security"
+              to="/tutorials/cloud-native/serverless-security"
               className="block p-6 bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-lg transition-all"
             >
               <div className="flex items-start justify-between">
@@ -200,13 +196,13 @@ export default function CategoryPage() {
           </p>
           <div className="flex gap-4">
             <Link
-              href="/faq"
+              to="/faq"
               className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
             >
               View FAQ →
             </Link>
             <a
-              href="https://discord.gg/vexaware"
+              to="https://discord.gg/vexaware"
               className="px-6 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors font-semibold"
             >
               Join Discord →
