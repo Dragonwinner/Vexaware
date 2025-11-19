@@ -1,15 +1,15 @@
 # VEX Aware Tutorial Website
 
-A comprehensive, SEO-optimized **full-stack tutorial website** for VEX Aware - a modern vulnerability management platform. Built with Next.js 16, React, TypeScript, Tailwind CSS, and MongoDB.
+A comprehensive, SEO-optimized **full-stack tutorial website** for VEX Aware - a modern vulnerability management platform. Built with **React**, **Vite**, **TypeScript**, **Tailwind CSS**, **Express.js**, and **MongoDB**.
 
 ## 🚀 Features
 
-- **Full-Stack Architecture**: Next.js API Routes + MongoDB backend with REST API
+- **Full-Stack Architecture**: Express.js API + MongoDB backend with REST API
 - **Database-Driven Content**: All tutorials, blogs, and resources stored in MongoDB
-- **Modern Tech Stack**: Next.js 16 with App Router, React 19, TypeScript, Tailwind CSS
+- **Modern Tech Stack**: React 19, Vite, TypeScript, Tailwind CSS, Express.js
 - **REST API**: Complete CRUD operations for all content types
-- **SEO Optimized**: Built-in metadata, Open Graph tags, Twitter Cards, JSON-LD structured data
-- **Performance**: Static generation, optimized images, Core Web Vitals optimized
+- **SEO Optimized**: React Helmet for metadata, Open Graph tags, Twitter Cards
+- **Performance**: Vite for fast development and optimized production builds
 - **Accessibility**: WCAG 2.1 AA compliant with keyboard navigation and screen reader support
 - **Dark Mode**: System preference detection with manual toggle
 - **Interactive Components**: Code blocks with copy functionality, table of contents, breadcrumbs
@@ -61,14 +61,19 @@ cp .env.example .env.local
 # 3. Seed the database (optional, for development)
 npm run seed
 
-# 4. Run development server
+# 4. Run development servers (requires two terminals)
+
+## Terminal 1: Start the Express API server
+npm run server:dev
+
+## Terminal 2: Start the Vite dev server
 npm run dev
 
 # 5. Build for production
 npm run build
 
-# 6. Start production server
-npm start
+# 6. Preview production build
+npm run preview
 ```
 
 For detailed database setup instructions, see [DATABASE_SETUP.md](./DATABASE_SETUP.md).
@@ -76,19 +81,18 @@ For detailed database setup instructions, see [DATABASE_SETUP.md](./DATABASE_SET
 ## 📖 Technology Stack
 
 ### Frontend
-- **Framework**: Next.js 16 with App Router
-- **UI Library**: React 19
+- **Framework**: React 19 with React Router
+- **Build Tool**: Vite 7.x
 - **Language**: TypeScript 5.9
 - **Styling**: Tailwind CSS v4 with @tailwindcss/postcss
-- **Content**: MDX for rich tutorial content
-- **SEO**: Next.js built-in metadata API
-- **Analytics**: Google Analytics 4 ready
+- **SEO**: React Helmet Async
+- **State Management**: React Hooks
 
 ### Backend
 - **Runtime**: Node.js v20
-- **API**: Next.js API Routes (REST)
+- **API Framework**: Express.js
 - **Database**: MongoDB with Mongoose ODM
-- **Authentication**: Ready for NextAuth.js integration
+- **Authentication**: Ready for integration
 
 ### Database Schema
 - **Tutorials**: Complete tutorial content with metadata
@@ -133,44 +137,42 @@ The application provides a full REST API for content management:
 
 ```
 vexaware/
-├── app/                      # Next.js App Router
-│   ├── api/                 # REST API Routes
-│   │   ├── tutorials/      # Tutorial CRUD endpoints
-│   │   ├── blog/           # Blog CRUD endpoints
-│   │   ├── use-cases/      # Use case CRUD endpoints
-│   │   └── resources/      # Resource CRUD endpoints
-│   ├── tutorials/           # Tutorial pages
-│   ├── api-docs/           # API documentation pages
-│   ├── use-cases/          # Case study pages
-│   ├── resources/          # Resource pages
-│   ├── blog/               # Blog pages
-│   ├── faq/                # FAQ page
-│   ├── layout.tsx          # Root layout with SEO
-│   ├── page.tsx            # Homepage
-│   └── sitemap.ts          # Dynamic sitemap
-├── components/              # React components
-│   ├── Navigation.tsx
-│   ├── Breadcrumbs.tsx
-│   ├── CodeBlock.tsx
-│   ├── TableOfContents.tsx
-│   └── SocialShare.tsx
-├── lib/                     # Utility functions & DB
-│   ├── db.ts               # MongoDB connection
-│   ├── models/             # Mongoose schemas
-│   │   ├── Tutorial.ts
-│   │   ├── BlogPost.ts
-│   │   ├── UseCase.ts
-│   │   └── Resource.ts
-│   ├── seo.ts              # SEO helpers
-│   └── analytics.ts        # Analytics tracking
+├── src/                      # React application source
+│   ├── components/          # React components
+│   │   ├── Navigation.tsx
+│   │   ├── Breadcrumbs.tsx
+│   │   ├── CodeBlock.tsx
+│   │   ├── TableOfContents.tsx
+│   │   └── SearchBar.tsx
+│   ├── pages/               # Page components
+│   │   └── Home.tsx
+│   ├── App.tsx              # Main app component with routing
+│   ├── main.tsx             # App entry point
+│   └── globals.css          # Global styles
+├── server/                   # Express.js backend
+│   ├── routes/              # API route handlers
+│   │   ├── tutorials.ts
+│   │   ├── blog.ts
+│   │   ├── use-cases.ts
+│   │   └── resources.ts
+│   ├── lib/                 # Server utilities
+│   │   ├── db.ts           # MongoDB connection
+│   │   └── models/         # Mongoose schemas
+│   │       ├── Tutorial.ts
+│   │       ├── BlogPost.ts
+│   │       ├── UseCase.ts
+│   │       └── Resource.ts
+│   └── index.ts            # Express server entry
+├── public/                  # Static assets
+│   └── robots.txt
 ├── scripts/                 # Utility scripts
 │   └── seed-database.js    # Database seeding script
 ├── types/                   # TypeScript type definitions
-│   └── mongoose.d.ts
-├── public/                  # Static assets
-│   └── robots.txt
+├── index.html              # HTML template
+├── vite.config.ts          # Vite configuration
+├── tsconfig.json           # TypeScript config (client)
+├── tsconfig.server.json    # TypeScript config (server)
 ├── .env.example            # Environment variables template
-├── DATABASE_SETUP.md       # Database setup guide
 └── package.json
 ```
 
@@ -211,31 +213,30 @@ Set the following environment variables in your deployment platform:
 
 ```bash
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/vexaware
-NEXT_PUBLIC_API_URL=https://your-domain.com
+PORT=5000
 ```
 
-### Vercel (Recommended)
+### Deploying the Frontend (Vite/React)
 
-1. Push your code to GitHub
-2. Import project in Vercel
-3. Add environment variables in Vercel dashboard
-4. Deploy
+The frontend can be deployed to any static hosting service:
+- **Vercel**: Connect your Git repository and deploy
+- **Netlify**: Import project and configure build settings
+- **AWS S3 + CloudFront**: Upload dist folder after build
+- **GitHub Pages**: Use gh-pages for deployment
 
-```bash
-# Or use Vercel CLI
-npm i -g vercel
-vercel
-```
+Build command: `npm run build`
+Publish directory: `dist`
 
-### Other Platforms
+### Deploying the Backend (Express API)
 
-The site can be deployed to any platform supporting Next.js:
-- Netlify
-- AWS Amplify
-- Azure Static Web Apps
-- Railway
-- Render
-- Self-hosted with Node.js
+The backend can be deployed to any Node.js hosting platform:
+- **Heroku**: Deploy using Heroku CLI or GitHub integration
+- **Railway**: Connect repository and auto-deploy
+- **AWS Elastic Beanstalk**: Deploy Node.js application
+- **DigitalOcean App Platform**: Connect Git repository
+- **Render**: Deploy as Web Service
+
+Start command: `node server/index.js` (after compilation)
 
 **Important:** Ensure MongoDB is accessible from your deployment environment. Use MongoDB Atlas for production.
 
@@ -301,38 +302,41 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🏗️ Built With
 
-- [Next.js](https://nextjs.org/) - React framework with App Router
+- [Vite](https://vitejs.dev/) - Next generation frontend tooling
 - [React](https://react.dev/) - UI library
+- [React Router](https://reactrouter.com/) - Client-side routing
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS
+- [Express.js](https://expressjs.com/) - Web framework for Node.js
 - [MongoDB](https://www.mongodb.com/) - NoSQL database
 - [Mongoose](https://mongoosejs.com/) - MongoDB ODM
-- [PyPDF2](https://pypdf2.readthedocs.io/) - PDF content extraction
 
-## 🔄 Migration from Static to Full-Stack
+## 🔄 Migration from Next.js to React
 
-This project has been converted from a static Next.js site to a full-stack application:
+This project has been migrated from Next.js to React with Vite:
 
 ### What Changed
-- ✅ Added MongoDB database for content storage
-- ✅ Created Mongoose schemas for all content types
-- ✅ Implemented REST API routes for CRUD operations
-- ✅ Database seeding script for sample data
-- ✅ Full backend infrastructure with Node.js
+- ✅ Migrated from Next.js App Router to React with React Router
+- ✅ Replaced Next.js API Routes with Express.js backend
+- ✅ Changed build tool from Next.js to Vite for faster development
+- ✅ Updated SEO management from Next.js metadata API to React Helmet
+- ✅ Converted all Next.js Link components to React Router Link
+- ✅ Removed MDX dependencies (can be added back if needed)
+- ✅ Separated frontend and backend into distinct applications
 
-### What Stayed the Same
-- ✅ All existing Tailwind CSS styling (unchanged)
-- ✅ All 130+ pages and routes
-- ✅ SEO optimization and metadata
-- ✅ Interactive components
-- ✅ Dark mode support
+### Benefits of React + Vite Architecture
+- **Faster Development**: Vite HMR is significantly faster than Next.js
+- **Simpler Architecture**: Clear separation between frontend and backend
+- **More Flexible**: Can deploy frontend and backend independently
+- **Better Performance**: Optimized production builds with Vite
+- **Easier to Understand**: Standard React patterns without Next.js abstractions
+- **Wider Deployment Options**: Frontend can be deployed to any static host
 
-### Benefits of Full-Stack Architecture
-- **Dynamic Content**: Content can be updated without rebuilding
-- **API Access**: External applications can fetch content via API
-- **Scalability**: Easier to add new features and content types
-- **Content Management**: Foundation for future admin dashboard
-- **Real-time Updates**: Content changes reflect immediately
+### Migration Notes
+- The original Next.js `app/` directory has been preserved for reference
+- All MongoDB models and database logic remain unchanged
+- API endpoints maintain the same structure and responses
+- Frontend routing uses React Router instead of file-based routing
 
 ---
 
