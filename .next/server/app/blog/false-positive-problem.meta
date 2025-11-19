@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/blog/layout,_N_T_/blog/false-positive-problem/layout,_N_T_/blog/false-positive-problem/page,_N_T_/blog/false-positive-problem"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/blog/false-positive-problem/__PAGE__",
+    "/blog/false-positive-problem",
+    "/blog",
+    "/_index",
+    "/_head"
+  ]
+}

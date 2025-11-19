@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/tutorials/layout,_N_T_/tutorials/compliance/layout,_N_T_/tutorials/compliance/remediation-tracking/layout,_N_T_/tutorials/compliance/remediation-tracking/page,_N_T_/tutorials/compliance/remediation-tracking"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/tutorials/compliance/remediation-tracking/__PAGE__",
+    "/tutorials/compliance/remediation-tracking",
+    "/tutorials/compliance",
+    "/tutorials",
+    "/_index",
+    "/_head"
+  ]
+}

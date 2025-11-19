@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/tutorials/layout,_N_T_/tutorials/cloud-native/layout,_N_T_/tutorials/cloud-native/cloud-compliance/layout,_N_T_/tutorials/cloud-native/cloud-compliance/page,_N_T_/tutorials/cloud-native/cloud-compliance"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/tutorials/cloud-native/cloud-compliance/__PAGE__",
+    "/tutorials/cloud-native/cloud-compliance",
+    "/tutorials/cloud-native",
+    "/tutorials",
+    "/_index",
+    "/_head"
+  ]
+}

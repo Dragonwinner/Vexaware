@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/tutorials/layout,_N_T_/tutorials/advanced/layout,_N_T_/tutorials/advanced/security-champions/layout,_N_T_/tutorials/advanced/security-champions/page,_N_T_/tutorials/advanced/security-champions"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/tutorials/advanced/security-champions/__PAGE__",
+    "/tutorials/advanced/security-champions",
+    "/tutorials/advanced",
+    "/tutorials",
+    "/_index",
+    "/_head"
+  ]
+}

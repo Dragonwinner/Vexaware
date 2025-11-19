@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/tutorials/layout,_N_T_/tutorials/compliance/layout,_N_T_/tutorials/compliance/policy-enforcement/layout,_N_T_/tutorials/compliance/policy-enforcement/page,_N_T_/tutorials/compliance/policy-enforcement"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/tutorials/compliance/policy-enforcement/__PAGE__",
+    "/tutorials/compliance/policy-enforcement",
+    "/tutorials/compliance",
+    "/tutorials",
+    "/_index",
+    "/_head"
+  ]
+}

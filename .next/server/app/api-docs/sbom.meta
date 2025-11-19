@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/api-docs/layout,_N_T_/api-docs/sbom/layout,_N_T_/api-docs/sbom/page,_N_T_/api-docs/sbom"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/api-docs/sbom/__PAGE__",
+    "/api-docs/sbom",
+    "/api-docs",
+    "/_index",
+    "/_head"
+  ]
+}

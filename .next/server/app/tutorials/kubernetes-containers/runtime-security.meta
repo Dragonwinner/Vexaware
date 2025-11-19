@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/tutorials/layout,_N_T_/tutorials/kubernetes-containers/layout,_N_T_/tutorials/kubernetes-containers/runtime-security/layout,_N_T_/tutorials/kubernetes-containers/runtime-security/page,_N_T_/tutorials/kubernetes-containers/runtime-security"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/tutorials/kubernetes-containers/runtime-security/__PAGE__",
+    "/tutorials/kubernetes-containers/runtime-security",
+    "/tutorials/kubernetes-containers",
+    "/tutorials",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/tutorials/layout,_N_T_/tutorials/getting-started/layout,_N_T_/tutorials/getting-started/what-is-vex-and-why-it-matters/layout,_N_T_/tutorials/getting-started/what-is-vex-and-why-it-matters/page,_N_T_/tutorials/getting-started/what-is-vex-and-why-it-matters"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/tutorials/getting-started/what-is-vex-and-why-it-matters/__PAGE__",
+    "/tutorials/getting-started/what-is-vex-and-why-it-matters",
+    "/tutorials/getting-started",
+    "/tutorials",
+    "/_index",
+    "/_head"
+  ]
+}

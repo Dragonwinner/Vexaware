@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/blog/layout,_N_T_/blog/compliance-automation/layout,_N_T_/blog/compliance-automation/page,_N_T_/blog/compliance-automation"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/blog/compliance-automation/__PAGE__",
+    "/blog/compliance-automation",
+    "/blog",
+    "/_index",
+    "/_head"
+  ]
+}

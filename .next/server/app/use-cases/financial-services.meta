@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/use-cases/layout,_N_T_/use-cases/financial-services/layout,_N_T_/use-cases/financial-services/page,_N_T_/use-cases/financial-services"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/use-cases/financial-services/__PAGE__",
+    "/use-cases/financial-services",
+    "/use-cases",
+    "/_index",
+    "/_head"
+  ]
+}

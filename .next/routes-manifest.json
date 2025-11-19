@@ -1,0 +1,905 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/api/blog/[slug]",
+      "regex": "^/api/blog/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/api/blog/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/resources/[slug]",
+      "regex": "^/api/resources/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/api/resources/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/tutorials/[slug]",
+      "regex": "^/api/tutorials/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/api/tutorials/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/use-cases/[slug]",
+      "regex": "^/api/use\\-cases/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/api/use\\-cases/(?<nxtPslug>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/api/blog",
+      "regex": "^/api/blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/blog(?:/)?$"
+    },
+    {
+      "page": "/api/resources",
+      "regex": "^/api/resources(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/resources(?:/)?$"
+    },
+    {
+      "page": "/api/tutorials",
+      "regex": "^/api/tutorials(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/tutorials(?:/)?$"
+    },
+    {
+      "page": "/api/use-cases",
+      "regex": "^/api/use\\-cases(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/use\\-cases(?:/)?$"
+    },
+    {
+      "page": "/api-docs",
+      "regex": "^/api\\-docs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api\\-docs(?:/)?$"
+    },
+    {
+      "page": "/api-docs/authentication",
+      "regex": "^/api\\-docs/authentication(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api\\-docs/authentication(?:/)?$"
+    },
+    {
+      "page": "/api-docs/examples",
+      "regex": "^/api\\-docs/examples(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api\\-docs/examples(?:/)?$"
+    },
+    {
+      "page": "/api-docs/integrations",
+      "regex": "^/api\\-docs/integrations(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api\\-docs/integrations(?:/)?$"
+    },
+    {
+      "page": "/api-docs/policies",
+      "regex": "^/api\\-docs/policies(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api\\-docs/policies(?:/)?$"
+    },
+    {
+      "page": "/api-docs/projects",
+      "regex": "^/api\\-docs/projects(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api\\-docs/projects(?:/)?$"
+    },
+    {
+      "page": "/api-docs/reports",
+      "regex": "^/api\\-docs/reports(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api\\-docs/reports(?:/)?$"
+    },
+    {
+      "page": "/api-docs/sbom",
+      "regex": "^/api\\-docs/sbom(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api\\-docs/sbom(?:/)?$"
+    },
+    {
+      "page": "/api-docs/users",
+      "regex": "^/api\\-docs/users(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api\\-docs/users(?:/)?$"
+    },
+    {
+      "page": "/api-docs/vex-documents",
+      "regex": "^/api\\-docs/vex\\-documents(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api\\-docs/vex\\-documents(?:/)?$"
+    },
+    {
+      "page": "/api-docs/vulnerabilities",
+      "regex": "^/api\\-docs/vulnerabilities(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api\\-docs/vulnerabilities(?:/)?$"
+    },
+    {
+      "page": "/api-docs/webhooks",
+      "regex": "^/api\\-docs/webhooks(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api\\-docs/webhooks(?:/)?$"
+    },
+    {
+      "page": "/blog",
+      "regex": "^/blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog(?:/)?$"
+    },
+    {
+      "page": "/blog/compliance-automation",
+      "regex": "^/blog/compliance\\-automation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/compliance\\-automation(?:/)?$"
+    },
+    {
+      "page": "/blog/container-scanning-tools",
+      "regex": "^/blog/container\\-scanning\\-tools(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/container\\-scanning\\-tools(?:/)?$"
+    },
+    {
+      "page": "/blog/devsecops-culture",
+      "regex": "^/blog/devsecops\\-culture(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/devsecops\\-culture(?:/)?$"
+    },
+    {
+      "page": "/blog/false-positive-problem",
+      "regex": "^/blog/false\\-positive\\-problem(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/false\\-positive\\-problem(?:/)?$"
+    },
+    {
+      "page": "/blog/kubernetes-security-best-practices",
+      "regex": "^/blog/kubernetes\\-security\\-best\\-practices(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/kubernetes\\-security\\-best\\-practices(?:/)?$"
+    },
+    {
+      "page": "/blog/sbom-integration-guide",
+      "regex": "^/blog/sbom\\-integration\\-guide(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/sbom\\-integration\\-guide(?:/)?$"
+    },
+    {
+      "page": "/blog/supply-chain-attacks-2024",
+      "regex": "^/blog/supply\\-chain\\-attacks\\-2024(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/supply\\-chain\\-attacks\\-2024(?:/)?$"
+    },
+    {
+      "page": "/blog/threat-intelligence-feeds",
+      "regex": "^/blog/threat\\-intelligence\\-feeds(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/threat\\-intelligence\\-feeds(?:/)?$"
+    },
+    {
+      "page": "/blog/understanding-vex-standard",
+      "regex": "^/blog/understanding\\-vex\\-standard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/understanding\\-vex\\-standard(?:/)?$"
+    },
+    {
+      "page": "/blog/zero-day-vulnerabilities",
+      "regex": "^/blog/zero\\-day\\-vulnerabilities(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/zero\\-day\\-vulnerabilities(?:/)?$"
+    },
+    {
+      "page": "/faq",
+      "regex": "^/faq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/faq(?:/)?$"
+    },
+    {
+      "page": "/resources",
+      "regex": "^/resources(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/resources(?:/)?$"
+    },
+    {
+      "page": "/resources/browser-extensions",
+      "regex": "^/resources/browser\\-extensions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/resources/browser\\-extensions(?:/)?$"
+    },
+    {
+      "page": "/resources/cli-tools",
+      "regex": "^/resources/cli\\-tools(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/resources/cli\\-tools(?:/)?$"
+    },
+    {
+      "page": "/resources/dashboards",
+      "regex": "^/resources/dashboards(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/resources/dashboards(?:/)?$"
+    },
+    {
+      "page": "/resources/ide-plugins",
+      "regex": "^/resources/ide\\-plugins(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/resources/ide\\-plugins(?:/)?$"
+    },
+    {
+      "page": "/resources/integration-scripts",
+      "regex": "^/resources/integration\\-scripts(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/resources/integration\\-scripts(?:/)?$"
+    },
+    {
+      "page": "/resources/migration-tools",
+      "regex": "^/resources/migration\\-tools(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/resources/migration\\-tools(?:/)?$"
+    },
+    {
+      "page": "/resources/policy-templates",
+      "regex": "^/resources/policy\\-templates(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/resources/policy\\-templates(?:/)?$"
+    },
+    {
+      "page": "/resources/sbom-samples",
+      "regex": "^/resources/sbom\\-samples(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/resources/sbom\\-samples(?:/)?$"
+    },
+    {
+      "page": "/resources/testing-tools",
+      "regex": "^/resources/testing\\-tools(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/resources/testing\\-tools(?:/)?$"
+    },
+    {
+      "page": "/resources/vex-templates",
+      "regex": "^/resources/vex\\-templates(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/resources/vex\\-templates(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced",
+      "regex": "^/tutorials/advanced(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/advanced-analytics",
+      "regex": "^/tutorials/advanced/advanced\\-analytics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/advanced\\-analytics(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/automation-orchestration",
+      "regex": "^/tutorials/advanced/automation\\-orchestration(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/automation\\-orchestration(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/bug-bounty",
+      "regex": "^/tutorials/advanced/bug\\-bounty(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/bug\\-bounty(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/cost-optimization",
+      "regex": "^/tutorials/advanced/cost\\-optimization(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/cost\\-optimization(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/custom-cve-database",
+      "regex": "^/tutorials/advanced/custom\\-cve\\-database(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/custom\\-cve\\-database(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/devsecops-integration",
+      "regex": "^/tutorials/advanced/devsecops\\-integration(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/devsecops\\-integration(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/executive-dashboards",
+      "regex": "^/tutorials/advanced/executive\\-dashboards(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/executive\\-dashboards(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/incident-response",
+      "regex": "^/tutorials/advanced/incident\\-response(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/incident\\-response(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/license-compliance",
+      "regex": "^/tutorials/advanced/license\\-compliance(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/license\\-compliance(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/ml-exploitability",
+      "regex": "^/tutorials/advanced/ml\\-exploitability(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/ml\\-exploitability(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/open-source-risk",
+      "regex": "^/tutorials/advanced/open\\-source\\-risk(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/open\\-source\\-risk(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/penetration-testing",
+      "regex": "^/tutorials/advanced/penetration\\-testing(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/penetration\\-testing(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/predictive-security",
+      "regex": "^/tutorials/advanced/predictive\\-security(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/predictive\\-security(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/security-champions",
+      "regex": "^/tutorials/advanced/security\\-champions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/security\\-champions(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/security-metrics",
+      "regex": "^/tutorials/advanced/security\\-metrics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/security\\-metrics(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/soar-integration",
+      "regex": "^/tutorials/advanced/soar\\-integration(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/soar\\-integration(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/supply-chain-security",
+      "regex": "^/tutorials/advanced/supply\\-chain\\-security(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/supply\\-chain\\-security(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/threat-intelligence",
+      "regex": "^/tutorials/advanced/threat\\-intelligence(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/threat\\-intelligence(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/vex-automation",
+      "regex": "^/tutorials/advanced/vex\\-automation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/vex\\-automation(?:/)?$"
+    },
+    {
+      "page": "/tutorials/advanced/zero-day-management",
+      "regex": "^/tutorials/advanced/zero\\-day\\-management(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/advanced/zero\\-day\\-management(?:/)?$"
+    },
+    {
+      "page": "/tutorials/cloud-native",
+      "regex": "^/tutorials/cloud\\-native(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/cloud\\-native(?:/)?$"
+    },
+    {
+      "page": "/tutorials/cloud-native/api-gateway-security",
+      "regex": "^/tutorials/cloud\\-native/api\\-gateway\\-security(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/cloud\\-native/api\\-gateway\\-security(?:/)?$"
+    },
+    {
+      "page": "/tutorials/cloud-native/aws-integration",
+      "regex": "^/tutorials/cloud\\-native/aws\\-integration(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/cloud\\-native/aws\\-integration(?:/)?$"
+    },
+    {
+      "page": "/tutorials/cloud-native/azure-integration",
+      "regex": "^/tutorials/cloud\\-native/azure\\-integration(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/cloud\\-native/azure\\-integration(?:/)?$"
+    },
+    {
+      "page": "/tutorials/cloud-native/cloud-compliance",
+      "regex": "^/tutorials/cloud\\-native/cloud\\-compliance(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/cloud\\-native/cloud\\-compliance(?:/)?$"
+    },
+    {
+      "page": "/tutorials/cloud-native/cloud-sbom",
+      "regex": "^/tutorials/cloud\\-native/cloud\\-sbom(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/cloud\\-native/cloud\\-sbom(?:/)?$"
+    },
+    {
+      "page": "/tutorials/cloud-native/gcp-integration",
+      "regex": "^/tutorials/cloud\\-native/gcp\\-integration(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/cloud\\-native/gcp\\-integration(?:/)?$"
+    },
+    {
+      "page": "/tutorials/cloud-native/iac-security",
+      "regex": "^/tutorials/cloud\\-native/iac\\-security(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/cloud\\-native/iac\\-security(?:/)?$"
+    },
+    {
+      "page": "/tutorials/cloud-native/microservices-architecture",
+      "regex": "^/tutorials/cloud\\-native/microservices\\-architecture(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/cloud\\-native/microservices\\-architecture(?:/)?$"
+    },
+    {
+      "page": "/tutorials/cloud-native/multi-cloud-strategy",
+      "regex": "^/tutorials/cloud\\-native/multi\\-cloud\\-strategy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/cloud\\-native/multi\\-cloud\\-strategy(?:/)?$"
+    },
+    {
+      "page": "/tutorials/cloud-native/serverless-security",
+      "regex": "^/tutorials/cloud\\-native/serverless\\-security(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/cloud\\-native/serverless\\-security(?:/)?$"
+    },
+    {
+      "page": "/tutorials/compliance",
+      "regex": "^/tutorials/compliance(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/compliance(?:/)?$"
+    },
+    {
+      "page": "/tutorials/compliance/audit-trail",
+      "regex": "^/tutorials/compliance/audit\\-trail(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/compliance/audit\\-trail(?:/)?$"
+    },
+    {
+      "page": "/tutorials/compliance/cis-benchmarks",
+      "regex": "^/tutorials/compliance/cis\\-benchmarks(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/compliance/cis\\-benchmarks(?:/)?$"
+    },
+    {
+      "page": "/tutorials/compliance/compliance-automation",
+      "regex": "^/tutorials/compliance/compliance\\-automation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/compliance/compliance\\-automation(?:/)?$"
+    },
+    {
+      "page": "/tutorials/compliance/compliance-reporting",
+      "regex": "^/tutorials/compliance/compliance\\-reporting(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/compliance/compliance\\-reporting(?:/)?$"
+    },
+    {
+      "page": "/tutorials/compliance/evidence-collection",
+      "regex": "^/tutorials/compliance/evidence\\-collection(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/compliance/evidence\\-collection(?:/)?$"
+    },
+    {
+      "page": "/tutorials/compliance/hipaa-compliance",
+      "regex": "^/tutorials/compliance/hipaa\\-compliance(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/compliance/hipaa\\-compliance(?:/)?$"
+    },
+    {
+      "page": "/tutorials/compliance/iso-27001",
+      "regex": "^/tutorials/compliance/iso\\-27001(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/compliance/iso\\-27001(?:/)?$"
+    },
+    {
+      "page": "/tutorials/compliance/nist-framework",
+      "regex": "^/tutorials/compliance/nist\\-framework(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/compliance/nist\\-framework(?:/)?$"
+    },
+    {
+      "page": "/tutorials/compliance/pci-dss",
+      "regex": "^/tutorials/compliance/pci\\-dss(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/compliance/pci\\-dss(?:/)?$"
+    },
+    {
+      "page": "/tutorials/compliance/policy-enforcement",
+      "regex": "^/tutorials/compliance/policy\\-enforcement(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/compliance/policy\\-enforcement(?:/)?$"
+    },
+    {
+      "page": "/tutorials/compliance/regulatory-updates",
+      "regex": "^/tutorials/compliance/regulatory\\-updates(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/compliance/regulatory\\-updates(?:/)?$"
+    },
+    {
+      "page": "/tutorials/compliance/remediation-tracking",
+      "regex": "^/tutorials/compliance/remediation\\-tracking(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/compliance/remediation\\-tracking(?:/)?$"
+    },
+    {
+      "page": "/tutorials/compliance/risk-assessment",
+      "regex": "^/tutorials/compliance/risk\\-assessment(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/compliance/risk\\-assessment(?:/)?$"
+    },
+    {
+      "page": "/tutorials/compliance/soc2-compliance",
+      "regex": "^/tutorials/compliance/soc2\\-compliance(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/compliance/soc2\\-compliance(?:/)?$"
+    },
+    {
+      "page": "/tutorials/compliance/third-party-audits",
+      "regex": "^/tutorials/compliance/third\\-party\\-audits(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/compliance/third\\-party\\-audits(?:/)?$"
+    },
+    {
+      "page": "/tutorials/getting-started",
+      "regex": "^/tutorials/getting\\-started(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/getting\\-started(?:/)?$"
+    },
+    {
+      "page": "/tutorials/getting-started/dashboard-tour",
+      "regex": "^/tutorials/getting\\-started/dashboard\\-tour(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/getting\\-started/dashboard\\-tour(?:/)?$"
+    },
+    {
+      "page": "/tutorials/getting-started/first-vex-document",
+      "regex": "^/tutorials/getting\\-started/first\\-vex\\-document(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/getting\\-started/first\\-vex\\-document(?:/)?$"
+    },
+    {
+      "page": "/tutorials/getting-started/installing-vex-aware",
+      "regex": "^/tutorials/getting\\-started/installing\\-vex\\-aware(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/getting\\-started/installing\\-vex\\-aware(?:/)?$"
+    },
+    {
+      "page": "/tutorials/getting-started/introduction-to-vex-aware",
+      "regex": "^/tutorials/getting\\-started/introduction\\-to\\-vex\\-aware(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/getting\\-started/introduction\\-to\\-vex\\-aware(?:/)?$"
+    },
+    {
+      "page": "/tutorials/getting-started/vulnerability-management-crisis",
+      "regex": "^/tutorials/getting\\-started/vulnerability\\-management\\-crisis(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/getting\\-started/vulnerability\\-management\\-crisis(?:/)?$"
+    },
+    {
+      "page": "/tutorials/getting-started/what-is-vex-and-why-it-matters",
+      "regex": "^/tutorials/getting\\-started/what\\-is\\-vex\\-and\\-why\\-it\\-matters(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/getting\\-started/what\\-is\\-vex\\-and\\-why\\-it\\-matters(?:/)?$"
+    },
+    {
+      "page": "/tutorials/kubernetes-containers",
+      "regex": "^/tutorials/kubernetes\\-containers(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/kubernetes\\-containers(?:/)?$"
+    },
+    {
+      "page": "/tutorials/kubernetes-containers/admission-controllers",
+      "regex": "^/tutorials/kubernetes\\-containers/admission\\-controllers(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/kubernetes\\-containers/admission\\-controllers(?:/)?$"
+    },
+    {
+      "page": "/tutorials/kubernetes-containers/cicd-integration",
+      "regex": "^/tutorials/kubernetes\\-containers/cicd\\-integration(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/kubernetes\\-containers/cicd\\-integration(?:/)?$"
+    },
+    {
+      "page": "/tutorials/kubernetes-containers/container-security-basics",
+      "regex": "^/tutorials/kubernetes\\-containers/container\\-security\\-basics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/kubernetes\\-containers/container\\-security\\-basics(?:/)?$"
+    },
+    {
+      "page": "/tutorials/kubernetes-containers/helm-security",
+      "regex": "^/tutorials/kubernetes\\-containers/helm\\-security(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/kubernetes\\-containers/helm\\-security(?:/)?$"
+    },
+    {
+      "page": "/tutorials/kubernetes-containers/image-scanning",
+      "regex": "^/tutorials/kubernetes\\-containers/image\\-scanning(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/kubernetes\\-containers/image\\-scanning(?:/)?$"
+    },
+    {
+      "page": "/tutorials/kubernetes-containers/kubernetes-sbom",
+      "regex": "^/tutorials/kubernetes\\-containers/kubernetes\\-sbom(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/kubernetes\\-containers/kubernetes\\-sbom(?:/)?$"
+    },
+    {
+      "page": "/tutorials/kubernetes-containers/kubernetes-security-context",
+      "regex": "^/tutorials/kubernetes\\-containers/kubernetes\\-security\\-context(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/kubernetes\\-containers/kubernetes\\-security\\-context(?:/)?$"
+    },
+    {
+      "page": "/tutorials/kubernetes-containers/network-policies",
+      "regex": "^/tutorials/kubernetes\\-containers/network\\-policies(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/kubernetes\\-containers/network\\-policies(?:/)?$"
+    },
+    {
+      "page": "/tutorials/kubernetes-containers/pod-security-policies",
+      "regex": "^/tutorials/kubernetes\\-containers/pod\\-security\\-policies(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/kubernetes\\-containers/pod\\-security\\-policies(?:/)?$"
+    },
+    {
+      "page": "/tutorials/kubernetes-containers/registry-integration",
+      "regex": "^/tutorials/kubernetes\\-containers/registry\\-integration(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/kubernetes\\-containers/registry\\-integration(?:/)?$"
+    },
+    {
+      "page": "/tutorials/kubernetes-containers/runtime-security",
+      "regex": "^/tutorials/kubernetes\\-containers/runtime\\-security(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/kubernetes\\-containers/runtime\\-security(?:/)?$"
+    },
+    {
+      "page": "/tutorials/kubernetes-containers/service-mesh-security",
+      "regex": "^/tutorials/kubernetes\\-containers/service\\-mesh\\-security(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/kubernetes\\-containers/service\\-mesh\\-security(?:/)?$"
+    },
+    {
+      "page": "/tutorials/technical-implementation",
+      "regex": "^/tutorials/technical\\-implementation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/technical\\-implementation(?:/)?$"
+    },
+    {
+      "page": "/tutorials/technical-implementation/alert-configuration",
+      "regex": "^/tutorials/technical\\-implementation/alert\\-configuration(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/technical\\-implementation/alert\\-configuration(?:/)?$"
+    },
+    {
+      "page": "/tutorials/technical-implementation/api-integration",
+      "regex": "^/tutorials/technical\\-implementation/api\\-integration(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/technical\\-implementation/api\\-integration(?:/)?$"
+    },
+    {
+      "page": "/tutorials/technical-implementation/architecture-overview",
+      "regex": "^/tutorials/technical\\-implementation/architecture\\-overview(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/technical\\-implementation/architecture\\-overview(?:/)?$"
+    },
+    {
+      "page": "/tutorials/technical-implementation/authentication-setup",
+      "regex": "^/tutorials/technical\\-implementation/authentication\\-setup(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/technical\\-implementation/authentication\\-setup(?:/)?$"
+    },
+    {
+      "page": "/tutorials/technical-implementation/backup-recovery",
+      "regex": "^/tutorials/technical\\-implementation/backup\\-recovery(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/technical\\-implementation/backup\\-recovery(?:/)?$"
+    },
+    {
+      "page": "/tutorials/technical-implementation/configuration-management",
+      "regex": "^/tutorials/technical\\-implementation/configuration\\-management(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/technical\\-implementation/configuration\\-management(?:/)?$"
+    },
+    {
+      "page": "/tutorials/technical-implementation/custom-policies",
+      "regex": "^/tutorials/technical\\-implementation/custom\\-policies(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/technical\\-implementation/custom\\-policies(?:/)?$"
+    },
+    {
+      "page": "/tutorials/technical-implementation/database-setup",
+      "regex": "^/tutorials/technical\\-implementation/database\\-setup(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/technical\\-implementation/database\\-setup(?:/)?$"
+    },
+    {
+      "page": "/tutorials/technical-implementation/docker-deployment",
+      "regex": "^/tutorials/technical\\-implementation/docker\\-deployment(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/technical\\-implementation/docker\\-deployment(?:/)?$"
+    },
+    {
+      "page": "/tutorials/technical-implementation/kubernetes-deployment",
+      "regex": "^/tutorials/technical\\-implementation/kubernetes\\-deployment(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/technical\\-implementation/kubernetes\\-deployment(?:/)?$"
+    },
+    {
+      "page": "/tutorials/technical-implementation/monitoring-logging",
+      "regex": "^/tutorials/technical\\-implementation/monitoring\\-logging(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/technical\\-implementation/monitoring\\-logging(?:/)?$"
+    },
+    {
+      "page": "/tutorials/technical-implementation/performance-tuning",
+      "regex": "^/tutorials/technical\\-implementation/performance\\-tuning(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/technical\\-implementation/performance\\-tuning(?:/)?$"
+    },
+    {
+      "page": "/tutorials/technical-implementation/troubleshooting",
+      "regex": "^/tutorials/technical\\-implementation/troubleshooting(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/technical\\-implementation/troubleshooting(?:/)?$"
+    },
+    {
+      "page": "/tutorials/technical-implementation/upgrade-procedures",
+      "regex": "^/tutorials/technical\\-implementation/upgrade\\-procedures(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/technical\\-implementation/upgrade\\-procedures(?:/)?$"
+    },
+    {
+      "page": "/tutorials/technical-implementation/webhook-configuration",
+      "regex": "^/tutorials/technical\\-implementation/webhook\\-configuration(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tutorials/technical\\-implementation/webhook\\-configuration(?:/)?$"
+    },
+    {
+      "page": "/use-cases",
+      "regex": "^/use\\-cases(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/use\\-cases(?:/)?$"
+    },
+    {
+      "page": "/use-cases/ecommerce-platform",
+      "regex": "^/use\\-cases/ecommerce\\-platform(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/use\\-cases/ecommerce\\-platform(?:/)?$"
+    },
+    {
+      "page": "/use-cases/education-sector",
+      "regex": "^/use\\-cases/education\\-sector(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/use\\-cases/education\\-sector(?:/)?$"
+    },
+    {
+      "page": "/use-cases/enterprise-software",
+      "regex": "^/use\\-cases/enterprise\\-software(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/use\\-cases/enterprise\\-software(?:/)?$"
+    },
+    {
+      "page": "/use-cases/financial-services",
+      "regex": "^/use\\-cases/financial\\-services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/use\\-cases/financial\\-services(?:/)?$"
+    },
+    {
+      "page": "/use-cases/government-agency",
+      "regex": "^/use\\-cases/government\\-agency(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/use\\-cases/government\\-agency(?:/)?$"
+    },
+    {
+      "page": "/use-cases/healthcare-provider",
+      "regex": "^/use\\-cases/healthcare\\-provider(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/use\\-cases/healthcare\\-provider(?:/)?$"
+    },
+    {
+      "page": "/use-cases/manufacturing",
+      "regex": "^/use\\-cases/manufacturing(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/use\\-cases/manufacturing(?:/)?$"
+    },
+    {
+      "page": "/use-cases/saas-provider",
+      "regex": "^/use\\-cases/saas\\-provider(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/use\\-cases/saas\\-provider(?:/)?$"
+    },
+    {
+      "page": "/use-cases/startup-success",
+      "regex": "^/use\\-cases/startup\\-success(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/use\\-cases/startup\\-success(?:/)?$"
+    },
+    {
+      "page": "/use-cases/telecommunications",
+      "regex": "^/use\\-cases/telecommunications(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/use\\-cases/telecommunications(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

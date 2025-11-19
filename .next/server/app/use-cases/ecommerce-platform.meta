@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/use-cases/layout,_N_T_/use-cases/ecommerce-platform/layout,_N_T_/use-cases/ecommerce-platform/page,_N_T_/use-cases/ecommerce-platform"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/use-cases/ecommerce-platform/__PAGE__",
+    "/use-cases/ecommerce-platform",
+    "/use-cases",
+    "/_index",
+    "/_head"
+  ]
+}

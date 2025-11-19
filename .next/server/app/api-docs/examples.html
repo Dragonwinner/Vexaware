@@ -1,0 +1,226 @@
+<!DOCTYPE html><!--xiT_dlrwuBhsIBnVsgLtJ--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/chunks/2503b8c9a3700625.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/cbd55ab9639e1e66.js"/><script src="/_next/static/chunks/fc4c64f42f073841.js" async=""></script><script src="/_next/static/chunks/b745c9a56da63fb9.js" async=""></script><script src="/_next/static/chunks/06525dfb60487280.js" async=""></script><script src="/_next/static/chunks/turbopack-dea23e7930e3207b.js" async=""></script><script src="/_next/static/chunks/ff1a16fafef87110.js" async=""></script><script src="/_next/static/chunks/64c0a5e3a0354479.js" async=""></script><script src="/_next/static/chunks/796e69ae18b2784c.js" async=""></script><link rel="canonical" href="https://vexaware.com"/><title>API Integration Examples - VEX Aware Tutorial - VEX Aware Tutorial</title><meta name="description" content="Learn how to integrate with the VEX Aware REST API. Complete examples for fetching tutorials, blog posts, and resources."/><meta name="author" content="VEX Aware"/><meta name="keywords" content="API,REST,integration,examples,tutorial"/><meta name="creator" content="VEX Aware"/><meta name="publisher" content="VEX Aware"/><meta name="robots" content="index, follow"/><meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"/><meta name="google-site-verification" content="google-site-verification-code"/><meta property="og:title" content="VEX Aware Tutorial - Complete Guide to Vulnerability Management"/><meta property="og:description" content="Learn VEX Aware from basics to advanced. Free tutorials on vulnerability exploitability, SBOM integration, container security, and compliance."/><meta property="og:url" content="https://vexaware.com"/><meta property="og:site_name" content="VEX Aware Tutorial"/><meta property="og:locale" content="en_US"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="@VexAwareTutorial"/><meta name="twitter:title" content="VEX Aware Tutorial - Complete Guide to Vulnerability Management"/><meta name="twitter:description" content="Learn VEX Aware from basics to advanced. Free tutorials on vulnerability exploitability, SBOM integration, container security, and compliance."/><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"VEX Aware Tutorial","url":"https://vexaware.com","description":"Complete guide to vulnerability management with VEX Aware","publisher":{"@type":"Organization","name":"VEX Aware"}}</script><script src="/_next/static/chunks/a6dad97d9634a72d.js" noModule=""></script></head><body class="antialiased min-h-screen"><div hidden=""><!--$--><!--/$--></div><div class="min-h-screen bg-white dark:bg-gray-950"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"><nav aria-label="Breadcrumb" class="mb-4"><ol class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400"><li><a class="hover:text-blue-600 dark:hover:text-blue-400" href="/">Home</a></li><li class="flex items-center space-x-2"><span>/</span><a class="hover:text-blue-600 dark:hover:text-blue-400" href="/api-docs">API Docs</a></li><li class="flex items-center space-x-2"><span>/</span><span class="text-gray-900 dark:text-white font-medium">Integration Examples</span></li></ol></nav><div class="mt-8"><h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">API Integration Examples</h1><p class="text-xl text-gray-600 dark:text-gray-400 mb-8">Learn how to integrate with the VEX Aware REST API using practical examples</p><section class="mb-12"><h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">JavaScript / TypeScript Examples</h2><div class="mb-8 border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50"><h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">1. Fetch All Tutorials</h3><p class="text-gray-600 dark:text-gray-400 mb-4">Get a list of all published tutorials from the database.</p><pre class="bg-gray-50 dark:bg-gray-950 p-4 rounded-lg overflow-x-auto border border-gray-200 dark:border-gray-800"><code class="text-sm text-gray-800 dark:text-gray-200">// Using fetch API
+async function getAllTutorials() {
+  const response = await fetch(&#x27;/api/tutorials&#x27;);
+  const data = await response.json();
+  
+  if (data.success) {
+    console.log(`Found ${data.count} tutorials`);
+    return data.data;
+  } else {
+    throw new Error(data.error);
+  }
+}
+
+// Usage
+const tutorials = await getAllTutorials();
+tutorials.forEach(tutorial =&gt; {
+  console.log(tutorial.title, tutorial.category);
+});</code></pre></div><div class="mb-8 border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50"><h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">2. Filter Tutorials by Category</h3><p class="text-gray-600 dark:text-gray-400 mb-4">Get tutorials filtered by specific category.</p><pre class="bg-gray-50 dark:bg-gray-950 p-4 rounded-lg overflow-x-auto border border-gray-200 dark:border-gray-800"><code class="text-sm text-gray-800 dark:text-gray-200">// Fetch only &quot;getting-started&quot; tutorials
+async function getTutorialsByCategory(category) {
+  const response = await fetch(`/api/tutorials?category=${category}`);
+  const data = await response.json();
+  return data.data;
+}
+
+// Usage
+const beginnerTutorials = await getTutorialsByCategory(&#x27;getting-started&#x27;);
+console.log(`Beginner tutorials: ${beginnerTutorials.length}`);</code></pre></div><div class="mb-8 border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50"><h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">3. Get Single Tutorial by Slug</h3><p class="text-gray-600 dark:text-gray-400 mb-4">Fetch detailed information about a specific tutorial.</p><pre class="bg-gray-50 dark:bg-gray-950 p-4 rounded-lg overflow-x-auto border border-gray-200 dark:border-gray-800"><code class="text-sm text-gray-800 dark:text-gray-200">async function getTutorial(slug) {
+  const response = await fetch(`/api/tutorials/${slug}`);
+  const data = await response.json();
+  
+  if (data.success) {
+    return data.data;
+  } else {
+    throw new Error(&#x27;Tutorial not found&#x27;);
+  }
+}
+
+// Usage
+const tutorial = await getTutorial(&#x27;what-is-vex-and-why-it-matters&#x27;);
+console.log(tutorial.title);
+console.log(tutorial.content);
+console.log(tutorial.difficulty);</code></pre></div><div class="mb-8 border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50"><h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">4. Create New Tutorial</h3><p class="text-gray-600 dark:text-gray-400 mb-4">Add a new tutorial to the database via POST request.</p><pre class="bg-gray-50 dark:bg-gray-950 p-4 rounded-lg overflow-x-auto border border-gray-200 dark:border-gray-800"><code class="text-sm text-gray-800 dark:text-gray-200">async function createTutorial(tutorialData) {
+  const response = await fetch(&#x27;/api/tutorials&#x27;, {
+    method: &#x27;POST&#x27;,
+    headers: {
+      &#x27;Content-Type&#x27;: &#x27;application/json&#x27;,
+    },
+    body: JSON.stringify(tutorialData),
+  });
+  
+  const data = await response.json();
+  return data.data;
+}
+
+// Usage
+const newTutorial = await createTutorial({
+  title: &#x27;Advanced VEX Techniques&#x27;,
+  slug: &#x27;advanced-vex-techniques&#x27;,
+  category: &#x27;advanced&#x27;,
+  description: &#x27;Learn advanced VEX document creation&#x27;,
+  content: &#x27;# Advanced VEX Techniques\n\nContent here...&#x27;,
+  difficulty: &#x27;Advanced&#x27;,
+  duration: &#x27;30 min&#x27;,
+  tags: [&#x27;advanced&#x27;, &#x27;vex&#x27;],
+  keywords: [&#x27;VEX&#x27;, &#x27;advanced&#x27;, &#x27;techniques&#x27;],
+  published: true,
+});
+
+console.log(&#x27;Created:&#x27;, newTutorial.title);</code></pre></div></section><section class="mb-12"><h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">React Component Example</h2><div class="border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50"><h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Tutorial List Component</h3><p class="text-gray-600 dark:text-gray-400 mb-4">A complete React component that fetches and displays tutorials.</p><pre class="bg-gray-50 dark:bg-gray-950 p-4 rounded-lg overflow-x-auto border border-gray-200 dark:border-gray-800"><code class="text-sm text-gray-800 dark:text-gray-200">&#x27;use client&#x27;;
+
+import { useState, useEffect } from &#x27;react&#x27;;
+import Link from &#x27;next/link&#x27;;
+
+export default function TutorialList({ category }) {
+  const [tutorials, setTutorials] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() =&gt; {
+    async function fetchTutorials() {
+      try {
+        const url = category 
+          ? `/api/tutorials?category=${category}`
+          : &#x27;/api/tutorials&#x27;;
+        
+        const response = await fetch(url);
+        const data = await response.json();
+        
+        if (data.success) {
+          setTutorials(data.data);
+        } else {
+          setError(data.error);
+        }
+      } catch (err) {
+        setError(&#x27;Failed to fetch tutorials&#x27;);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchTutorials();
+  }, [category]);
+
+  if (loading) {
+    return (
+      &lt;div className=&quot;text-center py-8&quot;&gt;
+        &lt;div className=&quot;animate-spin rounded-full h-12 w-12 
+                       border-b-2 border-blue-600 mx-auto&quot;&gt;&lt;/div&gt;
+        &lt;p className=&quot;mt-4 text-gray-600&quot;&gt;Loading tutorials...&lt;/p&gt;
+      &lt;/div&gt;
+    );
+  }
+
+  if (error) {
+    return (
+      &lt;div className=&quot;bg-red-50 dark:bg-red-900/20 border 
+                     border-red-200 dark:border-red-800 
+                     rounded-lg p-4 text-red-600 dark:text-red-400&quot;&gt;
+        Error: {error}
+      &lt;/div&gt;
+    );
+  }
+
+  return (
+    &lt;div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;&gt;
+      {tutorials.map((tutorial) =&gt; (
+        &lt;Link
+          key={tutorial._id}
+          href={`/tutorials/${tutorial.category}/${tutorial.slug}`}
+          className=&quot;block p-6 border border-gray-200 dark:border-gray-800 
+                   rounded-lg hover:shadow-lg hover:border-blue-500 
+                   dark:hover:border-blue-400 transition-all 
+                   bg-white dark:bg-gray-900&quot;
+        &gt;
+          &lt;div className=&quot;flex items-center gap-2 mb-3&quot;&gt;
+            &lt;span className=&quot;text-xs font-semibold text-blue-600 
+                           dark:text-blue-400 bg-blue-100 
+                           dark:bg-blue-900/30 px-3 py-1 rounded-full&quot;&gt;
+              {tutorial.difficulty}
+            &lt;/span&gt;
+            &lt;span className=&quot;text-sm text-gray-500&quot;&gt;
+              ⏱ {tutorial.duration}
+            &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;h3 className=&quot;text-xl font-bold text-gray-900 dark:text-white mb-2&quot;&gt;
+            {tutorial.title}
+          &lt;/h3&gt;
+          &lt;p className=&quot;text-gray-600 dark:text-gray-400 line-clamp-3&quot;&gt;
+            {tutorial.description}
+          &lt;/p&gt;
+          &lt;div className=&quot;mt-4 text-blue-600 dark:text-blue-400 
+                       text-sm font-semibold&quot;&gt;
+            Read Tutorial →
+          &lt;/div&gt;
+        &lt;/Link&gt;
+      ))}
+    &lt;/div&gt;
+  );
+}</code></pre></div></section><section class="mb-12"><h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">cURL Examples</h2><div class="mb-8 border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50"><h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Testing API with cURL</h3><pre class="bg-gray-50 dark:bg-gray-950 p-4 rounded-lg overflow-x-auto border border-gray-200 dark:border-gray-800"><code class="text-sm text-gray-800 dark:text-gray-200"># Get all tutorials
+curl http://localhost:3000/api/tutorials
+
+# Get tutorials by category
+curl http://localhost:3000/api/tutorials?category=getting-started
+
+# Get single tutorial
+curl http://localhost:3000/api/tutorials/what-is-vex-and-why-it-matters
+
+# Create new tutorial
+curl -X POST http://localhost:3000/api/tutorials \
+  -H &quot;Content-Type: application/json&quot; \
+  -d &#x27;{
+    &quot;title&quot;: &quot;New Tutorial&quot;,
+    &quot;slug&quot;: &quot;new-tutorial&quot;,
+    &quot;category&quot;: &quot;getting-started&quot;,
+    &quot;description&quot;: &quot;Description here&quot;,
+    &quot;content&quot;: &quot;Content here&quot;,
+    &quot;difficulty&quot;: &quot;Beginner&quot;,
+    &quot;duration&quot;: &quot;10 min&quot;,
+    &quot;tags&quot;: [&quot;tutorial&quot;],
+    &quot;keywords&quot;: [&quot;keyword&quot;]
+  }&#x27;
+
+# Update tutorial
+curl -X PUT http://localhost:3000/api/tutorials/new-tutorial \
+  -H &quot;Content-Type&quot;: application/json&quot; \
+  -d &#x27;{&quot;duration&quot;: &quot;15 min&quot;}&#x27;
+
+# Delete tutorial
+curl -X DELETE http://localhost:3000/api/tutorials/new-tutorial</code></pre></div></section><section class="mb-12"><h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Error Handling</h2><div class="border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50"><p class="text-gray-600 dark:text-gray-400 mb-4">All API responses follow a consistent format:</p><pre class="bg-gray-50 dark:bg-gray-950 p-4 rounded-lg overflow-x-auto mb-4 border border-gray-200 dark:border-gray-800"><code class="text-sm text-gray-800 dark:text-gray-200">// Success Response
+{
+  &quot;success&quot;: true,
+  &quot;count&quot;: 10,  // for list endpoints
+  &quot;data&quot;: {...} // or [...]
+}
+
+// Error Response
+{
+  &quot;success&quot;: false,
+  &quot;error&quot;: &quot;Error message here&quot;
+}</code></pre><h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 mt-6">Best Practice Error Handling</h3><pre class="bg-gray-50 dark:bg-gray-950 p-4 rounded-lg overflow-x-auto border border-gray-200 dark:border-gray-800"><code class="text-sm text-gray-800 dark:text-gray-200">async function safeFetch(url, options = {}) {
+  try {
+    const response = await fetch(url, options);
+    const data = await response.json();
+    
+    if (!response.ok) {
+      throw new Error(data.error || &#x27;Request failed&#x27;);
+    }
+    
+    if (!data.success) {
+      throw new Error(data.error || &#x27;Unknown error&#x27;);
+    }
+    
+    return data.data;
+  } catch (error) {
+    console.error(&#x27;API Error:&#x27;, error.message);
+    throw error;
+  }
+}
+
+// Usage with error handling
+try {
+  const tutorial = await safeFetch(&#x27;/api/tutorials/some-slug&#x27;);
+  console.log(&#x27;Success:&#x27;, tutorial);
+} catch (error) {
+  console.error(&#x27;Failed to fetch tutorial:&#x27;, error.message);
+}</code></pre></div></section><section class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10 border border-blue-200 dark:border-blue-800 rounded-lg p-8"><h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center"><span class="text-3xl mr-3">📚</span>Related Resources</h2><ul class="space-y-3"><li class="flex items-center"><span class="text-blue-600 dark:text-blue-400 mr-2">→</span><a class="text-blue-600 dark:text-blue-400 hover:underline font-semibold" href="/api-docs">Complete API Documentation</a></li><li class="flex items-center"><span class="text-blue-600 dark:text-blue-400 mr-2">→</span><a class="text-blue-600 dark:text-blue-400 hover:underline font-semibold" href="/api-docs/authentication">API Authentication Guide</a></li><li class="flex items-center"><span class="text-blue-600 dark:text-blue-400 mr-2">→</span><a class="text-blue-600 dark:text-blue-400 hover:underline font-semibold" href="/tutorials/technical-implementation/api-integration">API Integration Tutorial</a></li><li class="flex items-center"><span class="text-blue-600 dark:text-blue-400 mr-2">→</span><a href="https://github.com/Dragonwinner/Vexaware" class="text-blue-600 dark:text-blue-400 hover:underline font-semibold" target="_blank" rel="noopener noreferrer">View Source Code on GitHub</a></li></ul></section></div></div></div><!--$--><!--/$--><script src="/_next/static/chunks/cbd55ab9639e1e66.js" id="_R_" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[39756,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/64c0a5e3a0354479.js\"],\"default\"]\n3:I[37457,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/64c0a5e3a0354479.js\"],\"default\"]\n4:I[22016,[\"/_next/static/chunks/796e69ae18b2784c.js\"],\"\"]\n11:I[68027,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/64c0a5e3a0354479.js\"],\"default\"]\n:HL[\"/_next/static/chunks/2503b8c9a3700625.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"xiT-dlrwuBhsIBnVsgLtJ\",\"c\":[\"\",\"api-docs\",\"examples\"],\"q\":\"\",\"i\":false,\"f\":[[[\"\",{\"children\":[\"api-docs\",{\"children\":[\"examples\",{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/2503b8c9a3700625.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"canonical\",\"href\":\"https://vexaware.com\"}],[\"$\",\"script\",null,{\"type\":\"application/ld+json\",\"dangerouslySetInnerHTML\":{\"__html\":\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"WebSite\\\",\\\"name\\\":\\\"VEX Aware Tutorial\\\",\\\"url\\\":\\\"https://vexaware.com\\\",\\\"description\\\":\\\"Complete guide to vulnerability management with VEX Aware\\\",\\\"publisher\\\":{\\\"@type\\\":\\\"Organization\\\",\\\"name\\\":\\\"VEX Aware\\\"}}\"}}]]}],[\"$\",\"body\",null,{\"className\":\"antialiased min-h-screen\",\"children\":[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]]}]]}],{\"children\":[[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"div\",null,{\"className\":\"min-h-screen bg-white dark:bg-gray-950\",\"children\":[\"$\",\"div\",null,{\"className\":\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8\",\"children\":[[\"$\",\"nav\",null,{\"aria-label\":\"Breadcrumb\",\"className\":\"mb-4\",\"children\":[\"$\",\"ol\",null,{\"className\":\"flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400\",\"children\":[[\"$\",\"li\",null,{\"children\":[\"$\",\"$L4\",null,{\"href\":\"/\",\"className\":\"hover:text-blue-600 dark:hover:text-blue-400\",\"children\":\"Home\"}]}],[[\"$\",\"li\",\"0\",{\"className\":\"flex items-center space-x-2\",\"children\":[[\"$\",\"span\",null,{\"children\":\"/\"}],[\"$\",\"$L4\",null,{\"href\":\"/api-docs\",\"className\":\"hover:text-blue-600 dark:hover:text-blue-400\",\"children\":\"API Docs\"}]]}],[\"$\",\"li\",\"1\",{\"className\":\"flex items-center space-x-2\",\"children\":[[\"$\",\"span\",null,{\"children\":\"/\"}],[\"$\",\"span\",null,{\"className\":\"text-gray-900 dark:text-white font-medium\",\"children\":\"Integration Examples\"}]]}]]]}]}],[\"$\",\"div\",null,{\"className\":\"mt-8\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4\",\"children\":\"API Integration Examples\"}],[\"$\",\"p\",null,{\"className\":\"text-xl text-gray-600 dark:text-gray-400 mb-8\",\"children\":\"Learn how to integrate with the VEX Aware REST API using practical examples\"}],[\"$\",\"section\",null,{\"className\":\"mb-12\",\"children\":[[\"$\",\"h2\",null,{\"className\":\"text-3xl font-bold text-gray-900 dark:text-white mb-6\",\"children\":\"JavaScript / TypeScript Examples\"}],[\"$\",\"div\",null,{\"className\":\"mb-8 border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50\",\"children\":[[\"$\",\"h3\",null,{\"className\":\"text-2xl font-semibold text-gray-900 dark:text-white mb-4\",\"children\":\"1. Fetch All Tutorials\"}],\"$L5\",\"$L6\"]}],\"$L7\",\"$L8\",\"$L9\"]}],\"$La\",\"$Lb\",\"$Lc\",\"$Ld\"]}]]}]}],[\"$Le\"],\"$Lf\"]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false],\"$L10\",false]],\"m\":\"$undefined\",\"G\":[\"$11\",[]],\"S\":true}\n"])</script><script>self.__next_f.push([1,"13:I[97367,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/64c0a5e3a0354479.js\"],\"OutletBoundary\"]\n14:\"$Sreact.suspense\"\n16:I[97367,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/64c0a5e3a0354479.js\"],\"ViewportBoundary\"]\n18:I[97367,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/64c0a5e3a0354479.js\"],\"MetadataBoundary\"]\n5:[\"$\",\"p\",null,{\"className\":\"text-gray-600 dark:text-gray-400 mb-4\",\"children\":\"Get a list of all published tutorials from the database.\"}]\n6:[\"$\",\"pre\",null,{\"className\":\"bg-gray-50 dark:bg-gray-950 p-4 rounded-lg overflow-x-auto border border-gray-200 dark:border-gray-800\",\"children\":[\"$\",\"code\",null,{\"className\":\"text-sm text-gray-800 dark:text-gray-200\",\"children\":\"// Using fetch API\\nasync function getAllTutorials() {\\n  const response = await fetch('/api/tutorials');\\n  const data = await response.json();\\n  \\n  if (data.success) {\\n    console.log(`Found ${data.count} tutorials`);\\n    return data.data;\\n  } else {\\n    throw new Error(data.error);\\n  }\\n}\\n\\n// Usage\\nconst tutorials = await getAllTutorials();\\ntutorials.forEach(tutorial =\u003e {\\n  console.log(tutorial.title, tutorial.category);\\n});\"}]}]\n7:[\"$\",\"div\",null,{\"className\":\"mb-8 border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50\",\"children\":[[\"$\",\"h3\",null,{\"className\":\"text-2xl font-semibold text-gray-900 dark:text-white mb-4\",\"children\":\"2. Filter Tutorials by Category\"}],[\"$\",\"p\",null,{\"className\":\"text-gray-600 dark:text-gray-400 mb-4\",\"children\":\"Get tutorials filtered by specific category.\"}],[\"$\",\"pre\",null,{\"className\":\"bg-gray-50 dark:bg-gray-950 p-4 rounded-lg overflow-x-auto border border-gray-200 dark:border-gray-800\",\"children\":[\"$\",\"code\",null,{\"className\":\"text-sm text-gray-800 dark:text-gray-200\",\"children\":\"// Fetch only \\\"getting-started\\\" tutorials\\nasync function getTutorialsByCategory(category) {\\n  const response = await fetch(`/api/tutorials?category=${category}`);\\n  const data = await response.json();\\n  return data.data;\\n}\\n\\n// Usage\\nconst beginnerTutorials = await getTutorialsByCategory('getting-started');\\nconsole.log(`Beginner tutorials: ${beginnerTutorials.length}`);\"}]}]]}]\n8:[\"$\",\"div\",null,{\"className\":\"mb-8 border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50\",\"children\":[[\"$\",\"h3\",null,{\"className\":\"text-2xl font-semibold text-gray-900 dark:text-white mb-4\",\"children\":\"3. Get Single Tutorial by Slug\"}],[\"$\",\"p\",null,{\"className\":\"text-gray-600 dark:text-gray-400 mb-4\",\"children\":\"Fetch detailed information about a specific tutorial.\"}],[\"$\",\"pre\",null,{\"className\":\"bg-gray-50 dark:bg-gray-950 p-4 rounded-lg overflow-x-auto border border-gray-200 dark:border-gray-800\",\"children\":[\"$\",\"code\",null,{\"className\":\"text-sm text-gray-800 dark:text-gray-200\",\"children\":\"async function getTutorial(slug) {\\n  const response = await fetch(`/api/tutorials/${slug}`);\\n  const data = await response.json();\\n  \\n  if (data.success) {\\n    return data.data;\\n  } else {\\n    throw new Error('Tutorial not found');\\n  }\\n}\\n\\n// Usage\\nconst tutorial = await getTutorial('what-is-vex-and-why-it-matters');\\nconsole.log(tutorial.title);\\nconsole.log(tutorial.content);\\nconsole.log(tutorial.difficulty);\"}]}]]}]\n"])</script><script>self.__next_f.push([1,"9:[\"$\",\"div\",null,{\"className\":\"mb-8 border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50\",\"children\":[[\"$\",\"h3\",null,{\"className\":\"text-2xl font-semibold text-gray-900 dark:text-white mb-4\",\"children\":\"4. Create New Tutorial\"}],[\"$\",\"p\",null,{\"className\":\"text-gray-600 dark:text-gray-400 mb-4\",\"children\":\"Add a new tutorial to the database via POST request.\"}],[\"$\",\"pre\",null,{\"className\":\"bg-gray-50 dark:bg-gray-950 p-4 rounded-lg overflow-x-auto border border-gray-200 dark:border-gray-800\",\"children\":[\"$\",\"code\",null,{\"className\":\"text-sm text-gray-800 dark:text-gray-200\",\"children\":\"async function createTutorial(tutorialData) {\\n  const response = await fetch('/api/tutorials', {\\n    method: 'POST',\\n    headers: {\\n      'Content-Type': 'application/json',\\n    },\\n    body: JSON.stringify(tutorialData),\\n  });\\n  \\n  const data = await response.json();\\n  return data.data;\\n}\\n\\n// Usage\\nconst newTutorial = await createTutorial({\\n  title: 'Advanced VEX Techniques',\\n  slug: 'advanced-vex-techniques',\\n  category: 'advanced',\\n  description: 'Learn advanced VEX document creation',\\n  content: '# Advanced VEX Techniques\\\\n\\\\nContent here...',\\n  difficulty: 'Advanced',\\n  duration: '30 min',\\n  tags: ['advanced', 'vex'],\\n  keywords: ['VEX', 'advanced', 'techniques'],\\n  published: true,\\n});\\n\\nconsole.log('Created:', newTutorial.title);\"}]}]]}]\n"])</script><script>self.__next_f.push([1,"12:Taef,"])</script><script>self.__next_f.push([1,"'use client';\n\nimport { useState, useEffect } from 'react';\nimport Link from 'next/link';\n\nexport default function TutorialList({ category }) {\n  const [tutorials, setTutorials] = useState([]);\n  const [loading, setLoading] = useState(true);\n  const [error, setError] = useState(null);\n\n  useEffect(() =\u003e {\n    async function fetchTutorials() {\n      try {\n        const url = category \n          ? `/api/tutorials?category=${category}`\n          : '/api/tutorials';\n        \n        const response = await fetch(url);\n        const data = await response.json();\n        \n        if (data.success) {\n          setTutorials(data.data);\n        } else {\n          setError(data.error);\n        }\n      } catch (err) {\n        setError('Failed to fetch tutorials');\n      } finally {\n        setLoading(false);\n      }\n    }\n\n    fetchTutorials();\n  }, [category]);\n\n  if (loading) {\n    return (\n      \u003cdiv className=\"text-center py-8\"\u003e\n        \u003cdiv className=\"animate-spin rounded-full h-12 w-12 \n                       border-b-2 border-blue-600 mx-auto\"\u003e\u003c/div\u003e\n        \u003cp className=\"mt-4 text-gray-600\"\u003eLoading tutorials...\u003c/p\u003e\n      \u003c/div\u003e\n    );\n  }\n\n  if (error) {\n    return (\n      \u003cdiv className=\"bg-red-50 dark:bg-red-900/20 border \n                     border-red-200 dark:border-red-800 \n                     rounded-lg p-4 text-red-600 dark:text-red-400\"\u003e\n        Error: {error}\n      \u003c/div\u003e\n    );\n  }\n\n  return (\n    \u003cdiv className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\"\u003e\n      {tutorials.map((tutorial) =\u003e (\n        \u003cLink\n          key={tutorial._id}\n          href={`/tutorials/${tutorial.category}/${tutorial.slug}`}\n          className=\"block p-6 border border-gray-200 dark:border-gray-800 \n                   rounded-lg hover:shadow-lg hover:border-blue-500 \n                   dark:hover:border-blue-400 transition-all \n                   bg-white dark:bg-gray-900\"\n        \u003e\n          \u003cdiv className=\"flex items-center gap-2 mb-3\"\u003e\n            \u003cspan className=\"text-xs font-semibold text-blue-600 \n                           dark:text-blue-400 bg-blue-100 \n                           dark:bg-blue-900/30 px-3 py-1 rounded-full\"\u003e\n              {tutorial.difficulty}\n            \u003c/span\u003e\n            \u003cspan className=\"text-sm text-gray-500\"\u003e\n              ⏱ {tutorial.duration}\n            \u003c/span\u003e\n          \u003c/div\u003e\n          \u003ch3 className=\"text-xl font-bold text-gray-900 dark:text-white mb-2\"\u003e\n            {tutorial.title}\n          \u003c/h3\u003e\n          \u003cp className=\"text-gray-600 dark:text-gray-400 line-clamp-3\"\u003e\n            {tutorial.description}\n          \u003c/p\u003e\n          \u003cdiv className=\"mt-4 text-blue-600 dark:text-blue-400 \n                       text-sm font-semibold\"\u003e\n            Read Tutorial →\n          \u003c/div\u003e\n        \u003c/Link\u003e\n      ))}\n    \u003c/div\u003e\n  );\n}"])</script><script>self.__next_f.push([1,"a:[\"$\",\"section\",null,{\"className\":\"mb-12\",\"children\":[[\"$\",\"h2\",null,{\"className\":\"text-3xl font-bold text-gray-900 dark:text-white mb-6\",\"children\":\"React Component Example\"}],[\"$\",\"div\",null,{\"className\":\"border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50\",\"children\":[[\"$\",\"h3\",null,{\"className\":\"text-2xl font-semibold text-gray-900 dark:text-white mb-4\",\"children\":\"Tutorial List Component\"}],[\"$\",\"p\",null,{\"className\":\"text-gray-600 dark:text-gray-400 mb-4\",\"children\":\"A complete React component that fetches and displays tutorials.\"}],[\"$\",\"pre\",null,{\"className\":\"bg-gray-50 dark:bg-gray-950 p-4 rounded-lg overflow-x-auto border border-gray-200 dark:border-gray-800\",\"children\":[\"$\",\"code\",null,{\"className\":\"text-sm text-gray-800 dark:text-gray-200\",\"children\":\"$12\"}]}]]}]]}]\n"])</script><script>self.__next_f.push([1,"b:[\"$\",\"section\",null,{\"className\":\"mb-12\",\"children\":[[\"$\",\"h2\",null,{\"className\":\"text-3xl font-bold text-gray-900 dark:text-white mb-6\",\"children\":\"cURL Examples\"}],[\"$\",\"div\",null,{\"className\":\"mb-8 border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50\",\"children\":[[\"$\",\"h3\",null,{\"className\":\"text-2xl font-semibold text-gray-900 dark:text-white mb-4\",\"children\":\"Testing API with cURL\"}],[\"$\",\"pre\",null,{\"className\":\"bg-gray-50 dark:bg-gray-950 p-4 rounded-lg overflow-x-auto border border-gray-200 dark:border-gray-800\",\"children\":[\"$\",\"code\",null,{\"className\":\"text-sm text-gray-800 dark:text-gray-200\",\"children\":\"# Get all tutorials\\ncurl http://localhost:3000/api/tutorials\\n\\n# Get tutorials by category\\ncurl http://localhost:3000/api/tutorials?category=getting-started\\n\\n# Get single tutorial\\ncurl http://localhost:3000/api/tutorials/what-is-vex-and-why-it-matters\\n\\n# Create new tutorial\\ncurl -X POST http://localhost:3000/api/tutorials \\\\\\n  -H \\\"Content-Type: application/json\\\" \\\\\\n  -d '{\\n    \\\"title\\\": \\\"New Tutorial\\\",\\n    \\\"slug\\\": \\\"new-tutorial\\\",\\n    \\\"category\\\": \\\"getting-started\\\",\\n    \\\"description\\\": \\\"Description here\\\",\\n    \\\"content\\\": \\\"Content here\\\",\\n    \\\"difficulty\\\": \\\"Beginner\\\",\\n    \\\"duration\\\": \\\"10 min\\\",\\n    \\\"tags\\\": [\\\"tutorial\\\"],\\n    \\\"keywords\\\": [\\\"keyword\\\"]\\n  }'\\n\\n# Update tutorial\\ncurl -X PUT http://localhost:3000/api/tutorials/new-tutorial \\\\\\n  -H \\\"Content-Type\\\": application/json\\\" \\\\\\n  -d '{\\\"duration\\\": \\\"15 min\\\"}'\\n\\n# Delete tutorial\\ncurl -X DELETE http://localhost:3000/api/tutorials/new-tutorial\"}]}]]}]]}]\n"])</script><script>self.__next_f.push([1,"c:[\"$\",\"section\",null,{\"className\":\"mb-12\",\"children\":[[\"$\",\"h2\",null,{\"className\":\"text-3xl font-bold text-gray-900 dark:text-white mb-6\",\"children\":\"Error Handling\"}],[\"$\",\"div\",null,{\"className\":\"border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50\",\"children\":[[\"$\",\"p\",null,{\"className\":\"text-gray-600 dark:text-gray-400 mb-4\",\"children\":\"All API responses follow a consistent format:\"}],[\"$\",\"pre\",null,{\"className\":\"bg-gray-50 dark:bg-gray-950 p-4 rounded-lg overflow-x-auto mb-4 border border-gray-200 dark:border-gray-800\",\"children\":[\"$\",\"code\",null,{\"className\":\"text-sm text-gray-800 dark:text-gray-200\",\"children\":\"// Success Response\\n{\\n  \\\"success\\\": true,\\n  \\\"count\\\": 10,  // for list endpoints\\n  \\\"data\\\": {...} // or [...]\\n}\\n\\n// Error Response\\n{\\n  \\\"success\\\": false,\\n  \\\"error\\\": \\\"Error message here\\\"\\n}\"}]}],[\"$\",\"h3\",null,{\"className\":\"text-xl font-semibold text-gray-900 dark:text-white mb-3 mt-6\",\"children\":\"Best Practice Error Handling\"}],[\"$\",\"pre\",null,{\"className\":\"bg-gray-50 dark:bg-gray-950 p-4 rounded-lg overflow-x-auto border border-gray-200 dark:border-gray-800\",\"children\":[\"$\",\"code\",null,{\"className\":\"text-sm text-gray-800 dark:text-gray-200\",\"children\":\"async function safeFetch(url, options = {}) {\\n  try {\\n    const response = await fetch(url, options);\\n    const data = await response.json();\\n    \\n    if (!response.ok) {\\n      throw new Error(data.error || 'Request failed');\\n    }\\n    \\n    if (!data.success) {\\n      throw new Error(data.error || 'Unknown error');\\n    }\\n    \\n    return data.data;\\n  } catch (error) {\\n    console.error('API Error:', error.message);\\n    throw error;\\n  }\\n}\\n\\n// Usage with error handling\\ntry {\\n  const tutorial = await safeFetch('/api/tutorials/some-slug');\\n  console.log('Success:', tutorial);\\n} catch (error) {\\n  console.error('Failed to fetch tutorial:', error.message);\\n}\"}]}]]}]]}]\n"])</script><script>self.__next_f.push([1,"d:[\"$\",\"section\",null,{\"className\":\"bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10 border border-blue-200 dark:border-blue-800 rounded-lg p-8\",\"children\":[[\"$\",\"h2\",null,{\"className\":\"text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center\",\"children\":[[\"$\",\"span\",null,{\"className\":\"text-3xl mr-3\",\"children\":\"📚\"}],\"Related Resources\"]}],[\"$\",\"ul\",null,{\"className\":\"space-y-3\",\"children\":[[\"$\",\"li\",null,{\"className\":\"flex items-center\",\"children\":[[\"$\",\"span\",null,{\"className\":\"text-blue-600 dark:text-blue-400 mr-2\",\"children\":\"→\"}],[\"$\",\"$L4\",null,{\"href\":\"/api-docs\",\"className\":\"text-blue-600 dark:text-blue-400 hover:underline font-semibold\",\"children\":\"Complete API Documentation\"}]]}],[\"$\",\"li\",null,{\"className\":\"flex items-center\",\"children\":[[\"$\",\"span\",null,{\"className\":\"text-blue-600 dark:text-blue-400 mr-2\",\"children\":\"→\"}],[\"$\",\"$L4\",null,{\"href\":\"/api-docs/authentication\",\"className\":\"text-blue-600 dark:text-blue-400 hover:underline font-semibold\",\"children\":\"API Authentication Guide\"}]]}],[\"$\",\"li\",null,{\"className\":\"flex items-center\",\"children\":[[\"$\",\"span\",null,{\"className\":\"text-blue-600 dark:text-blue-400 mr-2\",\"children\":\"→\"}],[\"$\",\"$L4\",null,{\"href\":\"/tutorials/technical-implementation/api-integration\",\"className\":\"text-blue-600 dark:text-blue-400 hover:underline font-semibold\",\"children\":\"API Integration Tutorial\"}]]}],[\"$\",\"li\",null,{\"className\":\"flex items-center\",\"children\":[[\"$\",\"span\",null,{\"className\":\"text-blue-600 dark:text-blue-400 mr-2\",\"children\":\"→\"}],[\"$\",\"a\",null,{\"href\":\"https://github.com/Dragonwinner/Vexaware\",\"className\":\"text-blue-600 dark:text-blue-400 hover:underline font-semibold\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"children\":\"View Source Code on GitHub\"}]]}]]}]]}]\n"])</script><script>self.__next_f.push([1,"e:[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/796e69ae18b2784c.js\",\"async\":true,\"nonce\":\"$undefined\"}]\nf:[\"$\",\"$L13\",null,{\"children\":[\"$\",\"$14\",null,{\"name\":\"Next.MetadataOutlet\",\"children\":\"$@15\"}]}]\n10:[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$L16\",null,{\"children\":\"$@17\"}],[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$L18\",null,{\"children\":[\"$\",\"$14\",null,{\"name\":\"Next.Metadata\",\"children\":\"$@19\"}]}]}],null]}]\n"])</script><script>self.__next_f.push([1,"17:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n"])</script><script>self.__next_f.push([1,"19:[[\"$\",\"title\",\"0\",{\"children\":\"API Integration Examples - VEX Aware Tutorial - VEX Aware Tutorial\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Learn how to integrate with the VEX Aware REST API. Complete examples for fetching tutorials, blog posts, and resources.\"}],[\"$\",\"meta\",\"2\",{\"name\":\"author\",\"content\":\"VEX Aware\"}],[\"$\",\"meta\",\"3\",{\"name\":\"keywords\",\"content\":\"API,REST,integration,examples,tutorial\"}],[\"$\",\"meta\",\"4\",{\"name\":\"creator\",\"content\":\"VEX Aware\"}],[\"$\",\"meta\",\"5\",{\"name\":\"publisher\",\"content\":\"VEX Aware\"}],[\"$\",\"meta\",\"6\",{\"name\":\"robots\",\"content\":\"index, follow\"}],[\"$\",\"meta\",\"7\",{\"name\":\"googlebot\",\"content\":\"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1\"}],[\"$\",\"meta\",\"8\",{\"name\":\"google-site-verification\",\"content\":\"google-site-verification-code\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:title\",\"content\":\"VEX Aware Tutorial - Complete Guide to Vulnerability Management\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:description\",\"content\":\"Learn VEX Aware from basics to advanced. Free tutorials on vulnerability exploitability, SBOM integration, container security, and compliance.\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:url\",\"content\":\"https://vexaware.com\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:site_name\",\"content\":\"VEX Aware Tutorial\"}],[\"$\",\"meta\",\"13\",{\"property\":\"og:locale\",\"content\":\"en_US\"}],[\"$\",\"meta\",\"14\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:creator\",\"content\":\"@VexAwareTutorial\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:title\",\"content\":\"VEX Aware Tutorial - Complete Guide to Vulnerability Management\"}],[\"$\",\"meta\",\"18\",{\"name\":\"twitter:description\",\"content\":\"Learn VEX Aware from basics to advanced. Free tutorials on vulnerability exploitability, SBOM integration, container security, and compliance.\"}]]\n"])</script><script>self.__next_f.push([1,"15:null\n"])</script></body></html>

@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/tutorials/layout,_N_T_/tutorials/technical-implementation/layout,_N_T_/tutorials/technical-implementation/custom-policies/layout,_N_T_/tutorials/technical-implementation/custom-policies/page,_N_T_/tutorials/technical-implementation/custom-policies"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/tutorials/technical-implementation/custom-policies/__PAGE__",
+    "/tutorials/technical-implementation/custom-policies",
+    "/tutorials/technical-implementation",
+    "/tutorials",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/blog/layout,_N_T_/blog/supply-chain-attacks-2024/layout,_N_T_/blog/supply-chain-attacks-2024/page,_N_T_/blog/supply-chain-attacks-2024"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/blog/supply-chain-attacks-2024/__PAGE__",
+    "/blog/supply-chain-attacks-2024",
+    "/blog",
+    "/_index",
+    "/_head"
+  ]
+}

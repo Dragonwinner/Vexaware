@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/tutorials/layout,_N_T_/tutorials/compliance/layout,_N_T_/tutorials/compliance/nist-framework/layout,_N_T_/tutorials/compliance/nist-framework/page,_N_T_/tutorials/compliance/nist-framework"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/tutorials/compliance/nist-framework/__PAGE__",
+    "/tutorials/compliance/nist-framework",
+    "/tutorials/compliance",
+    "/tutorials",
+    "/_index",
+    "/_head"
+  ]
+}

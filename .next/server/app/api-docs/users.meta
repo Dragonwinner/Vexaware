@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/api-docs/layout,_N_T_/api-docs/users/layout,_N_T_/api-docs/users/page,_N_T_/api-docs/users"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/api-docs/users/__PAGE__",
+    "/api-docs/users",
+    "/api-docs",
+    "/_index",
+    "/_head"
+  ]
+}
