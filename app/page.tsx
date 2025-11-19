@@ -155,6 +155,76 @@ export default function Home() {
         </div>
       </section>
 
+      {/* VEX Tool Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-900 dark:to-purple-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="flex-1 text-white">
+              <div className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                🆕 New Tool Available
+              </div>
+              <h2 className="text-4xl font-bold mb-4">
+                VEX-Aware CLI Tool
+              </h2>
+              <p className="text-xl text-blue-100 mb-6">
+                A comprehensive command-line tool for creating, validating, and managing VEX documents.
+                Automate your vulnerability management workflow with our open-source tool.
+              </p>
+              <ul className="space-y-3 mb-8 text-blue-100">
+                <li className="flex items-start">
+                  <span className="mr-3">✅</span>
+                  <span>Create VEX documents from CLI or programmatically</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3">✅</span>
+                  <span>Validate against OpenVEX v0.2.0 specification</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3">✅</span>
+                  <span>Generate VEX from SBOM documents</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3">✅</span>
+                  <span>Query vulnerability status and calculate risk scores</span>
+                </li>
+              </ul>
+              <Link
+                href="/vex-tool-demo"
+                className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-colors"
+              >
+                Try the VEX Tool →
+              </Link>
+            </div>
+            <div className="flex-1">
+              <div className="bg-gray-900 rounded-lg p-6 shadow-2xl">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                  <span className="ml-2 text-gray-400 text-sm">terminal</span>
+                </div>
+                <pre className="text-green-400 text-sm overflow-x-auto">
+                  <code>{`$ vex-tool create \\
+  --cve CVE-2024-1234 \\
+  --product "pkg:npm/myapp@1.0.0" \\
+  --status not_affected \\
+  --justification vulnerable_code_not_in_execute_path
+
+✓ VEX document created: vex-document.json
+
+$ vex-tool validate vex-document.json
+✓ VEX document is valid
+
+$ vex-tool stats vex-document.json
+Total Statements: 1
+Risk Score: 0/100`}</code>
+                </pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Tutorial Pathways */}
       <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
