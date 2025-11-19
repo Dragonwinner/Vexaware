@@ -189,11 +189,11 @@ export default function Home() {
                 key={index} 
                 className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover-lift text-center border border-gray-100 dark:border-gray-700"
               >
-                <div className="text-4xl mb-3">{stat.icon}</div>
-                <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                <div className="text-2xl mb-3">{stat.icon}</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-600 dark:text-gray-400 font-medium">{stat.label}</div>
+                <div className="text-base text-gray-600 dark:text-gray-400 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -221,11 +221,11 @@ export default function Home() {
                 <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${feature.gradient} opacity-10 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500`}></div>
                 
                 <div className="relative z-10">
-                  <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{feature.description}</p>
+                  <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">{feature.description}</p>
                 </div>
               </div>
             ))}
@@ -259,13 +259,13 @@ export default function Home() {
                     {path.level}
                   </div>
                   
-                  <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">{path.icon}</div>
+                  <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">{path.icon}</div>
                   
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {path.title}
                   </h3>
                   
-                  <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                  <p className="text-base text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                     {path.description}
                   </p>
                   
