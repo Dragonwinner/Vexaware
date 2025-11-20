@@ -132,18 +132,18 @@ export class VexUtils {
    * Check if document is stale (older than X days)
    */
   static isStale(doc: VexDocument, daysThreshold = 30): boolean {
-    return this.getDocumentAge(doc) > daysThreshold;
+    return VexUtils.getDocumentAge(doc) > daysThreshold;
   }
 
   /**
    * Compare two VEX documents
    */
   static compare(doc1: VexDocument, doc2: VexDocument) {
-    const stats1 = this.getStats(doc1);
-    const stats2 = this.getStats(doc2);
+    const stats1 = VexUtils.getStats(doc1);
+    const stats2 = VexUtils.getStats(doc2);
 
-    const vulns1 = new Set(this.getVulnerabilities(doc1));
-    const vulns2 = new Set(this.getVulnerabilities(doc2));
+    const vulns1 = new Set(VexUtils.getVulnerabilities(doc1));
+    const vulns2 = new Set(VexUtils.getVulnerabilities(doc2));
 
     const addedVulns = [...vulns2].filter(v => !vulns1.has(v));
     const removedVulns = [...vulns1].filter(v => !vulns2.has(v));
