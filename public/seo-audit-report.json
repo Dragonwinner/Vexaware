@@ -1,0 +1,3766 @@
+{
+  "timestamp": "2025-11-19T20:52:23.161Z",
+  "summary": {
+    "totalPages": 133,
+    "configuredPages": 0,
+    "missingConfigs": [
+      "/admin/contact-submissions/page.tsx",
+      "/api-docs/authentication/page.tsx",
+      "/api-docs/integrations/page.tsx",
+      "/api-docs/page.tsx",
+      "/api-docs/policies/page.tsx",
+      "/api-docs/projects/page.tsx",
+      "/api-docs/reports/page.tsx",
+      "/api-docs/sbom/page.tsx",
+      "/api-docs/users/page.tsx",
+      "/api-docs/vex-documents/page.tsx",
+      "/api-docs/vulnerabilities/page.tsx",
+      "/api-docs/webhooks/page.tsx",
+      "/blog/compliance-automation/page.tsx",
+      "/blog/container-scanning-tools/page.tsx",
+      "/blog/devsecops-culture/page.tsx",
+      "/blog/false-positive-problem/page.tsx",
+      "/blog/kubernetes-security-best-practices/page.tsx",
+      "/blog/page.tsx",
+      "/blog/sbom-integration-guide/page.tsx",
+      "/blog/supply-chain-attacks-2024/page.tsx",
+      "/blog/threat-intelligence-feeds/page.tsx",
+      "/blog/understanding-vex-standard/page.tsx",
+      "/blog/zero-day-vulnerabilities/page.tsx",
+      "/contact/page.tsx",
+      "/faq/page.tsx",
+      "/page.tsx",
+      "/resources/browser-extensions/page.tsx",
+      "/resources/cli-tools/page.tsx",
+      "/resources/dashboards/page.tsx",
+      "/resources/ide-plugins/page.tsx",
+      "/resources/integration-scripts/page.tsx",
+      "/resources/migration-tools/page.tsx",
+      "/resources/page.tsx",
+      "/resources/policy-templates/page.tsx",
+      "/resources/sbom-samples/page.tsx",
+      "/resources/testing-tools/page.tsx",
+      "/resources/vex-templates/page.tsx",
+      "/tutorials/advanced/advanced-analytics/page.tsx",
+      "/tutorials/advanced/automation-orchestration/page.tsx",
+      "/tutorials/advanced/bug-bounty/page.tsx",
+      "/tutorials/advanced/cost-optimization/page.tsx",
+      "/tutorials/advanced/custom-cve-database/page.tsx",
+      "/tutorials/advanced/devsecops-integration/page.tsx",
+      "/tutorials/advanced/executive-dashboards/page.tsx",
+      "/tutorials/advanced/incident-response/page.tsx",
+      "/tutorials/advanced/license-compliance/page.tsx",
+      "/tutorials/advanced/ml-exploitability/page.tsx",
+      "/tutorials/advanced/open-source-risk/page.tsx",
+      "/tutorials/advanced/page.tsx",
+      "/tutorials/advanced/penetration-testing/page.tsx",
+      "/tutorials/advanced/predictive-security/page.tsx",
+      "/tutorials/advanced/security-champions/page.tsx",
+      "/tutorials/advanced/security-metrics/page.tsx",
+      "/tutorials/advanced/soar-integration/page.tsx",
+      "/tutorials/advanced/supply-chain-security/page.tsx",
+      "/tutorials/advanced/threat-intelligence/page.tsx",
+      "/tutorials/advanced/vex-automation/page.tsx",
+      "/tutorials/advanced/zero-day-management/page.tsx",
+      "/tutorials/cloud-native/api-gateway-security/page.tsx",
+      "/tutorials/cloud-native/aws-integration/page.tsx",
+      "/tutorials/cloud-native/azure-integration/page.tsx",
+      "/tutorials/cloud-native/cloud-compliance/page.tsx",
+      "/tutorials/cloud-native/cloud-sbom/page.tsx",
+      "/tutorials/cloud-native/gcp-integration/page.tsx",
+      "/tutorials/cloud-native/iac-security/page.tsx",
+      "/tutorials/cloud-native/microservices-architecture/page.tsx",
+      "/tutorials/cloud-native/multi-cloud-strategy/page.tsx",
+      "/tutorials/cloud-native/page.tsx",
+      "/tutorials/cloud-native/serverless-security/page.tsx",
+      "/tutorials/compliance/audit-trail/page.tsx",
+      "/tutorials/compliance/cis-benchmarks/page.tsx",
+      "/tutorials/compliance/compliance-automation/page.tsx",
+      "/tutorials/compliance/compliance-reporting/page.tsx",
+      "/tutorials/compliance/evidence-collection/page.tsx",
+      "/tutorials/compliance/hipaa-compliance/page.tsx",
+      "/tutorials/compliance/iso-27001/page.tsx",
+      "/tutorials/compliance/nist-framework/page.tsx",
+      "/tutorials/compliance/page.tsx",
+      "/tutorials/compliance/pci-dss/page.tsx",
+      "/tutorials/compliance/policy-enforcement/page.tsx",
+      "/tutorials/compliance/regulatory-updates/page.tsx",
+      "/tutorials/compliance/remediation-tracking/page.tsx",
+      "/tutorials/compliance/risk-assessment/page.tsx",
+      "/tutorials/compliance/soc2-compliance/page.tsx",
+      "/tutorials/compliance/third-party-audits/page.tsx",
+      "/tutorials/getting-started/dashboard-tour/page.tsx",
+      "/tutorials/getting-started/first-vex-document/page.tsx",
+      "/tutorials/getting-started/installing-vex-aware/page.tsx",
+      "/tutorials/getting-started/introduction-to-vex-aware/page.tsx",
+      "/tutorials/getting-started/page.tsx",
+      "/tutorials/getting-started/vulnerability-management-crisis/page.tsx",
+      "/tutorials/getting-started/what-is-vex-and-why-it-matters/page.tsx",
+      "/tutorials/kubernetes-containers/admission-controllers/page.tsx",
+      "/tutorials/kubernetes-containers/cicd-integration/page.tsx",
+      "/tutorials/kubernetes-containers/container-security-basics/page.tsx",
+      "/tutorials/kubernetes-containers/helm-security/page.tsx",
+      "/tutorials/kubernetes-containers/image-scanning/page.tsx",
+      "/tutorials/kubernetes-containers/kubernetes-sbom/page.tsx",
+      "/tutorials/kubernetes-containers/kubernetes-security-context/page.tsx",
+      "/tutorials/kubernetes-containers/network-policies/page.tsx",
+      "/tutorials/kubernetes-containers/page.tsx",
+      "/tutorials/kubernetes-containers/pod-security-policies/page.tsx",
+      "/tutorials/kubernetes-containers/registry-integration/page.tsx",
+      "/tutorials/kubernetes-containers/runtime-security/page.tsx",
+      "/tutorials/kubernetes-containers/service-mesh-security/page.tsx",
+      "/tutorials/page.tsx",
+      "/tutorials/technical-implementation/alert-configuration/page.tsx",
+      "/tutorials/technical-implementation/api-integration/page.tsx",
+      "/tutorials/technical-implementation/architecture-overview/page.tsx",
+      "/tutorials/technical-implementation/authentication-setup/page.tsx",
+      "/tutorials/technical-implementation/backup-recovery/page.tsx",
+      "/tutorials/technical-implementation/configuration-management/page.tsx",
+      "/tutorials/technical-implementation/custom-policies/page.tsx",
+      "/tutorials/technical-implementation/database-setup/page.tsx",
+      "/tutorials/technical-implementation/docker-deployment/page.tsx",
+      "/tutorials/technical-implementation/kubernetes-deployment/page.tsx",
+      "/tutorials/technical-implementation/monitoring-logging/page.tsx",
+      "/tutorials/technical-implementation/page.tsx",
+      "/tutorials/technical-implementation/performance-tuning/page.tsx",
+      "/tutorials/technical-implementation/troubleshooting/page.tsx",
+      "/tutorials/technical-implementation/upgrade-procedures/page.tsx",
+      "/tutorials/technical-implementation/webhook-configuration/page.tsx",
+      "/use-cases/ecommerce-platform/page.tsx",
+      "/use-cases/education-sector/page.tsx",
+      "/use-cases/enterprise-software/page.tsx",
+      "/use-cases/financial-services/page.tsx",
+      "/use-cases/government-agency/page.tsx",
+      "/use-cases/healthcare-provider/page.tsx",
+      "/use-cases/manufacturing/page.tsx",
+      "/use-cases/page.tsx",
+      "/use-cases/saas-provider/page.tsx",
+      "/use-cases/startup-success/page.tsx",
+      "/use-cases/telecommunications/page.tsx"
+    ],
+    "seoIssues": [
+      {
+        "url": "/blog/container-scanning-tools/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/blog/kubernetes-security-best-practices/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/blog/page.tsx",
+        "issues": [
+          "Title too short (<30 characters)"
+        ]
+      },
+      {
+        "url": "/blog/supply-chain-attacks-2024/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/blog/threat-intelligence-feeds/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/blog/understanding-vex-standard/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/blog/zero-day-vulnerabilities/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/faq/page.tsx",
+        "issues": [
+          "Title too short (<30 characters)"
+        ]
+      },
+      {
+        "url": "/page.tsx",
+        "issues": [
+          "Title too short (<30 characters)"
+        ]
+      },
+      {
+        "url": "/resources/browser-extensions/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/resources/integration-scripts/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/advanced-analytics/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/automation-orchestration/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/bug-bounty/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/cost-optimization/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/custom-cve-database/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/devsecops-integration/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/executive-dashboards/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/incident-response/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/license-compliance/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/ml-exploitability/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/open-source-risk/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/penetration-testing/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/predictive-security/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/security-champions/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/security-metrics/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/soar-integration/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/supply-chain-security/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/threat-intelligence/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/vex-automation/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/advanced/zero-day-management/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/cloud-native/api-gateway-security/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/cloud-native/aws-integration/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/cloud-native/azure-integration/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/cloud-native/cloud-compliance/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/cloud-native/cloud-sbom/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/cloud-native/gcp-integration/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/cloud-native/iac-security/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/cloud-native/microservices-architecture/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/cloud-native/multi-cloud-strategy/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/cloud-native/serverless-security/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/compliance/audit-trail/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/compliance/cis-benchmarks/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/compliance/compliance-automation/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/compliance/compliance-reporting/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/compliance/evidence-collection/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/compliance/hipaa-compliance/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/compliance/iso-27001/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/compliance/nist-framework/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/compliance/pci-dss/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/compliance/policy-enforcement/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/compliance/regulatory-updates/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/compliance/remediation-tracking/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/compliance/risk-assessment/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/compliance/soc2-compliance/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/compliance/third-party-audits/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/getting-started/dashboard-tour/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/getting-started/first-vex-document/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/getting-started/installing-vex-aware/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/getting-started/introduction-to-vex-aware/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/getting-started/vulnerability-management-crisis/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/getting-started/what-is-vex-and-why-it-matters/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/admission-controllers/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/cicd-integration/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/container-security-basics/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/helm-security/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/image-scanning/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/kubernetes-sbom/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/kubernetes-security-context/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/network-policies/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/pod-security-policies/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/registry-integration/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/runtime-security/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/service-mesh-security/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/technical-implementation/alert-configuration/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/technical-implementation/api-integration/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/technical-implementation/architecture-overview/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/technical-implementation/authentication-setup/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/technical-implementation/backup-recovery/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/technical-implementation/configuration-management/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/technical-implementation/custom-policies/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/technical-implementation/database-setup/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/technical-implementation/docker-deployment/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/technical-implementation/kubernetes-deployment/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/technical-implementation/monitoring-logging/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/technical-implementation/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/technical-implementation/performance-tuning/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/technical-implementation/troubleshooting/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/technical-implementation/upgrade-procedures/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/tutorials/technical-implementation/webhook-configuration/page.tsx",
+        "issues": [
+          "Title too long (>60 characters)",
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/use-cases/ecommerce-platform/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/use-cases/enterprise-software/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/use-cases/financial-services/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/use-cases/healthcare-provider/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      },
+      {
+        "url": "/use-cases/telecommunications/page.tsx",
+        "issues": [
+          "Description too long (>160 characters)"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "url": "/api-docs/authentication/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/api-docs/integrations/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/api-docs/policies/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/api-docs/projects/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/api-docs/reports/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/api-docs/sbom/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/api-docs/users/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/api-docs/vex-documents/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/api-docs/vulnerabilities/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/api-docs/webhooks/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/blog/compliance-automation/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/blog/container-scanning-tools/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/blog/devsecops-culture/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/blog/false-positive-problem/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/blog/kubernetes-security-best-practices/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/blog/sbom-integration-guide/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/blog/supply-chain-attacks-2024/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/blog/threat-intelligence-feeds/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/blog/understanding-vex-standard/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/blog/zero-day-vulnerabilities/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/resources/cli-tools/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/resources/dashboards/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/resources/ide-plugins/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/resources/integration-scripts/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/resources/migration-tools/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/resources/policy-templates/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/resources/sbom-samples/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/resources/testing-tools/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/resources/vex-templates/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/advanced-analytics/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/automation-orchestration/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/bug-bounty/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/cost-optimization/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/custom-cve-database/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/devsecops-integration/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/executive-dashboards/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/incident-response/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/license-compliance/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/ml-exploitability/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/open-source-risk/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/penetration-testing/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/predictive-security/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/security-champions/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/security-metrics/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/soar-integration/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/supply-chain-security/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/threat-intelligence/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/vex-automation/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/advanced/zero-day-management/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/cloud-native/api-gateway-security/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/cloud-native/aws-integration/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/cloud-native/azure-integration/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/cloud-native/cloud-compliance/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/cloud-native/cloud-sbom/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/cloud-native/gcp-integration/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/cloud-native/iac-security/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/cloud-native/microservices-architecture/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/cloud-native/multi-cloud-strategy/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/cloud-native/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/cloud-native/serverless-security/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/compliance/audit-trail/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/compliance/cis-benchmarks/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/compliance/compliance-automation/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/compliance/compliance-reporting/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/compliance/evidence-collection/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/compliance/hipaa-compliance/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/compliance/iso-27001/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/compliance/nist-framework/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/compliance/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/compliance/pci-dss/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/compliance/policy-enforcement/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/compliance/regulatory-updates/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/compliance/remediation-tracking/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/compliance/risk-assessment/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/compliance/soc2-compliance/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/compliance/third-party-audits/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/getting-started/dashboard-tour/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/getting-started/first-vex-document/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/getting-started/installing-vex-aware/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/getting-started/introduction-to-vex-aware/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/getting-started/page.tsx",
+        "issues": [
+          "Missing SEO utility import"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/getting-started/vulnerability-management-crisis/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/getting-started/what-is-vex-and-why-it-matters/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/admission-controllers/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/cicd-integration/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/container-security-basics/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/helm-security/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/image-scanning/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/kubernetes-sbom/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/kubernetes-security-context/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/network-policies/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/pod-security-policies/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/registry-integration/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/runtime-security/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/kubernetes-containers/service-mesh-security/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/technical-implementation/alert-configuration/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/technical-implementation/api-integration/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/technical-implementation/architecture-overview/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/technical-implementation/authentication-setup/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/technical-implementation/backup-recovery/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/technical-implementation/configuration-management/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/technical-implementation/custom-policies/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/technical-implementation/database-setup/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/technical-implementation/docker-deployment/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/technical-implementation/kubernetes-deployment/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/technical-implementation/monitoring-logging/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/technical-implementation/page.tsx",
+        "issues": [
+          "Missing SEO utility import"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/technical-implementation/performance-tuning/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/technical-implementation/troubleshooting/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/technical-implementation/upgrade-procedures/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/tutorials/technical-implementation/webhook-configuration/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/use-cases/ecommerce-platform/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/use-cases/education-sector/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/use-cases/enterprise-software/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/use-cases/financial-services/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/use-cases/government-agency/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/use-cases/healthcare-provider/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/use-cases/manufacturing/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/use-cases/saas-provider/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/use-cases/startup-success/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      },
+      {
+        "url": "/use-cases/telecommunications/page.tsx",
+        "issues": [
+          "Missing SEO utility import",
+          "Missing Helmet component"
+        ],
+        "priority": "MEDIUM"
+      }
+    ]
+  },
+  "pages": [
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\admin\\contact-submissions\\page.tsx",
+      "url": "/admin/contact-submissions/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": true,
+        "hasStructuredData": false,
+        "lineCount": 266
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\api-docs\\authentication\\page.tsx",
+      "url": "/api-docs/authentication/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 150
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\api-docs\\integrations\\page.tsx",
+      "url": "/api-docs/integrations/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 150
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\api-docs\\page.tsx",
+      "url": "/api-docs/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": true,
+        "hasTitle": false,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": true,
+        "hasStructuredData": false,
+        "lineCount": 238
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\api-docs\\policies\\page.tsx",
+      "url": "/api-docs/policies/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 150
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\api-docs\\projects\\page.tsx",
+      "url": "/api-docs/projects/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 150
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\api-docs\\reports\\page.tsx",
+      "url": "/api-docs/reports/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 150
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\api-docs\\sbom\\page.tsx",
+      "url": "/api-docs/sbom/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 150
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\api-docs\\users\\page.tsx",
+      "url": "/api-docs/users/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 150
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\api-docs\\vex-documents\\page.tsx",
+      "url": "/api-docs/vex-documents/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 150
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\api-docs\\vulnerabilities\\page.tsx",
+      "url": "/api-docs/vulnerabilities/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 150
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\api-docs\\webhooks\\page.tsx",
+      "url": "/api-docs/webhooks/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 150
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\blog\\compliance-automation\\page.tsx",
+      "url": "/blog/compliance-automation/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 109
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\blog\\container-scanning-tools\\page.tsx",
+      "url": "/blog/container-scanning-tools/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 109
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\blog\\devsecops-culture\\page.tsx",
+      "url": "/blog/devsecops-culture/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 109
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\blog\\false-positive-problem\\page.tsx",
+      "url": "/blog/false-positive-problem/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 109
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\blog\\kubernetes-security-best-practices\\page.tsx",
+      "url": "/blog/kubernetes-security-best-practices/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 109
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\blog\\page.tsx",
+      "url": "/blog/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": true,
+        "hasTitle": false,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": true,
+        "hasStructuredData": false,
+        "lineCount": 230
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\blog\\sbom-integration-guide\\page.tsx",
+      "url": "/blog/sbom-integration-guide/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 109
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\blog\\supply-chain-attacks-2024\\page.tsx",
+      "url": "/blog/supply-chain-attacks-2024/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 109
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\blog\\threat-intelligence-feeds\\page.tsx",
+      "url": "/blog/threat-intelligence-feeds/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 109
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\blog\\understanding-vex-standard\\page.tsx",
+      "url": "/blog/understanding-vex-standard/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 109
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\blog\\zero-day-vulnerabilities\\page.tsx",
+      "url": "/blog/zero-day-vulnerabilities/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 109
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\contact\\page.tsx",
+      "url": "/contact/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": true,
+        "hasTitle": false,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": true,
+        "hasStructuredData": false,
+        "lineCount": 344
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\faq\\page.tsx",
+      "url": "/faq/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": true,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": true,
+        "hasStructuredData": false,
+        "lineCount": 196
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\page.tsx",
+      "url": "/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": true,
+        "hasStructuredData": false,
+        "lineCount": 267
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\resources\\browser-extensions\\page.tsx",
+      "url": "/resources/browser-extensions/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": true,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": true,
+        "hasStructuredData": false,
+        "lineCount": 440
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\resources\\cli-tools\\page.tsx",
+      "url": "/resources/cli-tools/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 169
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\resources\\dashboards\\page.tsx",
+      "url": "/resources/dashboards/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 103
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\resources\\ide-plugins\\page.tsx",
+      "url": "/resources/ide-plugins/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 233
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\resources\\integration-scripts\\page.tsx",
+      "url": "/resources/integration-scripts/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 103
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\resources\\migration-tools\\page.tsx",
+      "url": "/resources/migration-tools/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 103
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\resources\\page.tsx",
+      "url": "/resources/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": true,
+        "hasTitle": false,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": true,
+        "hasStructuredData": false,
+        "lineCount": 150
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\resources\\policy-templates\\page.tsx",
+      "url": "/resources/policy-templates/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 103
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\resources\\sbom-samples\\page.tsx",
+      "url": "/resources/sbom-samples/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 172
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\resources\\testing-tools\\page.tsx",
+      "url": "/resources/testing-tools/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 103
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\resources\\vex-templates\\page.tsx",
+      "url": "/resources/vex-templates/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 146
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\advanced-analytics\\page.tsx",
+      "url": "/tutorials/advanced/advanced-analytics/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 242
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\automation-orchestration\\page.tsx",
+      "url": "/tutorials/advanced/automation-orchestration/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 276
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\bug-bounty\\page.tsx",
+      "url": "/tutorials/advanced/bug-bounty/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\cost-optimization\\page.tsx",
+      "url": "/tutorials/advanced/cost-optimization/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\custom-cve-database\\page.tsx",
+      "url": "/tutorials/advanced/custom-cve-database/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\devsecops-integration\\page.tsx",
+      "url": "/tutorials/advanced/devsecops-integration/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\executive-dashboards\\page.tsx",
+      "url": "/tutorials/advanced/executive-dashboards/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\incident-response\\page.tsx",
+      "url": "/tutorials/advanced/incident-response/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 242
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\license-compliance\\page.tsx",
+      "url": "/tutorials/advanced/license-compliance/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\ml-exploitability\\page.tsx",
+      "url": "/tutorials/advanced/ml-exploitability/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 276
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\open-source-risk\\page.tsx",
+      "url": "/tutorials/advanced/open-source-risk/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\page.tsx",
+      "url": "/tutorials/advanced/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": true,
+        "hasTitle": false,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": true,
+        "hasStructuredData": false,
+        "lineCount": 361
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\penetration-testing\\page.tsx",
+      "url": "/tutorials/advanced/penetration-testing/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\predictive-security\\page.tsx",
+      "url": "/tutorials/advanced/predictive-security/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\security-champions\\page.tsx",
+      "url": "/tutorials/advanced/security-champions/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\security-metrics\\page.tsx",
+      "url": "/tutorials/advanced/security-metrics/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\soar-integration\\page.tsx",
+      "url": "/tutorials/advanced/soar-integration/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\supply-chain-security\\page.tsx",
+      "url": "/tutorials/advanced/supply-chain-security/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 276
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\threat-intelligence\\page.tsx",
+      "url": "/tutorials/advanced/threat-intelligence/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 276
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\vex-automation\\page.tsx",
+      "url": "/tutorials/advanced/vex-automation/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 242
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\advanced\\zero-day-management\\page.tsx",
+      "url": "/tutorials/advanced/zero-day-management/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 242
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\cloud-native\\api-gateway-security\\page.tsx",
+      "url": "/tutorials/cloud-native/api-gateway-security/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\cloud-native\\aws-integration\\page.tsx",
+      "url": "/tutorials/cloud-native/aws-integration/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 276
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\cloud-native\\azure-integration\\page.tsx",
+      "url": "/tutorials/cloud-native/azure-integration/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 276
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\cloud-native\\cloud-compliance\\page.tsx",
+      "url": "/tutorials/cloud-native/cloud-compliance/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\cloud-native\\cloud-sbom\\page.tsx",
+      "url": "/tutorials/cloud-native/cloud-sbom/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\cloud-native\\gcp-integration\\page.tsx",
+      "url": "/tutorials/cloud-native/gcp-integration/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 276
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\cloud-native\\iac-security\\page.tsx",
+      "url": "/tutorials/cloud-native/iac-security/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\cloud-native\\microservices-architecture\\page.tsx",
+      "url": "/tutorials/cloud-native/microservices-architecture/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\cloud-native\\multi-cloud-strategy\\page.tsx",
+      "url": "/tutorials/cloud-native/multi-cloud-strategy/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 242
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\cloud-native\\page.tsx",
+      "url": "/tutorials/cloud-native/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 117
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\cloud-native\\serverless-security\\page.tsx",
+      "url": "/tutorials/cloud-native/serverless-security/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 290
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\compliance\\audit-trail\\page.tsx",
+      "url": "/tutorials/compliance/audit-trail/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\compliance\\cis-benchmarks\\page.tsx",
+      "url": "/tutorials/compliance/cis-benchmarks/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\compliance\\compliance-automation\\page.tsx",
+      "url": "/tutorials/compliance/compliance-automation/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\compliance\\compliance-reporting\\page.tsx",
+      "url": "/tutorials/compliance/compliance-reporting/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\compliance\\evidence-collection\\page.tsx",
+      "url": "/tutorials/compliance/evidence-collection/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\compliance\\hipaa-compliance\\page.tsx",
+      "url": "/tutorials/compliance/hipaa-compliance/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 276
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\compliance\\iso-27001\\page.tsx",
+      "url": "/tutorials/compliance/iso-27001/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 276
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\compliance\\nist-framework\\page.tsx",
+      "url": "/tutorials/compliance/nist-framework/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\compliance\\page.tsx",
+      "url": "/tutorials/compliance/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 122
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\compliance\\pci-dss\\page.tsx",
+      "url": "/tutorials/compliance/pci-dss/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 276
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\compliance\\policy-enforcement\\page.tsx",
+      "url": "/tutorials/compliance/policy-enforcement/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\compliance\\regulatory-updates\\page.tsx",
+      "url": "/tutorials/compliance/regulatory-updates/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\compliance\\remediation-tracking\\page.tsx",
+      "url": "/tutorials/compliance/remediation-tracking/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 242
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\compliance\\risk-assessment\\page.tsx",
+      "url": "/tutorials/compliance/risk-assessment/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 242
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\compliance\\soc2-compliance\\page.tsx",
+      "url": "/tutorials/compliance/soc2-compliance/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 290
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\compliance\\third-party-audits\\page.tsx",
+      "url": "/tutorials/compliance/third-party-audits/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 242
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\getting-started\\dashboard-tour\\page.tsx",
+      "url": "/tutorials/getting-started/dashboard-tour/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 204
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\getting-started\\first-vex-document\\page.tsx",
+      "url": "/tutorials/getting-started/first-vex-document/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 204
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\getting-started\\installing-vex-aware\\page.tsx",
+      "url": "/tutorials/getting-started/installing-vex-aware/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 204
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\getting-started\\introduction-to-vex-aware\\page.tsx",
+      "url": "/tutorials/getting-started/introduction-to-vex-aware/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 291
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\getting-started\\page.tsx",
+      "url": "/tutorials/getting-started/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": true,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 113
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\getting-started\\vulnerability-management-crisis\\page.tsx",
+      "url": "/tutorials/getting-started/vulnerability-management-crisis/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\getting-started\\what-is-vex-and-why-it-matters\\page.tsx",
+      "url": "/tutorials/getting-started/what-is-vex-and-why-it-matters/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 223
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\kubernetes-containers\\admission-controllers\\page.tsx",
+      "url": "/tutorials/kubernetes-containers/admission-controllers/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\kubernetes-containers\\cicd-integration\\page.tsx",
+      "url": "/tutorials/kubernetes-containers/cicd-integration/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\kubernetes-containers\\container-security-basics\\page.tsx",
+      "url": "/tutorials/kubernetes-containers/container-security-basics/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 276
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\kubernetes-containers\\helm-security\\page.tsx",
+      "url": "/tutorials/kubernetes-containers/helm-security/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\kubernetes-containers\\image-scanning\\page.tsx",
+      "url": "/tutorials/kubernetes-containers/image-scanning/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 276
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\kubernetes-containers\\kubernetes-sbom\\page.tsx",
+      "url": "/tutorials/kubernetes-containers/kubernetes-sbom/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 276
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\kubernetes-containers\\kubernetes-security-context\\page.tsx",
+      "url": "/tutorials/kubernetes-containers/kubernetes-security-context/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\kubernetes-containers\\network-policies\\page.tsx",
+      "url": "/tutorials/kubernetes-containers/network-policies/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\kubernetes-containers\\page.tsx",
+      "url": "/tutorials/kubernetes-containers/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 119
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\kubernetes-containers\\pod-security-policies\\page.tsx",
+      "url": "/tutorials/kubernetes-containers/pod-security-policies/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\kubernetes-containers\\registry-integration\\page.tsx",
+      "url": "/tutorials/kubernetes-containers/registry-integration/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\kubernetes-containers\\runtime-security\\page.tsx",
+      "url": "/tutorials/kubernetes-containers/runtime-security/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 276
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\kubernetes-containers\\service-mesh-security\\page.tsx",
+      "url": "/tutorials/kubernetes-containers/service-mesh-security/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 228
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\page.tsx",
+      "url": "/tutorials/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": true,
+        "hasTitle": false,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": true,
+        "hasStructuredData": false,
+        "lineCount": 302
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\technical-implementation\\alert-configuration\\page.tsx",
+      "url": "/tutorials/technical-implementation/alert-configuration/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 242
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\technical-implementation\\api-integration\\page.tsx",
+      "url": "/tutorials/technical-implementation/api-integration/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 242
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\technical-implementation\\architecture-overview\\page.tsx",
+      "url": "/tutorials/technical-implementation/architecture-overview/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 290
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\technical-implementation\\authentication-setup\\page.tsx",
+      "url": "/tutorials/technical-implementation/authentication-setup/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 242
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\technical-implementation\\backup-recovery\\page.tsx",
+      "url": "/tutorials/technical-implementation/backup-recovery/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 242
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\technical-implementation\\configuration-management\\page.tsx",
+      "url": "/tutorials/technical-implementation/configuration-management/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 290
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\technical-implementation\\custom-policies\\page.tsx",
+      "url": "/tutorials/technical-implementation/custom-policies/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 242
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\technical-implementation\\database-setup\\page.tsx",
+      "url": "/tutorials/technical-implementation/database-setup/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 290
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\technical-implementation\\docker-deployment\\page.tsx",
+      "url": "/tutorials/technical-implementation/docker-deployment/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 290
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\technical-implementation\\kubernetes-deployment\\page.tsx",
+      "url": "/tutorials/technical-implementation/kubernetes-deployment/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 290
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\technical-implementation\\monitoring-logging\\page.tsx",
+      "url": "/tutorials/technical-implementation/monitoring-logging/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 242
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\technical-implementation\\page.tsx",
+      "url": "/tutorials/technical-implementation/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": true,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": true,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 215
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\technical-implementation\\performance-tuning\\page.tsx",
+      "url": "/tutorials/technical-implementation/performance-tuning/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 242
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\technical-implementation\\troubleshooting\\page.tsx",
+      "url": "/tutorials/technical-implementation/troubleshooting/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 242
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\technical-implementation\\upgrade-procedures\\page.tsx",
+      "url": "/tutorials/technical-implementation/upgrade-procedures/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 242
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\tutorials\\technical-implementation\\webhook-configuration\\page.tsx",
+      "url": "/tutorials/technical-implementation/webhook-configuration/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": true,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 242
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\use-cases\\ecommerce-platform\\page.tsx",
+      "url": "/use-cases/ecommerce-platform/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 159
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\use-cases\\education-sector\\page.tsx",
+      "url": "/use-cases/education-sector/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 159
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\use-cases\\enterprise-software\\page.tsx",
+      "url": "/use-cases/enterprise-software/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 159
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\use-cases\\financial-services\\page.tsx",
+      "url": "/use-cases/financial-services/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 159
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\use-cases\\government-agency\\page.tsx",
+      "url": "/use-cases/government-agency/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 159
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\use-cases\\healthcare-provider\\page.tsx",
+      "url": "/use-cases/healthcare-provider/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 159
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\use-cases\\manufacturing\\page.tsx",
+      "url": "/use-cases/manufacturing/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 159
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\use-cases\\page.tsx",
+      "url": "/use-cases/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": true,
+        "hasTitle": false,
+        "hasDescription": true,
+        "hasKeywords": false,
+        "hasSEOImport": true,
+        "hasStructuredData": false,
+        "lineCount": 151
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\use-cases\\saas-provider\\page.tsx",
+      "url": "/use-cases/saas-provider/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 159
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\use-cases\\startup-success\\page.tsx",
+      "url": "/use-cases/startup-success/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 159
+      },
+      "hasConfig": false
+    },
+    {
+      "file": "E:\\project\\Vexaware\\vexa1\\Vexaware\\app\\use-cases\\telecommunications\\page.tsx",
+      "url": "/use-cases/telecommunications/page.tsx",
+      "exists": true,
+      "analysis": {
+        "hasHelmet": false,
+        "hasTitle": false,
+        "hasDescription": false,
+        "hasKeywords": false,
+        "hasSEOImport": false,
+        "hasStructuredData": false,
+        "lineCount": 159
+      },
+      "hasConfig": false
+    }
+  ]
+}

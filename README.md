@@ -14,6 +14,7 @@ A comprehensive, SEO-optimized **full-stack tutorial website** for VEX Aware - a
 - **Dark Mode**: System preference detection with manual toggle
 - **Interactive Components**: Code blocks with copy functionality, table of contents, breadcrumbs
 - **Real Content**: Tutorials extracted from the official VEX Aware Complete Guide PDF
+- **Client-Side Routing**: React Router v6 for seamless navigation
 
 ## 📚 Content Structure
 
@@ -145,13 +146,14 @@ vexaware/
 │   ├── resources/          # Resource pages
 │   ├── blog/               # Blog pages
 │   ├── faq/                # FAQ page
-│   ├── layout.tsx          # Root layout with SEO
 │   ├── page.tsx            # Homepage
-│   └── sitemap.ts          # Dynamic sitemap
+│   └── globals.css         # Global styles
 ├── components/              # React components
 │   ├── Navigation.tsx
 │   ├── Breadcrumbs.tsx
 │   ├── CodeBlock.tsx
+│   ├── Navigation.tsx
+│   ├── SearchBar.tsx
 │   ├── TableOfContents.tsx
 │   └── SocialShare.tsx
 ├── lib/                     # Utility functions & DB
@@ -176,23 +178,19 @@ vexaware/
 
 ## 🎨 Styling
 
-The site uses Tailwind CSS v4 with:
+The site uses Tailwind CSS v3 with:
 - Dark mode support via `class` strategy
 - Custom color palette
-- Typography plugin for rich content
 - Responsive design (mobile-first)
 
 ## 🔍 SEO Features
 
-- ✅ Unique title tags and meta descriptions
+- ✅ Unique title tags and meta descriptions with React Helmet
 - ✅ Open Graph tags for social sharing
 - ✅ Twitter Card metadata
-- ✅ JSON-LD structured data (Article, HowTo, FAQ, Breadcrumb)
 - ✅ Semantic HTML structure
 - ✅ Image alt text
-- ✅ XML sitemap
 - ✅ Robots.txt with AI crawler support
-- ✅ Canonical URLs
 - ✅ Performance optimized (Lighthouse 95+)
 
 ## 📊 Analytics
@@ -227,7 +225,7 @@ npm i -g vercel
 vercel
 ```
 
-### Other Platforms
+### Vercel
 
 The site can be deployed to any platform supporting Next.js:
 - Netlify
@@ -303,6 +301,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - [Next.js](https://nextjs.org/) - React framework with App Router
 - [React](https://react.dev/) - UI library
+- [Vite](https://vitejs.dev/) - Build tool
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS
 - [MongoDB](https://www.mongodb.com/) - NoSQL database

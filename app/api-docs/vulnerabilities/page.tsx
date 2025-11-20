@@ -1,12 +1,8 @@
-import { Metadata } from "next";
+import { Helmet } from "react-helmet-async";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CodeBlock from "@/components/CodeBlock";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
-export const metadata: Metadata = {
-  title: "Vulnerabilities API - VEX Aware API Documentation",
-  description: "Complete API reference for vulnerabilities api in VEX Aware.",
-};
 
 export default function ApiDocPage() {
   const exampleRequest = `curl -X GET "https://api.vexaware.com/v1/vulnerabilities" \
@@ -136,14 +132,14 @@ export default function ApiDocPage() {
               Need Help?
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Link href="/api-docs" className="p-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all">
+              <Link to="/api-docs" className="p-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all">
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">📖 API Overview</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400">Return to API documentation home</p>
               </Link>
-              <a href="https://github.com/vexaware/examples" className="p-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all">
+              <Link to="/resources" className="p-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all">
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">💻 Code Examples</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400">View example implementations</p>
-              </a>
+              </Link>
             </div>
           </div>
         </article>

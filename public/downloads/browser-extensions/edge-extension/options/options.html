@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEX Aware - Extension Options</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="../icons/icon-48.png" alt="VEX Aware" class="logo-img">
+                <h1>VEX Aware Extension Settings</h1>
+            </div>
+            <div class="version">v2.0.0</div>
+        </header>
+
+        <nav class="nav-tabs">
+            <button class="nav-tab active" data-tab="general">General</button>
+            <button class="nav-tab" data-tab="validation">Validation</button>
+            <button class="nav-tab" data-tab="scanning">Scanning</button>
+            <button class="nav-tab" data-tab="integration">Integration</button>
+            <button class="nav-tab" data-tab="about">About</button>
+        </nav>
+
+        <main class="main">
+            <!-- General Settings -->
+            <div class="tab-content active" id="general">
+                <div class="section">
+                    <h2>General Settings</h2>
+                    
+                    <div class="setting-group">
+                        <label class="setting-label">
+                            <input type="checkbox" id="enableNotifications" checked>
+                            <span class="checkmark"></span>
+                            Enable notifications
+                        </label>
+                        <p class="setting-description">Show browser notifications for VEX-related events and results</p>
+                    </div>
+
+                    <div class="setting-group">
+                        <label class="setting-label">
+                            <input type="checkbox" id="enableContextMenu" checked>
+                            <span class="checkmark"></span>
+                            Enable context menu
+                        </label>
+                        <p class="setting-description">Add VEX Aware options to the right-click context menu</p>
+                    </div>
+
+                    <div class="setting-group">
+                        <label class="setting-label">
+                            <input type="checkbox" id="enablePageHighlighting" checked>
+                            <span class="checkmark"></span>
+                            Highlight VEX elements on pages
+                        </label>
+                        <p class="setting-description">Automatically highlight VEX documents and vulnerabilities found on web pages</p>
+                    </div>
+
+                    <div class="setting-group">
+                        <label class="setting-label">
+                            <input type="checkbox" id="enableAutoScan">
+                            <span class="checkmark"></span>
+                            Auto-scan pages for vulnerabilities
+                        </label>
+                        <p class="setting-description">Automatically scan supported pages for known vulnerabilities</p>
+                    </div>
+
+                    <div class="setting-group">
+                        <label class="setting-label" for="updateInterval">Update interval (minutes)</label>
+                        <select id="updateInterval">
+                            <option value="5">5 minutes</option>
+                            <option value="15" selected>15 minutes</option>
+                            <option value="30">30 minutes</option>
+                            <option value="60">1 hour</option>
+                            <option value="240">4 hours</option>
+                        </select>
+                        <p class="setting-description">How often to check for vulnerability database updates</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Validation Settings -->
+            <div class="tab-content" id="validation">
+                <div class="section">
+                    <h2>VEX Validation Settings</h2>
+                    
+                    <div class="setting-group">
+                        <label class="setting-label" for="validationMode">Validation strictness</label>
+                        <select id="validationMode">
+                            <option value="strict">Strict - Full compliance required</option>
+                            <option value="standard" selected>Standard - Common format accepted</option>
+                            <option value="lenient">Lenient - Basic structure only</option>
+                        </select>
+                        <p class="setting-description">How strictly to validate VEX document formats</p>
+                    </div>
+
+                    <div class="setting-group">
+                        <label class="setting-label">
+                            <input type="checkbox" id="validateSchemas" checked>
+                            <span class="checkmark"></span>
+                            Validate against JSON schemas
+                        </label>
+                        <p class="setting-description">Perform JSON schema validation for VEX documents</p>
+                    </div>
+
+                    <div class="setting-group">
+                        <label class="setting-label">
+                            <input type="checkbox" id="validateSignatures">
+                            <span class="checkmark"></span>
+                            Validate digital signatures
+                        </label>
+                        <p class="setting-description">Check digital signatures when present in VEX documents</p>
+                    </div>
+
+                    <div class="setting-group">
+                        <label class="setting-label">
+                            <input type="checkbox" id="showValidationDetails" checked>
+                            <span class="checkmark"></span>
+                            Show detailed validation results
+                        </label>
+                        <p class="setting-description">Display comprehensive validation information and recommendations</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scanning Settings -->
+            <div class="tab-content" id="scanning">
+                <div class="section">
+                    <h2>Vulnerability Scanning Settings</h2>
+                    
+                    <div class="setting-group">
+                        <label class="setting-label" for="vulnerabilityDatabases">Vulnerability databases</label>
+                        <div class="checkbox-group">
+                            <label class="setting-label">
+                                <input type="checkbox" id="useNVD" checked>
+                                <span class="checkmark"></span>
+                                National Vulnerability Database (NVD)
+                            </label>
+                            <label class="setting-label">
+                                <input type="checkbox" id="useOSV" checked>
+                                <span class="checkmark"></span>
+                                OSV (Open Source Vulnerabilities)
+                            </label>
+                            <label class="setting-label">
+                                <input type="checkbox" id="useGitHubAdvisories" checked>
+                                <span class="checkmark"></span>
+                                GitHub Security Advisories
+                            </label>
+                            <label class="setting-label">
+                                <input type="checkbox" id="useSnyk">
+                                <span class="checkmark"></span>
+                                Snyk Database
+                            </label>
+                        </div>
+                        <p class="setting-description">Select which vulnerability databases to use for scanning</p>
+                    </div>
+
+                    <div class="setting-group">
+                        <label class="setting-label" for="scanSeverity">Minimum severity to report</label>
+                        <select id="scanSeverity">
+                            <option value="critical">Critical only</option>
+                            <option value="high">High and above</option>
+                            <option value="medium" selected>Medium and above</option>
+                            <option value="low">Low and above</option>
+                            <option value="all">All severities</option>
+                        </select>
+                        <p class="setting-description">Only report vulnerabilities at or above this severity level</p>
+                    </div>
+
+                    <div class="setting-group">
+                        <label class="setting-label">
+                            <input type="checkbox" id="excludeDevDependencies">
+                            <span class="checkmark"></span>
+                            Exclude development dependencies
+                        </label>
+                        <p class="setting-description">Don't scan development-only dependencies for vulnerabilities</p>
+                    </div>
+
+                    <div class="setting-group">
+                        <label class="setting-label">
+                            <input type="checkbox" id="enableCacheScanning" checked>
+                            <span class="checkmark"></span>
+                            Cache scan results
+                        </label>
+                        <p class="setting-description">Cache vulnerability scan results to improve performance</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integration Settings -->
+            <div class="tab-content" id="integration">
+                <div class="section">
+                    <h2>Integration Settings</h2>
+                    
+                    <div class="setting-group">
+                        <label class="setting-label" for="apiEndpoint">VEX Aware API endpoint</label>
+                        <input type="url" id="apiEndpoint" value="https://api.vexaware.com/v1" class="setting-input">
+                        <p class="setting-description">API endpoint for VEX Aware services</p>
+                    </div>
+
+                    <div class="setting-group">
+                        <label class="setting-label" for="apiKey">API key (optional)</label>
+                        <input type="password" id="apiKey" placeholder="Enter your API key" class="setting-input">
+                        <p class="setting-description">API key for enhanced features and higher rate limits</p>
+                    </div>
+
+                    <div class="setting-group">
+                        <label class="setting-label">
+                            <input type="checkbox" id="shareAnonymousData">
+                            <span class="checkmark"></span>
+                            Share anonymous usage data
+                        </label>
+                        <p class="setting-description">Help improve VEX Aware by sharing anonymous usage statistics</p>
+                    </div>
+
+                    <div class="setting-group">
+                        <label class="setting-label" for="exportFormat">Default export format</label>
+                        <select id="exportFormat">
+                            <option value="json" selected>JSON</option>
+                            <option value="yaml">YAML</option>
+                            <option value="xml">XML</option>
+                            <option value="csv">CSV (summary)</option>
+                        </select>
+                        <p class="setting-description">Default format for exporting VEX documents and scan results</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About -->
+            <div class="tab-content" id="about">
+                <div class="section">
+                    <h2>About VEX Aware Extension</h2>
+                    
+                    <div class="about-info">
+                        <div class="info-card">
+                            <h3>Version Information</h3>
+                            <p><strong>Version:</strong> 2.0.0</p>
+                            <p><strong>Release Date:</strong> <span id="releaseDate">December 2024</span></p>
+                            <p><strong>Build:</strong> <span id="buildNumber">2024.12.001</span></p>
+                        </div>
+
+                        <div class="info-card">
+                            <h3>Features</h3>
+                            <ul>
+                                <li>VEX document validation and generation</li>
+                                <li>Vulnerability scanning with multiple databases</li>
+                                <li>Automatic dependency detection</li>
+                                <li>Integration with popular development platforms</li>
+                                <li>Real-time security notifications</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card">
+                            <h3>Resources</h3>
+                            <div class="resource-links">
+                                <a href="https://vexaware.com" class="resource-link" target="_blank">
+                                    <span>Official Website</span>
+                                    <svg class="external-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://vexaware.com/resources/browser-extensions" class="resource-link" target="_blank">
+                                    <span>Documentation</span>
+                                    <svg class="external-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://github.com/vexaware/browser-extensions" class="resource-link" target="_blank">
+                                    <span>Source Code</span>
+                                    <svg class="external-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                                    </svg>
+                                </a>
+                                <a href="mailto:support@vexaware.com" class="resource-link">
+                                    <span>Support</span>
+                                    <svg class="external-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-actions">
+                <button class="btn btn-secondary" id="resetSettings">Reset to Defaults</button>
+                <button class="btn btn-secondary" id="exportSettings">Export Settings</button>
+                <button class="btn btn-secondary" id="importSettings">Import Settings</button>
+                <button class="btn btn-primary" id="saveSettings">Save Settings</button>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2024 VEX Aware. Licensed under MIT License.</p>
+            </div>
+        </footer>
+    </div>
+
+    <input type="file" id="importFileInput" accept=".json" style="display: none;">
+    
+    <div id="notification" class="notification" style="display: none;">
+        <span id="notificationMessage"></span>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+</html>

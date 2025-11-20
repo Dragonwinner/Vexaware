@@ -1,16 +1,24 @@
-import { Metadata } from "next";
+import { Helmet } from "react-helmet-async";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SocialShare from "@/components/SocialShare";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
-export const metadata: Metadata = {
-  title: "Managing Zero-Day Vulnerabilities - VEX Aware Blog",
-  description: "Learn about managing zero-day vulnerabilities and how it impacts vulnerability management.",
-};
 
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950">
+      <Helmet>
+        <title>Managing Zero-Day Vulnerabilities - VEX Aware Blog</title>
+        <meta name="description" content="Learn how to effectively manage zero-day vulnerabilities in your organization with practical insights and best practices from security experts." />
+        <meta name="keywords" content="zero-day vulnerabilities, security, vulnerability management, cybersecurity, VEX" />
+        <meta property="og:title" content="Managing Zero-Day Vulnerabilities - VEX Aware Blog" />
+        <meta property="og:description" content="Learn how to effectively manage zero-day vulnerabilities in your organization with practical insights and best practices from security experts." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://vexaware.com/blog/zero-day-vulnerabilities" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Managing Zero-Day Vulnerabilities - VEX Aware Blog" />
+        <meta name="twitter:description" content="Learn how to effectively manage zero-day vulnerabilities in your organization with practical insights and best practices from security experts." />
+      </Helmet>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumbs
           items={[
@@ -95,11 +103,11 @@ export default function BlogPost() {
               Related Articles
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Link href="/blog" className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all">
+              <Link to="/blog" className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all">
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">View All Posts</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400">Explore more articles on security</p>
               </Link>
-              <Link href="/tutorials/getting-started" className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all">
+              <Link to="/tutorials/getting-started" className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all">
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Start Learning</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400">Begin with our tutorials</p>
               </Link>

@@ -1,14 +1,10 @@
-import { Metadata } from "next";
+import { Helmet } from "react-helmet-async";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CodeBlock from "@/components/CodeBlock";
 import SocialShare from "@/components/SocialShare";
 import TableOfContents from "@/components/TableOfContents";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
-export const metadata: Metadata = {
-  title: "DevSecOps Integration - VEX Aware Tutorial",
-  description: "Learn devsecops integration with VEX Aware.",
-};
 
 export default function TutorialPage() {
   const headings = [
@@ -212,11 +208,11 @@ vexaware logs tail --lines 100`}
                 <h2>Next Steps</h2>
                 <p>Now that you've completed this tutorial:</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-                  <Link href="/tutorials/advanced" className="p-4 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all">
+                  <Link to="/tutorials/advanced" className="p-4 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all">
                     <h3 className="font-semibold text-gray-900 dark:text-white mb-2">📚 More Tutorials</h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Continue learning</p>
                   </Link>
-                  <Link href="/api-docs" className="p-4 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all">
+                  <Link to="/api-docs" className="p-4 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all">
                     <h3 className="font-semibold text-gray-900 dark:text-white mb-2">📖 API Docs</h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Explore the API</p>
                   </Link>

@@ -1,147 +1,202 @@
-import { Metadata } from "next";
-import Breadcrumbs from "@/components/Breadcrumbs";
+import { Helmet } from "react-helmet-async";
+import { useState } from "react";
+import Footer from "../../components/Footer";
+import { faqMetadata } from "../../lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Frequently Asked Questions - VEX Aware",
-  description: "Common questions about VEX Aware, vulnerability management, and VEX implementation",
-  keywords: ["FAQ", "questions", "VEX aware help", "vulnerability management"],
-};
+export const metadata = faqMetadata;
 
-export default function FAQPage() {
-  const faqs = [
-    {
-      category: "General",
-      questions: [
-        {
-          q: "What is the difference between VEX and traditional vulnerability scanning?",
-          a: "Traditional scanning identifies all known vulnerabilities in your dependencies. VEX adds context about whether those vulnerabilities are actually exploitable in your specific implementation, dramatically reducing false positives."
-        },
-        {
-          q: "How long does VEX Aware implementation take?",
-          a: "Most organizations can complete basic implementation in 1-2 weeks. Full integration with CI/CD pipelines typically takes 4-6 weeks depending on complexity."
-        },
-        {
-          q: "What is the average ROI for VEX Aware?",
-          a: "Organizations typically see 70-85% reduction in vulnerability investigation time, resulting in significant cost savings. The average ROI is achieved within 3-6 months."
-        },
-      ],
-    },
-    {
-      category: "Technical",
-      questions: [
-        {
-          q: "Does VEX Aware work with my existing tools?",
-          a: "Yes! VEX Aware integrates with popular security scanners, CI/CD platforms, and SBOM tools. We support OpenVEX, CycloneDX, and CSAF formats."
-        },
-        {
-          q: "Can I deploy VEX Aware on-premises?",
-          a: "Absolutely. VEX Aware offers both cloud and on-premises deployment options to meet your security and compliance requirements."
-        },
-        {
-          q: "What programming languages does VEX Aware support?",
-          a: "VEX Aware is language-agnostic and works with any technology stack. Our API has client libraries for Python, JavaScript, Go, and Java."
-        },
-      ],
-    },
-    {
-      category: "Compliance",
-      questions: [
-        {
-          q: "Is VEX Aware compliant with SOC 2 and ISO 27001?",
-          a: "Yes, VEX Aware is SOC 2 Type II certified and ISO 27001 compliant. We also support HIPAA and PCI DSS requirements."
-        },
-        {
-          q: "How does VEX Aware help with security audits?",
-          a: "VEX Aware provides comprehensive audit trails, automated compliance reports, and documented justifications for vulnerability assessments."
-        },
-      ],
-    },
-  ];
+interface FAQItem {
+  question: string;
+  answer: string;
+  category: string;
+}
+
+const faqData: FAQItem[] = [
+  {
+    category: "Getting Started",
+    question: "What is VEX Aware?",
+    answer: "VEX Aware is a comprehensive vulnerability management platform that helps organizations identify, assess, and remediate security vulnerabilities in their software supply chain. It provides real-time visibility into your security posture and automates compliance reporting."
+  },
+  {
+    category: "Getting Started",
+    question: "How do I get started with VEX Aware?",
+    answer: "Getting started is simple: 1) Sign up for an account, 2) Install our CLI tools or integrate with your CI/CD pipeline, 3) Run your first vulnerability scan, 4) Review and prioritize findings in the dashboard. Our getting started guide provides step-by-step instructions."
+  },
+  {
+    category: "Getting Started",
+    question: "What programming languages and frameworks does VEX Aware support?",
+    answer: "VEX Aware supports a wide range of technologies including JavaScript/Node.js, Python, Java, .NET, Go, Rust, PHP, Ruby, and more. We also support container scanning, Infrastructure as Code (IaC), and cloud-native applications."
+  },
+  {
+    category: "Features",
+    question: "What is a VEX document?",
+    answer: "VEX (Vulnerability Exploitability eXchange) documents provide detailed information about vulnerabilities and their exploitability status in your specific context. They help communicate whether a vulnerability affects your application and what actions should be taken."
+  },
+  {
+    category: "Features",
+    question: "How does SBOM integration work?",
+    answer: "Software Bill of Materials (SBOM) integration allows you to import and analyze your software components automatically. VEX Aware can generate SBOMs from your code, import existing SBOMs in SPDX or CycloneDX formats, and continuously monitor components for new vulnerabilities."
+  },
+  {
+    category: "Features",
+    question: "Can I integrate VEX Aware with my existing tools?",
+    answer: "Yes! VEX Aware offers extensive integrations including CI/CD platforms (GitHub Actions, Jenkins, GitLab), security tools (SAST/DAST scanners), issue tracking systems (Jira, ServiceNow), and monitoring platforms. Our REST API allows custom integrations."
+  },
+  {
+    category: "Security",
+    question: "How secure is my data with VEX Aware?",
+    answer: "Security is our top priority. We use enterprise-grade encryption, SOC 2 compliance, role-based access control, and secure cloud infrastructure. Your code and vulnerability data are protected with industry-standard security measures."
+  },
+  {
+    category: "Security",
+    question: "Do you support on-premises deployment?",
+    answer: "Yes, we offer both cloud-hosted and on-premises deployment options. Our enterprise plans include private cloud and hybrid deployment models to meet your organization's security and compliance requirements."
+  },
+  {
+    category: "Pricing",
+    question: "What pricing plans are available?",
+    answer: "We offer flexible pricing including a free tier for small projects, professional plans for growing teams, and enterprise solutions for large organizations. Pricing is based on the number of repositories, users, and advanced features needed."
+  },
+  {
+    category: "Pricing",
+    question: "Is there a free trial?",
+    answer: "Yes! We offer a 14-day free trial of our professional features, and our basic plan remains free forever for public repositories and small teams. No credit card required to get started."
+  },
+  {
+    category: "Support",
+    question: "What support options are available?",
+    answer: "We provide comprehensive support including documentation, video tutorials, community forums, email support, and dedicated customer success managers for enterprise customers. Our support team is available 24/7 for critical issues."
+  },
+  {
+    category: "Support",
+    question: "How can I report a bug or request a feature?",
+    answer: "You can report bugs or request features through our support portal, GitHub issues, or by contacting our support team directly. We prioritize feedback from our users and regularly release updates based on community input."
+  }
+];
+
+export default function Page() {
+  const [openItems, setOpenItems] = useState<number[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+
+  const categories = ["All", ...Array.from(new Set(faqData.map(item => item.category)))];
+  const filteredFAQs = selectedCategory === "All" 
+    ? faqData 
+    : faqData.filter(item => item.category === selectedCategory);
+
+  const toggleItem = (index: number) => {
+    setOpenItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: faqs.flatMap((category) =>
-              category.questions.map(({ q, a }) => ({
-                "@type": "Question",
-                name: q,
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: a,
-                },
-              }))
-            ),
-          }),
-        }}
-      />
+    <div className="min-h-screen bg-white dark:bg-gray-950">
+      <Helmet>
+        <title>Frequently Asked Questions - VEX Aware</title>
+        <meta name="description" content="Find answers to common questions about VEX Aware's vulnerability management platform, VEX documents, and security features." />
+      </Helmet>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Frequently Asked Questions
+          </h1>
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            Find answers to common questions about VEX Aware's vulnerability management platform, 
+            features, pricing, and support options.
+          </p>
+        </div>
 
-      <div className="min-h-screen bg-white dark:bg-gray-950">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <Breadcrumbs items={[{ name: "FAQ", url: "/faq" }]} />
+        {/* Category Filter */}
+        <div className="flex flex-wrap gap-2 mb-8 justify-center">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                selectedCategory === category
+                  ? "bg-blue-600 text-white"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
 
-          <div className="mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              Frequently Asked Questions
-            </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400">
-              Find answers to common questions about VEX Aware and vulnerability management
-            </p>
-          </div>
-
-          <div className="space-y-12">
-            {faqs.map((category) => (
-              <section key={category.category}>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                  {category.category}
-                </h2>
-                <div className="space-y-6">
-                  {category.questions.map((faq, index) => (
-                    <div
-                      key={index}
-                      className="p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg"
-                    >
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                        {faq.q}
+        {/* FAQ Items */}
+        <div className="max-w-4xl mx-auto">
+          {filteredFAQs.map((faq, index) => {
+            const globalIndex = faqData.indexOf(faq);
+            const isOpen = openItems.includes(globalIndex);
+            
+            return (
+              <div key={globalIndex} className="mb-4">
+                <div className="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+                  <button
+                    onClick={() => toggleItem(globalIndex)}
+                    className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                  >
+                    <div>
+                      <span className="inline-block px-2 py-1 text-xs bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded-full mb-2">
+                        {faq.category}
+                      </span>
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                        {faq.question}
                       </h3>
-                      <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                        {faq.a}
+                    </div>
+                    <svg
+                      className={`w-5 h-5 text-gray-500 transform transition-transform ${
+                        isOpen ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  
+                  {isOpen && (
+                    <div className="px-6 pb-4">
+                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        {faq.answer}
                       </p>
                     </div>
-                  ))}
+                  )}
                 </div>
-              </section>
-            ))}
-          </div>
+              </div>
+            );
+          })}
+        </div>
 
-          <div className="mt-12 p-8 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Still have questions?
-            </h2>
-            <p className="text-gray-700 dark:text-gray-300 mb-6">
-              Can't find what you're looking for? Check out our comprehensive documentation or contact our support team.
+        {/* Contact Support Section */}
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white">
+            <h2 className="text-2xl font-bold mb-4">Still have questions?</h2>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Can't find what you're looking for? Our support team is here to help you get the most out of VEX Aware.
             </p>
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/tutorials/getting-started"
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                href="/contact"
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center"
               >
-                View Tutorials
+                Contact Support
               </a>
               <a
-                href="/api-docs"
-                className="px-6 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors font-semibold"
+                href="/tutorials"
+                className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
               >
-                API Documentation
+                View Tutorials
               </a>
             </div>
           </div>
         </div>
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }

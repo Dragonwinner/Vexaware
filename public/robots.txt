@@ -1,18 +1,20 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
 
-# Allow AI crawlers
-User-agent: GPTBot
-Allow: /
+# Block admin areas
+Disallow: /admin/
+Disallow: /server/
+Disallow: /*.json$
+Disallow: /api/
 
-User-agent: ChatGPT-User
-Allow: /
+# Allow important resources
+Allow: /assets/
+Allow: /images/
+Allow: /css/
+Allow: /js/
 
-User-agent: anthropic-ai
-Allow: /
+# Crawl delay
+Crawl-delay: 1
 
-User-agent: Claude-Web
-Allow: /
-
+# Sitemap location
 Sitemap: https://vexaware.com/sitemap.xml

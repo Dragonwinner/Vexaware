@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import { Helmet } from "react-helmet-async";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CodeBlock from "@/components/CodeBlock";
 import SocialShare from "@/components/SocialShare";
@@ -6,12 +6,8 @@ import TableOfContents from "@/components/TableOfContents";
 import CodePlayground from "@/components/CodePlayground";
 import Comments from "@/components/Comments";
 import InteractiveDiagram from "@/components/InteractiveDiagram";
+import TutorialNavigation from "@/components/TutorialNavigation";
 
-export const metadata: Metadata = {
-  title: "What is VEX and Why It Matters - VEX Aware Tutorial",
-  description: "Learn about VEX (Vulnerability Exploitability eXchange) and understand why it's revolutionizing vulnerability management in modern DevSecOps.",
-  keywords: ["VEX", "Vulnerability Exploitability eXchange", "SBOM", "vulnerability management", "security"],
-};
 
 export default function WhatIsVEXPage() {
   const headings = [
@@ -201,6 +197,14 @@ export default function WhatIsVEXPage() {
             <SocialShare
               title="What is VEX and Why It Matters"
               url="https://vexaware.com/tutorials/getting-started/what-is-vex-and-why-it-matters"
+            />
+
+            <TutorialNavigation
+              nextArticle={{
+                title: "The Vulnerability Management Crisis",
+                href: "/tutorials/getting-started/vulnerability-management-crisis",
+                description: "Understand the challenges facing modern security teams and why traditional approaches fall short."
+              }}
             />
 
             <Comments pageId="what-is-vex-and-why-it-matters" />

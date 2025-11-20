@@ -1,14 +1,11 @@
-import { Metadata } from "next";
+import { Helmet } from "react-helmet-async";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CodeBlock from "@/components/CodeBlock";
 import SocialShare from "@/components/SocialShare";
 import TableOfContents from "@/components/TableOfContents";
-import Link from "next/link";
+import TutorialNavigation from "@/components/TutorialNavigation";
+import { Link } from "react-router-dom";
 
-export const metadata: Metadata = {
-  title: "Your First VEX Document in 10 Minutes - VEX Aware Tutorial",
-  description: "Create and publish your first VEX document to communicate vulnerability status.",
-};
 
 export default function TutorialPage() {
   const headings = [
@@ -174,11 +171,11 @@ vexaware health check
                 <h2>Next Steps</h2>
                 <p>Congratulations on completing this tutorial! Here's what to explore next:</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-                  <Link href="/tutorials/getting-started" className="p-4 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all">
+                  <Link to="/tutorials/getting-started" className="p-4 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all">
                     <h3 className="font-semibold text-gray-900 dark:text-white mb-2">📚 More Getting Started</h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Continue with more beginner tutorials</p>
                   </Link>
-                  <Link href="/tutorials/technical-implementation" className="p-4 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all">
+                  <Link to="/tutorials/technical-implementation" className="p-4 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all">
                     <h3 className="font-semibold text-gray-900 dark:text-white mb-2">⚙️ Technical Implementation</h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Learn deployment and configuration</p>
                   </Link>
@@ -186,6 +183,19 @@ vexaware health check
               </section>
             </div>
           </div>
+          
+          <TutorialNavigation
+            previousArticle={{
+              title: "Dashboard Tour",
+              href: "/tutorials/getting-started/dashboard-tour",
+              description: "Take a guided tour of the VEX Aware dashboard and learn about its key features."
+            }}
+            nextArticle={{
+              title: "Technical Implementation",
+              href: "/tutorials/technical-implementation",
+              description: "Learn how to deploy and configure VEX Aware in production environments."
+            }}
+          />
         </article>
       </div>
     </div>

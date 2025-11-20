@@ -1,0 +1,66 @@
+{
+  "@context": "https://openvex.dev/ns",
+  "@id": "https://example.com/vex/advanced-template",
+  "author": "VEX Aware Security Team",
+  "timestamp": "2024-01-15T10:30:00Z",
+  "version": "2.0.0",
+  "tooling": {
+    "vendor": "VEX Aware",
+    "name": "VEX Document Generator",
+    "version": "3.2.1"
+  },
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2024-1234",
+        "@id": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1234",
+        "aliases": ["GHSA-xxxx-yyyy-zzzz"],
+        "description": "Example vulnerability description with detailed information about the security issue."
+      },
+      "products": [
+        {
+          "@id": "pkg:npm/advanced-package@2.1.0",
+          "identifiers": {
+            "purl": "pkg:npm/advanced-package@2.1.0",
+            "cpe": "cpe:2.3:a:vendor:advanced-package:2.1.0:*:*:*:*:*:*:*"
+          },
+          "hashes": {
+            "sha256": "abc123def456ghi789jkl012mno345pqr678stu901vwx234yzab567cde890f"
+          }
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Update to version 2.1.1 or later which includes a security patch for this vulnerability.",
+      "impact_statement": "This vulnerability may allow remote code execution in specific deployment scenarios.",
+      "action_statement_timestamp": "2024-01-15T10:30:00Z",
+      "supplier": {
+        "name": "Example Software Vendor",
+        "email": "security@example.com"
+      }
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-5678",
+        "@id": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-5678"
+      },
+      "products": [
+        {
+          "@id": "pkg:docker/example/webapp@1.0.0",
+          "identifiers": {
+            "purl": "pkg:docker/example/webapp@1.0.0"
+          }
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The vulnerable code path is not reachable in our deployment configuration.",
+      "action_statement": "No immediate action required. Monitor for updates."
+    }
+  ],
+  "metadata": {
+    "scan_tools": ["trivy", "grype", "snyk"],
+    "scan_timestamp": "2024-01-15T09:00:00Z",
+    "environment": "production",
+    "compliance_frameworks": ["SOC2", "ISO27001", "NIST"]
+  }
+}

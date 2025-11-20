@@ -1,0 +1,82 @@
+{
+    "VEX Basic Template": {
+        "prefix": "vex-basic",
+        "body": [
+            "{",
+            "  \"@context\": \"https://openvex.dev/ns\",",
+            "  \"@id\": \"${1:https://example.com/vex/document-id}\",",
+            "  \"author\": \"${2:Your Organization}\",",
+            "  \"timestamp\": \"${3:${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}Z}\",",
+            "  \"version\": \"${4:1.0.0}\",",
+            "  \"statements\": [",
+            "    {",
+            "      \"vulnerability\": {",
+            "        \"name\": \"${5:CVE-YYYY-XXXX}\",",
+            "        \"@id\": \"${6:https://cve.mitre.org/cgi-bin/cvename.cgi?name=${5:CVE-YYYY-XXXX}}\"",
+            "      },",
+            "      \"products\": [",
+            "        {",
+            "          \"@id\": \"${7:pkg:npm/package-name@1.0.0}\",",
+            "          \"identifiers\": {",
+            "            \"purl\": \"${7:pkg:npm/package-name@1.0.0}\"",
+            "          }",
+            "        }",
+            "      ],",
+            "      \"status\": \"${8|not_affected,affected,fixed,under_investigation|}\",",
+            "      \"justification\": \"${9|component_not_present,vulnerable_code_not_present,vulnerable_code_not_in_execute_path,vulnerable_code_cannot_be_controlled_by_adversary,inline_mitigations_already_exist|}\",",
+            "      \"impact_statement\": \"${10:This vulnerability does not affect the product.}\",",
+            "      \"action_statement\": \"${11:No action required.}\"",
+            "    }",
+            "  ]",
+            "}"
+        ],
+        "description": "Create a basic VEX document template"
+    },
+    "VEX Statement": {
+        "prefix": "vex-statement",
+        "body": [
+            "{",
+            "  \"vulnerability\": {",
+            "    \"name\": \"${1:CVE-YYYY-XXXX}\",",
+            "    \"@id\": \"${2:https://cve.mitre.org/cgi-bin/cvename.cgi?name=${1:CVE-YYYY-XXXX}}\"",
+            "  },",
+            "  \"products\": [",
+            "    {",
+            "      \"@id\": \"${3:pkg:npm/package-name@1.0.0}\",",
+            "      \"identifiers\": {",
+            "        \"purl\": \"${3:pkg:npm/package-name@1.0.0}\"",
+            "      }",
+            "    }",
+            "  ],",
+            "  \"status\": \"${4|not_affected,affected,fixed,under_investigation|}\",",
+            "  \"justification\": \"${5|component_not_present,vulnerable_code_not_present,vulnerable_code_not_in_execute_path,vulnerable_code_cannot_be_controlled_by_adversary,inline_mitigations_already_exist|}\",",
+            "  \"impact_statement\": \"${6:Impact description}\",",
+            "  \"action_statement\": \"${7:Action required}\"",
+            "}"
+        ],
+        "description": "Create a VEX vulnerability statement"
+    },
+    "VEX Product": {
+        "prefix": "vex-product",
+        "body": [
+            "{",
+            "  \"@id\": \"${1:pkg:npm/package-name@1.0.0}\",",
+            "  \"identifiers\": {",
+            "    \"purl\": \"${1:pkg:npm/package-name@1.0.0}\"$2",
+            "  }$3",
+            "}"
+        ],
+        "description": "Create a VEX product identifier"
+    },
+    "VEX Vulnerability": {
+        "prefix": "vex-vulnerability",
+        "body": [
+            "{",
+            "  \"name\": \"${1:CVE-YYYY-XXXX}\",",
+            "  \"@id\": \"${2:https://cve.mitre.org/cgi-bin/cvename.cgi?name=${1:CVE-YYYY-XXXX}}\",",
+            "  \"description\": \"${3:Vulnerability description}\"$4",
+            "}"
+        ],
+        "description": "Create a VEX vulnerability object"
+    }
+}
