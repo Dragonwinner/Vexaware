@@ -3,6 +3,12 @@
  * Comprehensive VEX document management utilities
  */
 
+import { VexParser } from './parser';
+import { VexBuilder } from './builder';
+import { VexExporter } from './exporter';
+import { VexConverter } from './converter';
+import { VexStatus } from './types';
+
 export { VexParser } from './parser';
 export { VexBuilder, StatementBuilder } from './builder';
 export { VexExporter } from './exporter';
@@ -91,7 +97,7 @@ export class VexTools {
   /**
    * Filter statements by status
    */
-  static filterByStatus(doc: any, status: string) {
+  static filterByStatus(doc: any, status: VexStatus) {
     return VexConverter.filterByStatus(doc, status);
   }
 }
