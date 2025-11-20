@@ -7,6 +7,18 @@ import { Link } from "react-router-dom";
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950">
+      <Helmet>
+        <title>Managing Zero-Day Vulnerabilities - VEX Aware Blog</title>
+        <meta name="description" content="Learn how to effectively manage zero-day vulnerabilities in your organization with practical insights and best practices from security experts." />
+        <meta name="keywords" content="zero-day vulnerabilities, security, vulnerability management, cybersecurity, VEX" />
+        <meta property="og:title" content="Managing Zero-Day Vulnerabilities - VEX Aware Blog" />
+        <meta property="og:description" content="Learn how to effectively manage zero-day vulnerabilities in your organization with practical insights and best practices from security experts." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://vexaware.com/blog/zero-day-vulnerabilities" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Managing Zero-Day Vulnerabilities - VEX Aware Blog" />
+        <meta name="twitter:description" content="Learn how to effectively manage zero-day vulnerabilities in your organization with practical insights and best practices from security experts." />
+      </Helmet>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumbs
           items={[

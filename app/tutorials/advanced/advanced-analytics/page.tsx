@@ -1,8 +1,9 @@
-import { Helmet } from "react-helmet-async";
+//import { Helmet } from "react-helmet-async";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CodeBlock from "@/components/CodeBlock";
 import SocialShare from "@/components/SocialShare";
 import TableOfContents from "@/components/TableOfContents";
+import TutorialNavigation from "@/components/TutorialNavigation";
 import { Link } from "react-router-dom";
 
 
@@ -220,6 +221,19 @@ vexaware logs tail --lines 100`}
               </section>
             </div>
           </div>
+          
+          <TutorialNavigation
+            previousArticle={{
+              title: "Technical Implementation",
+              href: "/tutorials/technical-implementation",
+              description: "Complete technical setup and deployment guides."
+            }}
+            nextArticle={{
+              title: "VEX Automation",
+              href: "/tutorials/advanced/vex-automation",
+              description: "Automate VEX document generation and management at scale."
+            }}
+          />
         </article>
       </div>
     </div>

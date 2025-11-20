@@ -3,6 +3,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CodeBlock from "@/components/CodeBlock";
 import SocialShare from "@/components/SocialShare";
 import TableOfContents from "@/components/TableOfContents";
+import TutorialNavigation from "@/components/TutorialNavigation";
 import { Link } from "react-router-dom";
 
 
@@ -220,6 +221,19 @@ vexaware logs tail --lines 100`}
               </section>
             </div>
           </div>
+          
+          <TutorialNavigation
+            previousArticle={{
+              title: "Risk Assessment",
+              href: "/tutorials/compliance/risk-assessment",
+              description: "Conduct comprehensive risk assessments using VEX data."
+            }}
+            nextArticle={{
+              title: "Remediation Tracking",
+              href: "/tutorials/compliance/remediation-tracking",
+              description: "Track and manage vulnerability remediation progress."
+            }}
+          />
         </article>
       </div>
     </div>

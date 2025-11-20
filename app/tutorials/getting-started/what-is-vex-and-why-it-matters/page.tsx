@@ -6,6 +6,7 @@ import TableOfContents from "@/components/TableOfContents";
 import CodePlayground from "@/components/CodePlayground";
 import Comments from "@/components/Comments";
 import InteractiveDiagram from "@/components/InteractiveDiagram";
+import TutorialNavigation from "@/components/TutorialNavigation";
 
 
 export default function WhatIsVEXPage() {
@@ -196,6 +197,14 @@ export default function WhatIsVEXPage() {
             <SocialShare
               title="What is VEX and Why It Matters"
               url="https://vexaware.com/tutorials/getting-started/what-is-vex-and-why-it-matters"
+            />
+
+            <TutorialNavigation
+              nextArticle={{
+                title: "The Vulnerability Management Crisis",
+                href: "/tutorials/getting-started/vulnerability-management-crisis",
+                description: "Understand the challenges facing modern security teams and why traditional approaches fall short."
+              }}
             />
 
             <Comments pageId="what-is-vex-and-why-it-matters" />

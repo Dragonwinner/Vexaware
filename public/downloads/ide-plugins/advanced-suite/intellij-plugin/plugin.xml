@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idea-plugin>
+    <id>com.vexaware.intellij</id>
+    <name>VEX Aware</name>
+    <version>2.0.0</version>
+    <vendor email="support@vexaware.com" url="https://vexaware.com">VEX Aware</vendor>
+
+    <description><![CDATA[
+    Advanced VEX (Vulnerability Exploitability eXchange) document support for IntelliJ IDEA.
+    
+    Features:
+    - Syntax highlighting and validation for VEX documents
+    - AI-powered VEX document generation
+    - Integrated SBOM viewer and analysis
+    - Real-time vulnerability scanning
+    - Team collaboration features
+    - Enterprise security integrations
+    
+    Supports OpenVEX specification and CSAF integration.
+    ]]></description>
+
+    <change-notes><![CDATA[
+    Version 2.0.0:
+    - AI-powered document generation
+    - Enhanced enterprise features
+    - Real-time collaboration
+    - Improved performance and stability
+    ]]></change-notes>
+
+    <idea-version since-build="221.0"/>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.json</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- File Type -->
+        <fileType name="VEX Document" 
+                  implementationClass="com.vexaware.intellij.VexFileType"
+                  fieldName="INSTANCE" 
+                  language="VEX" 
+                  extensions="vex"/>
+                  
+        <fileType name="VEX JSON Document" 
+                  implementationClass="com.vexaware.intellij.VexJsonFileType"
+                  fieldName="INSTANCE" 
+                  language="JSON" 
+                  extensions="vex.json"/>
+
+        <!-- Language -->
+        <lang.parserDefinition language="VEX" 
+                              implementationClass="com.vexaware.intellij.VexParserDefinition"/>
+                              
+        <lang.syntaxHighlighterFactory language="VEX" 
+                                      implementationClass="com.vexaware.intellij.VexSyntaxHighlighterFactory"/>
+
+        <!-- Code Completion -->
+        <completion.contributor language="VEX" 
+                               implementationClass="com.vexaware.intellij.VexCompletionContributor"/>
+                               
+        <completion.contributor language="JSON" 
+                               implementationClass="com.vexaware.intellij.VexJsonCompletionContributor"/>
+
+        <!-- Inspections -->
+        <localInspection language="VEX" 
+                        displayName="VEX Document Validation" 
+                        groupName="VEX Aware" 
+                        enabledByDefault="true" 
+                        implementationClass="com.vexaware.intellij.inspections.VexValidationInspection"/>
+
+        <!-- Tool Windows -->
+        <toolWindow id="VEX Explorer" 
+                   anchor="left" 
+                   factoryClass="com.vexaware.intellij.toolwindow.VexExplorerToolWindowFactory"/>
+                   
+        <toolWindow id="Vulnerability Scanner" 
+                   anchor="bottom" 
+                   factoryClass="com.vexaware.intellij.toolwindow.VulnerabilityScannerToolWindowFactory"/>
+
+        <!-- Actions -->
+        <group id="VexAware.MainMenu" text="VEX Aware" popup="true">
+            <add-to-group group-id="MainMenu" anchor="before" relative-to-action="HelpMenu"/>
+            
+            <action id="VexAware.GenerateDocument" 
+                   class="com.vexaware.intellij.actions.GenerateVexDocumentAction"
+                   text="Generate VEX Document" 
+                   description="Generate a new VEX document using AI">
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt V"/>
+            </action>
+            
+            <action id="VexAware.ValidateDocument" 
+                   class="com.vexaware.intellij.actions.ValidateVexDocumentAction"
+                   text="Validate VEX Document" 
+                   description="Validate the current VEX document"/>
+                   
+            <action id="VexAware.ScanDependencies" 
+                   class="com.vexaware.intellij.actions.ScanDependenciesAction"
+                   text="Scan Dependencies" 
+                   description="Scan project dependencies for vulnerabilities"/>
+                   
+            <action id="VexAware.StartCollaboration" 
+                   class="com.vexaware.intellij.actions.StartCollaborationAction"
+                   text="Start Collaborative Session" 
+                   description="Start real-time collaboration on VEX documents"/>
+        </group>
+
+        <!-- Editor Context Menu -->
+        <group id="VexAware.EditorPopupMenu">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <reference ref="VexAware.ValidateDocument"/>
+            <separator/>
+        </group>
+
+        <!-- Configuration -->
+        <applicationConfigurable parentId="tools" 
+                               instance="com.vexaware.intellij.settings.VexAwareConfigurable"
+                               id="VexAware.Settings" 
+                               displayName="VEX Aware"/>
+
+        <!-- Live Templates -->
+        <defaultLiveTemplatesProvider implementation="com.vexaware.intellij.VexLiveTemplatesProvider"/>
+        <liveTemplateContext implementation="com.vexaware.intellij.VexTemplateContextType"/>
+
+        <!-- Annotators -->
+        <annotator language="JSON" implementationClass="com.vexaware.intellij.VexJsonAnnotator"/>
+        
+        <!-- Intentions -->
+        <intentionAction>
+            <className>com.vexaware.intellij.intentions.AddVulnerabilityStatementIntention</className>
+            <category>VEX Aware</category>
+        </intentionAction>
+        
+        <intentionAction>
+            <className>com.vexaware.intellij.intentions.FixVexSchemaIntention</className>
+            <category>VEX Aware</category>
+        </intentionAction>
+    </extensions>
+
+    <applicationListeners>
+        <listener class="com.vexaware.intellij.listeners.VexFileListener"
+                 topic="com.intellij.openapi.vfs.VirtualFileListener"/>
+    </applicationListeners>
+
+    <actions>
+        <!-- Additional actions can be defined here -->
+    </actions>
+    
+    <project-components>
+        <component>
+            <implementation-class>com.vexaware.intellij.VexAwareProjectComponent</implementation-class>
+        </component>
+    </project-components>
+</idea-plugin>

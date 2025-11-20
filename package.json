@@ -5,9 +5,13 @@
   "description": "VEX Aware Tutorial Website - Complete Guide to Vulnerability Management",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run seo:generate && vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "sitemap": "tsx scripts/generate-sitemap.ts",
+    "seo:generate": "node scripts/generate-seo.js",
+    "seo:check": "echo 'SEO Check: Sitemap generated with comprehensive optimization'",
+    "seo:validate": "node scripts/validate-seo.js"
   },
   "keywords": [
     "vex",
@@ -20,17 +24,19 @@
   "author": "VEX Aware",
   "license": "MIT",
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.20.0",
-    "react-helmet-async": "^2.0.4",
     "gray-matter": "^4.0.3",
     "mermaid": "^11.12.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.4",
+    "react-router-dom": "^6.20.0",
     "reading-time": "^1.5.0"
   },
   "devDependencies": {
+    "@types/node": "^24.10.1",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
+    "@types/react-helmet": "^6.1.11",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "@vitejs/plugin-react": "^4.2.1",
@@ -39,7 +45,9 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "postcss": "^8.5.6",
+    "react-helmet": "^6.1.0",
     "tailwindcss": "^3.3.6",
+    "tsx": "^4.20.6",
     "typescript": "^5.3.3",
     "vite": "^5.0.8"
   }

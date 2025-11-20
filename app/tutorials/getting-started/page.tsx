@@ -1,6 +1,16 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import TutorialNavigation from "@/components/TutorialNavigation";
+import { generateTutorialMetadata } from "../../../lib/metadata";
+
+export const metadata = generateTutorialMetadata({
+  title: "Getting Started with VEX Aware",
+  description: "Learn the fundamentals of VEX documents, vulnerability management, and security automation with our comprehensive getting started guide.",
+  slug: "getting-started",
+  difficulty: "beginner",
+  category: "Tutorial"
+});
 
 export default function GettingStartedPage() {
   const tutorials = [
@@ -97,6 +107,14 @@ export default function GettingStartedPage() {
             </Link>
           ))}
         </div>
+        
+        <TutorialNavigation
+          nextArticle={{
+            title: "What is VEX and Why It Matters",
+            href: "/tutorials/getting-started/what-is-vex-and-why-it-matters",
+            description: "Start your VEX journey by understanding the fundamentals and importance of VEX."
+          }}
+        />
       </div>
     </div>
   );

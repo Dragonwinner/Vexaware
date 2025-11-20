@@ -3,6 +3,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CodeBlock from "@/components/CodeBlock";
 import SocialShare from "@/components/SocialShare";
 import TableOfContents from "@/components/TableOfContents";
+import TutorialNavigation from "@/components/TutorialNavigation";
 import { Link } from "react-router-dom";
 
 
@@ -182,6 +183,19 @@ vexaware health check
               </section>
             </div>
           </div>
+          
+          <TutorialNavigation
+            previousArticle={{
+              title: "Installing VEX Aware",
+              href: "/tutorials/getting-started/installing-vex-aware",
+              description: "Step-by-step guide to installing and setting up VEX Aware in your environment."
+            }}
+            nextArticle={{
+              title: "Creating Your First VEX Document",
+              href: "/tutorials/getting-started/first-vex-document",
+              description: "Learn how to create and manage your first VEX document with practical examples."
+            }}
+          />
         </article>
       </div>
     </div>

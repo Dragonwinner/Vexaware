@@ -1,7 +1,9 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SocialShare from "@/components/SocialShare";
 import TableOfContents from "@/components/TableOfContents";
+import TutorialNavigation from "@/components/TutorialNavigation";
 
 
 export default function IntroVexAwarePage() {
@@ -248,18 +250,31 @@ export default function IntroVexAwarePage() {
                   Now that you understand VEX Aware's architecture and capabilities, you're ready to install and 
                   configure the platform for your environment.
                 </p>
-                <a 
+                <Link 
                   to="/tutorials/getting-started/installing-vex-aware"
                   className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
                 >
                   Next: Installing VEX Aware →
-                </a>
+                </Link>
               </div>
             </div>
 
             <SocialShare
               title="Introduction to VEX Aware Platform"
               url="https://vexaware.com/tutorials/getting-started/introduction-to-vex-aware"
+            />
+
+            <TutorialNavigation
+              previousArticle={{
+                title: "The Vulnerability Management Crisis",
+                href: "/tutorials/getting-started/vulnerability-management-crisis",
+                description: "Understand the challenges facing modern security teams and why traditional approaches fall short."
+              }}
+              nextArticle={{
+                title: "Installing VEX Aware",
+                href: "/tutorials/getting-started/installing-vex-aware",
+                description: "Step-by-step guide to installing and setting up VEX Aware in your environment."
+              }}
             />
           </article>
 

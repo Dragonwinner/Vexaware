@@ -136,10 +136,10 @@ export default function ApiDocPage() {
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">📖 API Overview</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400">Return to API documentation home</p>
               </Link>
-              <a to="https://github.com/vexaware/examples" className="p-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all">
+              <Link to="/resources" className="p-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-all">
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">💻 Code Examples</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400">View example implementations</p>
-              </a>
+              </Link>
             </div>
           </div>
         </article>

@@ -33,28 +33,47 @@ export default function CategoryPage() {
         </div>
 
         <div className="grid gap-6">
-          
+          {[
+            { title: "Risk Assessment Framework", slug: "risk-assessment", duration: "45 min", description: "Build comprehensive risk assessment workflows" },
+            { title: "SOC 2 Compliance Guide", slug: "soc2-compliance", duration: "50 min", description: "Complete SOC 2 Type II compliance implementation" },
+            { title: "PCI DSS Requirements", slug: "pci-dss", duration: "45 min", description: "Payment card industry data security standards" },
+            { title: "HIPAA Compliance", slug: "hipaa-compliance", duration: "45 min", description: "Healthcare information privacy and security" },
+            { title: "ISO 27001 Certification", slug: "iso-27001", duration: "50 min", description: "Information security management system certification" },
+            { title: "NIST Framework Implementation", slug: "nist-framework", duration: "55 min", description: "Cybersecurity framework implementation guide" },
+            { title: "Third-Party Security Audits", slug: "third-party-audits", duration: "40 min", description: "Vendor security assessment and audit processes" },
+            { title: "Evidence Collection & Documentation", slug: "evidence-collection", duration: "35 min", description: "Automated evidence collection for compliance" },
+            { title: "Policy Enforcement", slug: "policy-enforcement", duration: "30 min", description: "Automated policy enforcement and monitoring" },
+            { title: "Compliance Reporting", slug: "compliance-reporting", duration: "40 min", description: "Generate compliance reports and dashboards" },
+            { title: "Audit Trail Management", slug: "audit-trail", duration: "35 min", description: "Comprehensive audit logging and trail management" },
+            { title: "CIS Benchmarks Implementation", slug: "cis-benchmarks", duration: "45 min", description: "Center for Internet Security benchmarks" },
+            { title: "Remediation Tracking", slug: "remediation-tracking", duration: "40 min", description: "Track and manage vulnerability remediation" },
+            { title: "Regulatory Updates Management", slug: "regulatory-updates", duration: "30 min", description: "Stay current with changing regulations" },
+            { title: "Compliance Automation", slug: "compliance-automation", duration: "50 min", description: "Automate compliance workflows and monitoring" }
+          ].map((tutorial, index) => (
             <Link
-              key="soc2-compliance"
-              to="/tutorials/compliance/soc2-compliance"
+              key={tutorial.slug}
+              to={`/tutorials/compliance/${tutorial.slug}`}
               className="block p-6 bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-lg transition-all"
             >
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-2xl font-bold text-gray-400">
-                      {String(1).padStart(2, "0")}
+                      {String(index + 1).padStart(2, "0")}
                     </span>
                     <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30 px-2 py-1 rounded">
                       Advanced
                     </span>
                     <span className="text-xs text-gray-500 dark:text-gray-500">
-                      ⏱ 50 min
+                      ⏱ {tutorial.duration}
                     </span>
                   </div>
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                    SOC 2 Compliance Guide
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    {tutorial.title}
                   </h2>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    {tutorial.description}
+                  </p>
                 </div>
                 <svg
                   className="w-6 h-6 text-gray-400 ml-4 flex-shrink-0"
@@ -71,120 +90,7 @@ export default function CategoryPage() {
                 </svg>
               </div>
             </Link>
-
-            <Link
-              key="pci-dss"
-              to="/tutorials/compliance/pci-dss"
-              className="block p-6 bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-lg transition-all"
-            >
-              <div className="flex items-start justify-between">
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="text-2xl font-bold text-gray-400">
-                      {String(2).padStart(2, "0")}
-                    </span>
-                    <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30 px-2 py-1 rounded">
-                      Advanced
-                    </span>
-                    <span className="text-xs text-gray-500 dark:text-gray-500">
-                      ⏱ 45 min
-                    </span>
-                  </div>
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                    PCI DSS Requirements
-                  </h2>
-                </div>
-                <svg
-                  className="w-6 h-6 text-gray-400 ml-4 flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </div>
-            </Link>
-
-            <Link
-              key="hipaa-compliance"
-              to="/tutorials/compliance/hipaa-compliance"
-              className="block p-6 bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-lg transition-all"
-            >
-              <div className="flex items-start justify-between">
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="text-2xl font-bold text-gray-400">
-                      {String(3).padStart(2, "0")}
-                    </span>
-                    <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30 px-2 py-1 rounded">
-                      Advanced
-                    </span>
-                    <span className="text-xs text-gray-500 dark:text-gray-500">
-                      ⏱ 45 min
-                    </span>
-                  </div>
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                    HIPAA Compliance
-                  </h2>
-                </div>
-                <svg
-                  className="w-6 h-6 text-gray-400 ml-4 flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </div>
-            </Link>
-
-            <Link
-              key="iso-27001"
-              to="/tutorials/compliance/iso-27001"
-              className="block p-6 bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-lg transition-all"
-            >
-              <div className="flex items-start justify-between">
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="text-2xl font-bold text-gray-400">
-                      {String(4).padStart(2, "0")}
-                    </span>
-                    <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30 px-2 py-1 rounded">
-                      Advanced
-                    </span>
-                    <span className="text-xs text-gray-500 dark:text-gray-500">
-                      ⏱ 50 min
-                    </span>
-                  </div>
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                    ISO 27001 Certification
-                  </h2>
-                </div>
-                <svg
-                  className="w-6 h-6 text-gray-400 ml-4 flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </div>
-            </Link>
+          ))}
         </div>
 
         <div className="mt-12 p-8 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
@@ -202,7 +108,7 @@ export default function CategoryPage() {
               View FAQ →
             </Link>
             <a
-              to="https://discord.gg/vexaware"
+              href="https://discord.gg/vexaware"
               className="px-6 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors font-semibold"
             >
               Join Discord →

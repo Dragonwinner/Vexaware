@@ -3,6 +3,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CodeBlock from "@/components/CodeBlock";
 import SocialShare from "@/components/SocialShare";
 import TableOfContents from "@/components/TableOfContents";
+import TutorialNavigation from "@/components/TutorialNavigation";
 import { Link } from "react-router-dom";
 
 
@@ -268,6 +269,19 @@ vexaware scan --target ./my-app`}
               </section>
             </div>
           </div>
+          
+          <TutorialNavigation
+            previousArticle={{
+              title: "Kubernetes Deployment",
+              href: "/tutorials/technical-implementation/kubernetes-deployment",
+              description: "Deploy VEX Aware on Kubernetes with best practices."
+            }}
+            nextArticle={{
+              title: "Authentication Setup",
+              href: "/tutorials/technical-implementation/authentication-setup",
+              description: "Configure authentication and authorization for VEX Aware."
+            }}
+          />
         </article>
       </div>
     </div>

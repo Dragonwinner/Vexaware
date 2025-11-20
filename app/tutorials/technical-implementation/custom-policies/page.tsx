@@ -3,6 +3,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CodeBlock from "@/components/CodeBlock";
 import SocialShare from "@/components/SocialShare";
 import TableOfContents from "@/components/TableOfContents";
+import TutorialNavigation from "@/components/TutorialNavigation";
 import { Link } from "react-router-dom";
 
 
@@ -220,6 +221,19 @@ vexaware logs tail --lines 100`}
               </section>
             </div>
           </div>
+          
+          <TutorialNavigation
+            previousArticle={{
+              title: "Troubleshooting",
+              href: "/tutorials/technical-implementation/troubleshooting",
+              description: "Diagnose and resolve common VEX Aware issues."
+            }}
+            nextArticle={{
+              title: "Advanced Tutorials",
+              href: "/tutorials/advanced",
+              description: "Explore advanced VEX Aware features and enterprise capabilities."
+            }}
+          />
         </article>
       </div>
     </div>

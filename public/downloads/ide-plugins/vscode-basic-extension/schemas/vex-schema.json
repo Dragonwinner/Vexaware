@@ -1,0 +1,147 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://openvex.dev/schema/vex.json",
+    "title": "VEX Document Schema",
+    "description": "Schema for Vulnerability Exploitability eXchange (VEX) documents",
+    "type": "object",
+    "required": ["@context", "statements"],
+    "properties": {
+        "@context": {
+            "type": "string",
+            "const": "https://openvex.dev/ns",
+            "description": "The JSON-LD context for VEX documents"
+        },
+        "@id": {
+            "type": "string",
+            "format": "uri",
+            "description": "Unique identifier for this VEX document"
+        },
+        "author": {
+            "type": "string",
+            "description": "The entity responsible for the VEX document"
+        },
+        "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "When this VEX document was created"
+        },
+        "version": {
+            "type": "string",
+            "description": "Version of this VEX document"
+        },
+        "tooling": {
+            "type": "string",
+            "description": "Information about the tooling used to generate this document"
+        },
+        "statements": {
+            "type": "array",
+            "description": "Array of vulnerability statements",
+            "items": {
+                "$ref": "#/$defs/statement"
+            }
+        }
+    },
+    "$defs": {
+        "statement": {
+            "type": "object",
+            "required": ["vulnerability", "products", "status"],
+            "properties": {
+                "vulnerability": {
+                    "$ref": "#/$defs/vulnerability"
+                },
+                "products": {
+                    "type": "array",
+                    "description": "Products affected or not affected by the vulnerability",
+                    "items": {
+                        "$ref": "#/$defs/product"
+                    }
+                },
+                "status": {
+                    "type": "string",
+                    "enum": ["affected", "not_affected", "fixed", "under_investigation"],
+                    "description": "Impact status of the vulnerability on the products"
+                },
+                "justification": {
+                    "type": "string",
+                    "enum": [
+                        "component_not_present",
+                        "vulnerable_code_not_present", 
+                        "vulnerable_code_not_in_execute_path",
+                        "vulnerable_code_cannot_be_controlled_by_adversary",
+                        "inline_mitigations_already_exist"
+                    ],
+                    "description": "Reason for the status when not affected"
+                },
+                "impact_statement": {
+                    "type": "string",
+                    "description": "Description of the impact or lack thereof"
+                },
+                "action_statement": {
+                    "type": "string",
+                    "description": "Actions that may be taken regarding this vulnerability"
+                }
+            }
+        },
+        "vulnerability": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "Vulnerability identifier (e.g., CVE-2021-12345)"
+                },
+                "@id": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URI identifying the vulnerability"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Human-readable description of the vulnerability"
+                }
+            }
+        },
+        "product": {
+            "type": "object",
+            "required": ["@id"],
+            "properties": {
+                "@id": {
+                    "type": "string",
+                    "description": "Product identifier (preferably PURL)"
+                },
+                "identifiers": {
+                    "type": "object",
+                    "description": "Additional product identifiers",
+                    "properties": {
+                        "purl": {
+                            "type": "string",
+                            "description": "Package URL identifier"
+                        },
+                        "cpe": {
+                            "type": "string",
+                            "description": "Common Platform Enumeration identifier"
+                        }
+                    }
+                },
+                "hashes": {
+                    "type": "array",
+                    "description": "Cryptographic hashes of the product",
+                    "items": {
+                        "type": "object",
+                        "required": ["alg", "content"],
+                        "properties": {
+                            "alg": {
+                                "type": "string",
+                                "description": "Hash algorithm (e.g., SHA-256)"
+                            },
+                            "content": {
+                                "type": "string",
+                                "description": "Hash value"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

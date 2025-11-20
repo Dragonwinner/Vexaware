@@ -3,6 +3,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CodeBlock from "@/components/CodeBlock";
 import SocialShare from "@/components/SocialShare";
 import TableOfContents from "@/components/TableOfContents";
+import TutorialNavigation from "@/components/TutorialNavigation";
 import { Link } from "react-router-dom";
 
 
@@ -220,6 +221,19 @@ vexaware logs tail --lines 100`}
               </section>
             </div>
           </div>
+          
+          <TutorialNavigation
+            previousArticle={{
+              title: "Serverless Security",
+              href: "/tutorials/cloud-native/serverless-security",
+              description: "Secure serverless functions and cloud-native applications."
+            }}
+            nextArticle={{
+              title: "Kubernetes Security",
+              href: "/tutorials/kubernetes-containers",
+              description: "Learn container and Kubernetes security best practices."
+            }}
+          />
         </article>
       </div>
     </div>

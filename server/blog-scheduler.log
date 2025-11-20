@@ -1,0 +1,11 @@
+[2025-11-20T21:20:16.705Z] Manual blog post generation triggered
+[2025-11-20T21:20:16.709Z] Starting daily blog post generation...
+[2025-11-20T21:20:16.731Z] ✅ Successfully generated blog post: "Zero-Day Response Strategies"
+[2025-11-20T21:20:16.732Z]    - Slug: zero-day-response-strategies
+[2025-11-20T21:20:16.732Z]    - Category: Vulnerability Management
+[2025-11-20T21:20:16.733Z]    - Reading Time: 3 minutes
+[2025-11-20T21:20:16.733Z]    - Publish Date: 2025-11-20
+[2025-11-20T21:20:16.754Z] Generated blog post file: E:\project\Vexaware\vexa1\Vexaware\app\blog\zero-day-response-strategies\page.tsx
+[2025-11-20T21:20:16.755Z] Blog index update triggered
+[2025-11-20T21:20:17.249Z] Sitemap updated successfully
+[2025-11-20T21:20:17.250Z] ✅ Site regeneration completed successfully

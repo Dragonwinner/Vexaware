@@ -1,0 +1,182 @@
+{
+  "name": "vexaware-advanced",
+  "displayName": "VEX Aware Advanced",
+  "description": "Advanced VEX document support with AI-powered features and enterprise integration",
+  "version": "2.0.0",
+  "publisher": "vexaware",
+  "repository": {
+    "type": "git", 
+    "url": "https://github.com/vexaware/vscode-advanced.git"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Linters", 
+    "Snippets",
+    "Machine Learning",
+    "Other"
+  ],
+  "keywords": [
+    "vex",
+    "vulnerability",
+    "security",
+    "sbom",
+    "ai",
+    "collaboration",
+    "enterprise"
+  ],
+  "activationEvents": [
+    "onLanguage:json",
+    "onLanguage:vex",
+    "onCommand:vexaware.aiGenerate",
+    "onView:vexaware.explorer"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "vex",
+        "aliases": ["VEX", "vex"],
+        "extensions": [".vex", ".vex.json"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "vex",
+        "scopeName": "source.vex.advanced",
+        "path": "./syntaxes/vex-advanced.tmGrammar.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "vex",
+        "path": "./snippets/vex-advanced.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "vexaware.aiGenerate",
+        "title": "Generate VEX with AI",
+        "category": "VEX Aware",
+        "icon": "$(sparkle)"
+      },
+      {
+        "command": "vexaware.validateAdvanced",
+        "title": "Advanced Validation",
+        "category": "VEX Aware"
+      },
+      {
+        "command": "vexaware.collaborativeEdit",
+        "title": "Start Collaborative Session",
+        "category": "VEX Aware",
+        "icon": "$(live-share)"
+      },
+      {
+        "command": "vexaware.scanDependencies",
+        "title": "Scan Project Dependencies",
+        "category": "VEX Aware",
+        "icon": "$(search)"
+      },
+      {
+        "command": "vexaware.exportReport",
+        "title": "Export Security Report",
+        "category": "VEX Aware"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "vexaware.explorer",
+          "name": "VEX Documents",
+          "when": "workspaceHasVexFiles"
+        },
+        {
+          "id": "vexaware.vulnerabilities",
+          "name": "Vulnerabilities",
+          "when": "vexaware.hasVulnerabilities"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "vexaware.explorer",
+        "contents": "No VEX documents found in this workspace.\n[Create VEX Document](command:vexaware.aiGenerate)\n[Scan Dependencies](command:vexaware.scanDependencies)"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "resourceExtname == .vex || resourceExtname == .json",
+          "command": "vexaware.aiGenerate",
+          "group": "vexaware@1"
+        },
+        {
+          "when": "resourceExtname == .vex || resourceExtname == .json",
+          "command": "vexaware.validateAdvanced",
+          "group": "vexaware@2"
+        }
+      ],
+      "editor/title": [
+        {
+          "when": "resourceExtname == .vex || resourceExtname == .json",
+          "command": "vexaware.collaborativeEdit",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "VEX Aware Advanced",
+      "properties": {
+        "vexaware.apiEndpoint": {
+          "type": "string",
+          "default": "https://api.vexaware.com/v2",
+          "description": "VEX Aware API endpoint"
+        },
+        "vexaware.enableAI": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable AI-powered features"
+        },
+        "vexaware.enableCollaboration": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable real-time collaboration"
+        },
+        "vexaware.enterpriseMode": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable enterprise features"
+        },
+        "vexaware.autoScan": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically scan for vulnerabilities"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "npm run compile && node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "@types/ws": "^8.5.4",
+    "typescript": "^4.9.4",
+    "@vscode/test-electron": "^2.2.0"
+  },
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "axios": "^1.4.0",
+    "ws": "^8.13.0",
+    "openai": "^4.0.0",
+    "jsonpath": "^1.1.1",
+    "semver": "^7.5.4"
+  }
+}

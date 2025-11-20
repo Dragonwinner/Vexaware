@@ -3,6 +3,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CodeBlock from "@/components/CodeBlock";
 import SocialShare from "@/components/SocialShare";
 import TableOfContents from "@/components/TableOfContents";
+import TutorialNavigation from "@/components/TutorialNavigation";
 import { Link } from "react-router-dom";
 
 
@@ -268,6 +269,19 @@ vexaware scan --target ./my-app`}
               </section>
             </div>
           </div>
+          
+          <TutorialNavigation
+            previousArticle={{
+              title: "Advanced Tutorials",
+              href: "/tutorials/advanced",
+              description: "Explore advanced VEX Aware features and enterprise capabilities."
+            }}
+            nextArticle={{
+              title: "Risk Assessment",
+              href: "/tutorials/compliance/risk-assessment",
+              description: "Conduct comprehensive risk assessments using VEX data."
+            }}
+          />
         </article>
       </div>
     </div>

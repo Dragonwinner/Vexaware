@@ -3,6 +3,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CodeBlock from "@/components/CodeBlock";
 import SocialShare from "@/components/SocialShare";
 import TableOfContents from "@/components/TableOfContents";
+import TutorialNavigation from "@/components/TutorialNavigation";
 import { Link } from "react-router-dom";
 
 
@@ -220,6 +221,19 @@ vexaware logs tail --lines 100`}
               </section>
             </div>
           </div>
+          
+          <TutorialNavigation
+            previousArticle={{
+              title: "Zero-Day Management",
+              href: "/tutorials/advanced/zero-day-management",
+              description: "Handle zero-day vulnerabilities with advanced strategies."
+            }}
+            nextArticle={{
+              title: "Compliance Tutorials",
+              href: "/tutorials/compliance",
+              description: "Learn about compliance frameworks and regulatory requirements."
+            }}
+          />
         </article>
       </div>
     </div>
