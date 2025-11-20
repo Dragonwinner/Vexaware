@@ -1,0 +1,42 @@
+# VEX Tools Configuration
+
+# Default configuration for VEX Tools
+# This file can be placed in your project root or home directory
+
+# Output format (json or yaml)
+output:
+  format: json
+  pretty: true
+  indent: 2
+
+# Validation settings
+validation:
+  strict: false
+  show_warnings: true
+
+# Document defaults
+defaults:
+  context: "https://openvex.dev/ns"
+  author: "security-team@example.com"
+  version: "1.0.0"
+  
+  # Tooling information
+  tooling:
+    vendor: "VEX Aware"
+    name: "VEX Tools"
+    version: "1.0.0"
+
+# Risk calculation weights
+risk:
+  affected: 10
+  under_investigation: 5
+  fixed: 1
+  not_affected: 0
+
+# Staleness threshold (in days)
+staleness_threshold: 30
+
+# CLI options
+cli:
+  color: true
+  verbose: false

@@ -1,0 +1,27 @@
+{
+  "@context": "https://openvex.dev/ns",
+  "@id": "https://example.com/vex/basic-template",
+  "author": "VEX Aware Team",
+  "timestamp": "2024-01-15T10:30:00Z",
+  "version": "1.0.0",
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2024-XXXX",
+        "@id": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-XXXX"
+      },
+      "products": [
+        {
+          "@id": "pkg:npm/example-package@1.0.0",
+          "identifiers": {
+            "purl": "pkg:npm/example-package@1.0.0"
+          }
+        }
+      ],
+      "status": "not_affected",
+      "justification": "component_not_present",
+      "impact_statement": "This vulnerability does not affect the product as the vulnerable component is not present in the deployment.",
+      "action_statement": "No action required. Continue normal operations."
+    }
+  ]
+}

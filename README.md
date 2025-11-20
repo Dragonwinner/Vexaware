@@ -15,6 +15,7 @@ A comprehensive, SEO-optimized **full-stack tutorial website** for VEX Aware - a
 - **Interactive Components**: Code blocks with copy functionality, table of contents, breadcrumbs
 - **Real Content**: Tutorials extracted from the official VEX Aware Complete Guide PDF
 - **Client-Side Routing**: React Router v6 for seamless navigation
+- **🆕 VEX Tools Platform**: Standalone toolkit for VEX document management - see [vex-tools/](./vex-tools/)
 
 ## 📚 Content Structure
 
@@ -296,6 +297,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [VEX Aware Website](https://vexaware.com)
 - [Documentation](https://vexaware.com/tutorials/getting-started)
 - [API Reference](https://vexaware.com/api-docs)
+- [VEX Tools Platform](./vex-tools/) - Standalone VEX document management toolkit
 
 ## 🏗️ Built With
 
